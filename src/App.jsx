@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom"
+
+import theme from "./styles/Theme.jsx"
+
+// import { ThemeProvider } from "@emotion/react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+
+////// <<-- Layouts -->> //////
+import RootLayout from "./layouts/RootLayout"
+
+////// <<-- Pages -->> //////
+import ErrorPage from "./utils/error-page.jsx"
+import Home from "./pages/Home";
+import About from "./pages/About.jsx";
+import Explore from "./pages/Explore";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Explore";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element = {<RootLayout />} errorElement= {<ErrorPage/>} >
+      <Route index element = {<Home />} />
+      <Route path="/about" element = {<About/>} />
+      <Route path="/projects" element = {<Explore/>} />
+      <Route path="/resume" element = {<Resume/>} />
+      <Route path="/contact" element = {<Contact/>} />
+    </Route>
+  )
+)
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+        <RouterProvider router={router}/>
+    </ThemeProvider>
   )
 }
 
