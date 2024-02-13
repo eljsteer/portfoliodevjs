@@ -1,34 +1,41 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material";
 
-const theme = createTheme({
-
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
+export const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#1976d2',
+      // light: '#42a5f5',
+      // dark: '#1565c0',
+    },
+    text: {
+      primary: "#000",
+      Secondary: "#000"
+    },
+    background: {
+      default: "#fff",
+      paper: "#fff",
     },
   },
-
-  lightTheme: {
-    palette: {
-      mode: 'light',
-      primary: {
-        main: '#1976d2',
-      },
-    },
-  },
-
-  darkTheme: {
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#1976d2',
-      },
-    },
-  }
 });
 
-export default theme
+export const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#1976d2',
+      // light: '#42a5f5',
+      // dark: '#1565c0',
+    },
+    text: {
+      primary: "#fff",
+      Secondary: "#fff"
+    },
+    background: {
+      default: "#000",
+      paper: "#000",
+    },
+  },
+});
+
+export default {lightTheme, darkTheme}

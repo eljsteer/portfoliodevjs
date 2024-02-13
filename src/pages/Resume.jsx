@@ -3,8 +3,7 @@ function Resume() {
     <div>
       Resume
     </div>
-  ) 
+  );
 }
 
 export default Resume;
-

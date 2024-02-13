@@ -1,9 +1,13 @@
 
 import Landing from "../components/AppAndHomePage/Landing";
 
+// import "../styles/Header.css"
+
 function Home() {
   return (
-    <Landing />
+    <div className="homePage">
+      <Landing />
+    </div>
   ) 
 }
 

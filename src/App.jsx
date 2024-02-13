@@ -1,14 +1,13 @@
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { ThemeContextProvider } from "./contexts/ThemeContext.jsx";
+
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom"
-
-import theme from "./styles/Theme.jsx"
-
-// import { ThemeProvider } from "@emotion/react";
-import { CssBaseline, ThemeProvider } from "@mui/material";
 
 ////// <<-- Layouts -->> //////
 import RootLayout from "./layouts/RootLayout"
@@ -17,17 +16,16 @@ import RootLayout from "./layouts/RootLayout"
 import ErrorPage from "./utils/error-page.jsx"
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
-import Explore from "./pages/Explore";
+import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
-import Contact from "./pages/Explore";
-
+import Contact from "./pages/Contact";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element = {<RootLayout />} errorElement= {<ErrorPage/>} >
       <Route index element = {<Home />} />
       <Route path="/about" element = {<About/>} />
-      <Route path="/projects" element = {<Explore/>} />
+      <Route path="/projects" element = {<Projects/>} />
       <Route path="/resume" element = {<Resume/>} />
       <Route path="/contact" element = {<Contact/>} />
     </Route>
@@ -36,11 +34,16 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-        <RouterProvider router={router}/>
-    </ThemeProvider>
-  )
+    <ThemeContextProvider>
+      {(theme) => (
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <RouterProvider router={router}/>
+        </ThemeProvider>
+      )}
+    </ThemeContextProvider>
+  );
 }
+
 
 export default App
