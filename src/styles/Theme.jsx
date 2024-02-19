@@ -16,6 +16,15 @@ export const lightTheme = createTheme({
       paper: "#F3EDE2",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1800,
+    },
+  },
 });
 
 export const darkTheme = createTheme({
@@ -34,6 +43,15 @@ export const darkTheme = createTheme({
     background: {
       default: "#051024",
       paper: "#051024",
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1800,
     },
   },
 });
