@@ -35,7 +35,7 @@ export const ThemeContextProvider = ({ children }) => {
 };
 
 ThemeContextProvider.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.array.isRequired,
 };
 
 export default ThemeContextProvider;

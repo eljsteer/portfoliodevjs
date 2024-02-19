@@ -10,10 +10,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { DiJavascript1 } from "react-icons/di";
+
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 import { useTheme } from '../../contexts/ThemeContext';
-
 
 import { NavList } from "../../layouts/NavList"
 import ToggleThemeButton from './toggleThemeButton';
@@ -34,8 +34,7 @@ function Header() {
     <AppBar className="AppBar" position="static" >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{backgroundColor: "rgba(0,0,0,0)"}}>
-          <DiJavascript1  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between" }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -75,25 +74,51 @@ function Header() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <DiJavascript1  sx={{ display: { xs: 'flex', md: "none", }, mr: 1 }} href="/"/>
-          <Box  className="Navbar" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"center" }}>
-            {NavList.map((navlink) => (
-                <Button
-                  key={navlink.id}
-                  href={navlink.url}
-                  onClick={handleCloseNavMenu}
-                  sx={{ 
-                    my: 2, 
-                    color: isDarkMode ? 'white' : 'black',
-                    display: 'block' 
-                  }}
-                >
-                  {navlink.name}
-                </Button>
-            ))}
-          </Box>
+            <IconButton
+            to="/"
+            sx={{
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+          >
+            <JavascriptIcon sx={{ fontSize: { xs: "75px", md: "100px" } }} />
+          </IconButton>
           <ToggleThemeButton/>
+          </Box>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between" }}>
+            <IconButton 
+              to="/"
+              sx={{ 
+                display: { xs: 'none', md: 'flex' }, 
+                color: isDarkMode ? 'primary' : 'secondary',
+                textDecoration: "none",
+              }} 
+            >
+                <JavascriptIcon 
+                  sx={{ fontSize: "100px" }}
+                />
+            </IconButton>
+            <Box className="Navbar" sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+              {NavList.map((navlink) => (
+                  <Button
+                    key={navlink.id}
+                    href={navlink.url}
+                    onClick={handleCloseNavMenu}
+                    sx={{ 
+                      my: 2, 
+                      color: isDarkMode ? 'white' : 'black',
+                      display: 'block' 
+                    }}
+                  >
+                    {navlink.name}
+                  </Button>
+              ))}
+            </Box>
+            <ToggleThemeButton/>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

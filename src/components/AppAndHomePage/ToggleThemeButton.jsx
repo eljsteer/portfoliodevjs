@@ -8,7 +8,9 @@ const ToggleThemeButton = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
-    <Box>
+    <Box
+      sx={{display:"flex", width: { md:"100px", justifyContent:"center"}}}
+    >
       <IconButton onClick={toggleTheme} color="inherit">
         {isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
       </IconButton>

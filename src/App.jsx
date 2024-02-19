@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 import { ThemeContextProvider } from "./contexts/ThemeContext.jsx";
 
 
