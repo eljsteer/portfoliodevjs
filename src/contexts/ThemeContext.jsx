@@ -1,10 +1,10 @@
 // ThemeContext.jsx
 
 import { PropTypes } from 'prop-types';
+// ThemeContext.jsx
 import { createContext, useContext, useEffect, useState, useMemo } from 'react';
 import { lightTheme, darkTheme } from '../styles/Theme';
-import { useMediaQuery } from '@mui/material';
-
+import { useMediaQuery, ThemeProvider } from '@mui/material';
 
 const ThemeContext = createContext();
 
@@ -18,7 +18,6 @@ export const ThemeContextProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Save the current theme preference to localStorage whenever it changes
     localStorage.setItem('theme', JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
@@ -26,12 +25,11 @@ export const ThemeContextProvider = ({ children }) => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
-  const theme = useMemo(() => (
-    isDarkMode ? darkTheme : lightTheme), [isDarkMode]);
+  const theme = useMemo(() => (isDarkMode ? darkTheme : lightTheme), [isDarkMode]);
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      {children(theme)}
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 };

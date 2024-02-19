@@ -35,12 +35,8 @@ const router = createBrowserRouter(
 function App() {
   return (
     <ThemeContextProvider>
-      {(theme) => (
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <RouterProvider router={router}/>
-        </ThemeProvider>
-      )}
+      <CssBaseline />
+      <RouterProvider router={router} />
     </ThemeContextProvider>
   );
 }
