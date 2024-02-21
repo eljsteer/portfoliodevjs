@@ -1,5 +1,6 @@
-import { CssBaseline } from '@mui/material';
-import { ThemeContextProvider } from "./contexts/ThemeContext.jsx";
+import { CssBaseline } from '@mui/material'
+import { ThemeContextProvider } from "./contexts/ThemeContext.jsx"
+
 
 
 import {

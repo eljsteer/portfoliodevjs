@@ -10,8 +10,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { IoLogoJavascript } from "react-icons/io";
 
-import JavascriptIcon from '@mui/icons-material/Javascript';
+import "./styles/Header.css"
 
 import { useTheme } from '../../contexts/ThemeContext';
 
@@ -34,7 +35,9 @@ function Header() {
     <AppBar className="AppBar" position="static" >
       <Container maxWidth="90%">
         <Toolbar disableGutters sx={{backgroundColor: "rgba(0,0,0,0)"}}>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between" }}>
+
+  {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between", alignItems: "center" }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -67,7 +70,7 @@ function Header() {
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                   <Typography 
                     textAlign="center"
-                    sx={{ color: isDarkMode ? 'primary' : 'secondary' }}
+                    sx={{ color: isDarkMode ? 'primary' : 'secondary'}}
                   >
                     {page.name}
                   </Typography>
@@ -83,32 +86,37 @@ function Header() {
               textAlign: "center",
             }}
           >
-            <JavascriptIcon sx={{ fontSize: { xs: "75px", md: "100px" } }} />
+            <IoLogoJavascript style={{ fontSize:"30px" }} />
           </IconButton>
           <ToggleThemeButton/>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between" }}>
+  {/* <<------ Monitor Larger Screens ----->>*/}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between", alignItems:"center" }}>
             <IconButton 
-              to="/"
+              href="/"
               sx={{ 
-                display: { xs: 'none', md: 'flex' }, 
+                display: { xs: 'none', md: 'flex' },
+                height:"fit-content",
                 color: isDarkMode ? 'primary' : 'secondary',
                 textDecoration: "none",
+                padding:"5px" 
               }} 
             >
-                <JavascriptIcon 
-                  sx={{ fontSize: "100px" }}
+                <IoLogoJavascript 
+                  style={{ fontSize: "50px", padding:"5px" }}
                 />
             </IconButton>
             <Box className="Navbar" sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
               {NavList.map((navlink) => (
                   <Button
+                    className="navLinksButton"
                     key={navlink.id}
                     href={navlink.url}
                     onClick={handleCloseNavMenu}
                     sx={{ 
-                      my: 2, 
+                      mx: { md: "5px", lg: "20px"},
+                      fontSize: { md: "18px", lg: "20px"},
                       color: isDarkMode ? 'white' : 'black',
                       display: 'block' 
                     }}
@@ -117,7 +125,9 @@ function Header() {
                   </Button>
               ))}
             </Box>
-            <ToggleThemeButton/>
+            <Box sx={{ height:{ md:"60px" }, width:{ md:"60px" }, padding:{ md: "5px"}, display:"flex", alignItems: "center",justifyContent:"center"}}>
+              <ToggleThemeButton/>
+            </Box>
           </Box>
         </Toolbar>
       </Container>
