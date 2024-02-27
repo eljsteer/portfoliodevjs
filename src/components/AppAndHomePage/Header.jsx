@@ -19,6 +19,11 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { NavList } from "../../layouts/NavList"
 import ToggleThemeButton from './toggleThemeButton';
 
+import { darkTheme, lightTheme } from "../../styles/Theme"; 
+
+let darkThemeText = darkTheme.palette.text
+let lightThemeText = lightTheme.palette.text
+
 function Header() {
   const { isDarkMode } = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -32,10 +37,9 @@ function Header() {
   };
 
   return (
-    <AppBar className="AppBar" position="static" >
+    <AppBar className="AppBar" position="static" sx={{backgroundColor: "rgba(0,0,0,0)"}}>
       <Container maxWidth="90%">
-        <Toolbar disableGutters sx={{backgroundColor: "rgba(0,0,0,0)"}}>
-
+        <Toolbar >
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between", alignItems: "center" }}>
             <IconButton
@@ -46,7 +50,9 @@ function Header() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon 
+                sx={{ color: isDarkMode ? darkThemeText.primary : lightThemeText.primary }}
+              />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -70,7 +76,7 @@ function Header() {
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                   <Typography 
                     textAlign="center"
-                    sx={{ color: isDarkMode ? 'primary' : 'secondary'}}
+                    sx={{ color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary }}
                   >
                     {page.name}
                   </Typography>
@@ -78,17 +84,17 @@ function Header() {
               ))}
             </Menu>
             <IconButton
-            to="/"
-            sx={{
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-            }}
-          >
-            <IoLogoJavascript style={{ fontSize:"30px" }} />
-          </IconButton>
-          <ToggleThemeButton/>
+              to="/"
+              sx={{
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <IoLogoJavascript style={{ fontSize:"30px", color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary  }} />
+            </IconButton>
+            <ToggleThemeButton/>
           </Box>
 
   {/* <<------ Monitor Larger Screens ----->>*/}
@@ -98,14 +104,18 @@ function Header() {
               sx={{ 
                 display: { xs: 'none', md: 'flex' },
                 height:"fit-content",
-                color: isDarkMode ? 'primary' : 'secondary',
+
                 textDecoration: "none",
                 padding:"5px" 
               }} 
             >
-                <IoLogoJavascript 
-                  style={{ fontSize: "50px", padding:"5px" }}
-                />
+              <IoLogoJavascript 
+                style={{ 
+                  fontSize: "50px", 
+                  padding:"5px",
+                  color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary
+                }}
+              />
             </IconButton>
             <Box className="Navbar" sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
               {NavList.map((navlink) => (
@@ -117,7 +127,7 @@ function Header() {
                     sx={{ 
                       mx: { md: "5px", lg: "20px"},
                       fontSize: { md: "18px", lg: "20px"},
-                      color: isDarkMode ? 'white' : 'black',
+                      color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary,
                       display: 'block' 
                     }}
                   >

@@ -1,16 +1,22 @@
 import { useTheme } from "../../contexts/ThemeContext";
 import IconButton from '@mui/material/IconButton';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+import { FiSun } from "react-icons/fi";
+import { FiMoon } from "react-icons/fi";
+
+import { darkTheme, lightTheme } from "../../styles/Theme"; 
+
+let darkThemeText = darkTheme.palette.text
+let lightThemeText = lightTheme.palette.text
 
 const ToggleThemeButton = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
       <IconButton 
-        sx={{display:"flex", height: "fit-content", alignItems:"center", justifyContent:"center"}}
+        sx={{display:"flex", height: "fit-content", alignItems:"center", justifyContent:"center", color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary}}
         onClick={toggleTheme} >
-        {isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+        {isDarkMode ? <FiSun /> : <FiMoon />}
       </IconButton>
   );
 };

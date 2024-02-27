@@ -8,11 +8,10 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#1976d2",
-      secondary: ""
     },
     text: {
       primary: "#000",
-      secondary: "#000"
+      secondary: "000"
     },
     background: {
       default: "#F3EDE2",
@@ -47,8 +46,8 @@ export const darkTheme = createTheme({
       secondary: "#fff"
     },
     background: {
-      default: "#051024",
-      paper: "#051024",
+      default: "#020812",
+      paper: "#020812",
     },
   },
   breakpoints: {

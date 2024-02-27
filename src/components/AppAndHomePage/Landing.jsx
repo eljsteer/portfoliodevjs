@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import { Container } from "@mui/material";
-
+import "./styles/Landing.css"
 // typed-js
 import Typed from 'typed.js';
 
@@ -28,12 +28,15 @@ function Landing() {
   }, []);
 
   return (
-    <Box >
-      <Container className="landingContainer">
-        <Typography variant="h2">Jason Steer</Typography>
-        <Typography variant="h4">
-          I am passionate about <span ref={typedJSRef} />
-        </Typography>
+    <Box className="landingContainer">
+      <Container >
+        <Box className="landingWelcomeText">
+          <Typography variant="h2">Jason Steer</Typography>
+          <Typography variant="h4">
+            I love <span ref={typedJSRef} />
+          </Typography>
+        </Box>
+        
       </Container>
     </Box>
   );
