@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
 
 import { Container } from "@mui/material";
+import { Typography } from "@mui/material";
+import Grid from '@mui/material/Unstable_Grid2';
+
 import "./styles/Landing.css"
 // typed-js
 import Typed from 'typed.js';
-
-// @mui material components
-import { Box } from "@mui/material";
-
-import { Typography } from "@mui/material";
+import ElearningHeroIllustration from "../../assets/animations/elearning-hero-illustration";
 
 function Landing() {
   const typedJSRef = useRef(null);
@@ -28,17 +27,19 @@ function Landing() {
   }, []);
 
   return (
-    <Box className="landingContainer">
-      <Container >
-        <Box className="landingWelcomeText">
+    <Container>
+      <Grid className="landingWrapper" container spacing={2}>
+        <Grid className="landingWelcomeText" xs={6} md={6}>
           <Typography variant="h2">Jason Steer</Typography>
           <Typography variant="h4">
             I love <span ref={typedJSRef} />
           </Typography>
-        </Box>
-        
-      </Container>
-    </Box>
+        </Grid>
+        <Grid className="landingWelcomeImage" xs={6} md={6}>
+          <ElearningHeroIllustration/>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
