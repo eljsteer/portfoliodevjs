@@ -82,6 +82,8 @@ const Image = forwardRef(
       />
     );
 
+    Image.displayName = 'Image';
+
     return (
       <Box
         ref={ref}

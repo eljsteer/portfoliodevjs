@@ -7,7 +7,8 @@ import { alpha, styled } from '@mui/material/styles';
 // ----------------------------------------------------------------------
 
 const StyledContent = styled('div')(({ theme }) => ({
-  width: 56,
+  width: "fitContent",
+  padding:"10px",
   height: 56,
   borderRadius: theme.shape.borderRadius * 1.5,
   position: 'relative',
