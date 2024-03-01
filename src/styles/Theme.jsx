@@ -7,11 +7,32 @@ export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#1976d2",
+      main: "#F3EDE2",
+      light: "#FFFDEB",
+      dark: "#EDE4D4",
+      contrastText: "#020812"
+    },
+    secondary: {
+      main: "#96D9D9",
+      light: "#C3E9E9",
+      dark: "#1A535C",
+      contrastText: "#020812"
+    },
+    tertiary: {
+      main: "#83781B",
+      light: "#D9CA45",
+      dark: "#776D18",
+      contrastText: "#020812"
+    },
+    accents: {
+      main: "#F1A208",
+      light: "#F9C762",
+      dark: "#C68606",
+      contrastText: "#020812"
     },
     text: {
-      primary: "#000",
-      secondary: "000"
+      primary: "#020812",
+      secondary: "#020812"
     },
     background: {
       default: "#F3EDE2",
@@ -35,15 +56,37 @@ export const darkTheme = createTheme({
   },
   palette: {
     mode: "dark",
+    common: {
+      black: "#000",
+      white: "#fff"
+    },
     primary: {
-      main: "#1976d2",
+      main: "#041025",
+      light: "#082049",
+      dark: "#020812",
+      contrastText: "#020812"
     },
     secondary: {
-      main: "#59C3C3",
+      main: "#5AC4C4",
+      light: "#87D4D4",
+      dark: "#3BA5A5",
+      contrastText: "#020812"
+    },
+    tertiary: {
+      main: "#84A98C",
+      light: "#9FBCA5",
+      dark: "#64906E",
+      contrastText: "#020812"
+    },
+    accents: {
+      main: "#E07A5F",
+      light: "#F79C82",
+      dark: "#BC4524",
+      contrastText: "#020812"
     },
     text: {
       primary: "#fff",
-      secondary: "#fff"
+      secondary: "#020812"
     },
     background: {
       default: "#020812",

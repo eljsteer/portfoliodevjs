@@ -28,6 +28,28 @@ function Header() {
   const { isDarkMode } = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
+  // Custom style for navLinksButton
+  const navLinksButtonStyle = {
+    mx: { md: "5px", lg: "20px"},
+    fontSize: { md: "18px", lg: "20px"},
+    color: isDarkMode ? darkThemeText.primary : lightThemeText.primary,
+    display: 'block',
+    position: 'relative',
+    borderBottom: '2px solid transparent',
+    transition: 'all 0.3s ease-in-out',
+    '&:hover::before': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: '2px',
+      borderBottom: `2px solid ${isDarkMode ? lightTheme.palette.primary.main : darkTheme.palette.primary.dark}`,
+      transform: 'scaleX(1)',
+      transformOrigin: '0 50%',
+    },
+  };
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -37,7 +59,7 @@ function Header() {
   };
 
   return (
-    <AppBar className="AppBar" position="static" sx={{backgroundColor: "rgba(0,0,0,0)"}}>
+    <AppBar id="back-to-top-anchor" className="AppBar" position="static" sx={{backgroundColor: "rgba(0,0,0,0)"}}>
       <Container maxWidth="90%">
         <Toolbar >
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
@@ -124,12 +146,7 @@ function Header() {
                     key={navlink.id}
                     href={navlink.url}
                     onClick={handleCloseNavMenu}
-                    sx={{ 
-                      mx: { md: "5px", lg: "20px"},
-                      fontSize: { md: "18px", lg: "20px"},
-                      color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary,
-                      display: 'block' 
-                    }}
+                    sx={navLinksButtonStyle}
                   >
                     {navlink.name}
                   </Button>

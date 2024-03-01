@@ -28,15 +28,4 @@
     width: 100%;
     transition: transform .3s ease-in-out;
 }
-/* 
-@media screen and (max-width: 600px) {  
-  .logo {
-    display: none;
-  }
-}
-@media (min-width: 900px) {
-  .css-1yo9slo-MuiToolbar-root {
-      min-height: 150px !important;
-  }
-} */
 

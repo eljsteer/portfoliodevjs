@@ -87,8 +87,8 @@ function ElearningHeroIllustration({ sx, ...other }) {
         component={motion.div}
         sx={{ position: 'absolute', left: 115, bottom: 115, zIndex: 8 }}
       >
-        <FcCommandLine 
-          style={{fontSize:"48px"}}
+        <FcMultipleDevices
+          style={{fontSize: "52px" }}
         />
       </Box>
 
@@ -97,8 +97,8 @@ function ElearningHeroIllustration({ sx, ...other }) {
         component={motion.div}
         sx={{ position: 'absolute', left: 18, top: 220, zIndex: 8 }}
       >
-        <FcMultipleDevices
-          style={{fontSize: "52px", color:"#a14f5b"}}
+        <FcCommandLine 
+          style={{fontSize:"48px"}}
         />
       </Box>
 

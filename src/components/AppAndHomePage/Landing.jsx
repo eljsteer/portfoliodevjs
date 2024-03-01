@@ -35,8 +35,8 @@ function Landing() {
             I love <span ref={typedJSRef} />
           </Typography>
         </Grid>
-        <Grid className="landingWelcomeImage" xs={6} md={6}>
-          <ElearningHeroIllustration/>
+        <Grid className="landingWelcomeImage" md={6} lg={6}>
+          <ElearningHeroIllustration />
         </Grid>
       </Grid>
     </Container>

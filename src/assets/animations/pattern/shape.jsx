@@ -1,21 +1,22 @@
 import { memo } from 'react';
 
 import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "../../../contexts/ThemeContext";
+import { darkTheme, lightTheme } from "../../../styles/Theme"; 
 
 // ----------------------------------------------------------------------
 
 function Shape({ ...other }) {
-  const theme = useTheme();
+  const { isDarkMode } = useTheme();
+  const DARK_PRIMARY_LIGHT = darkTheme.palette.accents.light;
+  const DARK_PRIMARY_MAIN = darkTheme.palette.tertiary.main;
+  const DARK_SECONDARY_LIGHT = darkTheme.palette.accents.light;
+  const DARK_SECONDARY_MAIN = darkTheme.palette.accents.main;
 
-  const PRIMARY_LIGHT = theme.palette.primary.light;
-
-  const PRIMARY_MAIN = theme.palette.primary.main;
-
-  const SECONDARY_LIGHT = theme.palette.secondary.light;
-
-  const SECONDARY_MAIN = theme.palette.secondary.main;
-
+  const LIGHT_PRIMARY_MAIN = lightTheme.palette.accents.main;
+  const LIGHT_PRIMARY_DARK = lightTheme.palette.tertiary.main;
+  const LIGHT_SECONDARY_MAIN = lightTheme.palette.accents.main;
+  const LIGHT_SECONDARY_DARK = lightTheme.palette.accents.main;
   return (
     <Box {...other}>
       <svg xmlns="http://www.w3.org/2000/svg" width="505" height="454" viewBox="0 0 505 454">
@@ -26,9 +27,10 @@ function Shape({ ...other }) {
             x2="107.911%"
             y1="42.109%"
             y2="42.109%"
-          >
-            <stop offset="0%" stopColor={SECONDARY_LIGHT} />
-            <stop offset="100%" stopColor={SECONDARY_MAIN} />
+          > 
+          {/* Bottom Tile Color Gradient Palette*/}
+            <stop offset="0%" stopColor={ isDarkMode ? DARK_SECONDARY_LIGHT : LIGHT_SECONDARY_MAIN } />
+            <stop offset="100%" stopColor={ isDarkMode ? DARK_SECONDARY_MAIN : LIGHT_SECONDARY_DARK} />
           </linearGradient>
           <linearGradient
             id="linearGradient-2"
@@ -37,8 +39,9 @@ function Shape({ ...other }) {
             y1="23.878%"
             y2="62.216%"
           >
-            <stop offset="0%" stopColor={PRIMARY_LIGHT} />
-            <stop offset="100%" stopColor={PRIMARY_MAIN} />
+          {/* Top Tile Color Gradient Palette*/}
+            <stop offset="0%" stopColor={isDarkMode ? DARK_PRIMARY_LIGHT : LIGHT_SECONDARY_MAIN } />
+            <stop offset="100%" stopColor={isDarkMode ? DARK_PRIMARY_MAIN : LIGHT_PRIMARY_DARK } />
           </linearGradient>
         </defs>
         <g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
