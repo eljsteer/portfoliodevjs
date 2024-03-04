@@ -30,7 +30,7 @@ function Shape({ ...other }) {
           > 
           {/* Bottom Tile Color Gradient Palette*/}
             <stop offset="0%" stopColor={ isDarkMode ? DARK_SECONDARY_LIGHT : LIGHT_SECONDARY_MAIN } />
-            <stop offset="100%" stopColor={ isDarkMode ? DARK_SECONDARY_MAIN : LIGHT_SECONDARY_DARK} />
+            <stop offset="100%" stopColor={ isDarkMode ? DARK_SECONDARY_MAIN : LIGHT_SECONDARY_DARK } />
           </linearGradient>
           <linearGradient
             id="linearGradient-2"
@@ -40,7 +40,7 @@ function Shape({ ...other }) {
             y2="62.216%"
           >
           {/* Top Tile Color Gradient Palette*/}
-            <stop offset="0%" stopColor={isDarkMode ? DARK_PRIMARY_LIGHT : LIGHT_SECONDARY_MAIN } />
+            <stop offset="0%" stopColor={isDarkMode ? DARK_PRIMARY_LIGHT : LIGHT_PRIMARY_MAIN } />
             <stop offset="100%" stopColor={isDarkMode ? DARK_PRIMARY_MAIN : LIGHT_PRIMARY_DARK } />
           </linearGradient>
         </defs>

@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
-import Image from "../../components/image";
+import Image from "../../utils/image";
 
 import { FcCommandLine } from "react-icons/fc"; 
 import { FcMultipleDevices } from "react-icons/fc";

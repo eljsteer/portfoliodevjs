@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -27,19 +27,19 @@ function Landing() {
   }, []);
 
   return (
-    <Container>
+    <Box>
       <Grid className="landingWrapper" container spacing={2}>
+        <Grid className="landingWelcomeImage" md={6} lg={6}>
+          <ElearningHeroIllustration />
+        </Grid>
         <Grid className="landingWelcomeText" xs={6} md={6}>
           <Typography variant="h2">Jason Steer</Typography>
           <Typography variant="h4">
             I love <span ref={typedJSRef} />
           </Typography>
         </Grid>
-        <Grid className="landingWelcomeImage" md={6} lg={6}>
-          <ElearningHeroIllustration />
-        </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 
