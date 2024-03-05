@@ -15,5 +15,14 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .swiper-pagination {
+  opacity: 0; /* initially hide pagination */
+  transition: opacity 0.3s ease-in-out; /* smooth transition effect */
+}
+
+.swiper-container:hover .swiper-pagination {
+  opacity: 1; /* show pagination on hover */
 }

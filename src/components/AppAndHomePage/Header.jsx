@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import AppBar from '@mui/material/AppBar';
+// import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -20,6 +20,7 @@ import { NavList } from "../../layouts/NavList"
 import ToggleThemeButton from './toggleThemeButton';
 
 import { darkTheme, lightTheme } from "../../styles/Theme"; 
+import { Link } from 'react-router-dom';
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text
@@ -59,9 +60,9 @@ function Header() {
   };
 
   return (
-    <AppBar id="back-to-top-anchor" className="AppBar" position="static" sx={{backgroundColor: "rgba(0,0,0,0)"}}>
+    <Box id="back-to-top-anchor" className="AppBar" position="static" sx={{display:"flex", alignItems:"center", height:"80px", backgroundColor:"#00000" }}>
       <Container maxWidth="90%">
-        <Toolbar >
+        <Toolbar sx={{}}>
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between", alignItems: "center" }}>
             <IconButton
@@ -95,18 +96,24 @@ function Header() {
               }}
             >
               {NavList.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography 
+                <Link
+                  key={page.id}
+                  to={`${page.url}`}
+                  style={{textDecoration:"none"}}
+                >
+                  <MenuItem 
+                    key={page.id}
+                    onClick={handleCloseNavMenu}
                     textAlign="center"
                     sx={{ color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary }}
-                  >
-                    {page.name}
-                  </Typography>
-                </MenuItem>
+                    >
+                      {page.name}
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
             <IconButton
-              to="/"
+              href="/"
               sx={{
                 flexDirection: "column",
                 alignItems: "center",
@@ -158,7 +165,7 @@ function Header() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </Box>
   );
 }
 export default Header;

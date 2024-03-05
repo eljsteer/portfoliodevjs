@@ -91,6 +91,7 @@ export const darkTheme = createTheme({
     background: {
       default: "#020812",
       paper: "#020812",
+      transparent: "#00000"
     },
   },
   breakpoints: {

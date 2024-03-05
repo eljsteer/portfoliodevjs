@@ -2,10 +2,12 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-creative';
+import 'swiper/css/pagination';
 
 
 import { Box } from '@mui/material';
@@ -20,17 +22,20 @@ export default function ProjectShowcase() {
   return (
     <Box 
       sx={{
-        backgroundColor: isDarkMode ? darkTheme.palette : lightTheme.palette
+        backgroundColor: isDarkMode ? darkTheme.palette.background : lightTheme.palette.background
       }}
     >
       <Grid container spacing={2}>
         <Grid xs={6}>
 
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={6} className="swiper-container">
           <Swiper
             grabCursor={true}
-            effect={'creative'}
+            effect={'creative'}            
+            pagination={{
+              dynamicBullets: true,
+            }}
             creativeEffect={{
               prev: {
                 shadow: true,
@@ -40,13 +45,20 @@ export default function ProjectShowcase() {
                 translate: ['100%', 0, 0],
               },
             }}
-            modules={[EffectCreative]}
+            modules={[EffectCreative, Pagination]}
             lazy={true}
             loop={true}
-            className="mySwiper"
+            style={{
+              "--swiper-pagination-color": isDarkMode ? darkTheme.palette.accents.main : lightTheme.palette.accents.main,
+              "--swiper-pagination-bullet-inactive-color": "#fff",
+              "--swiper-pagination-bullet-inactive-opacity": "1",
+              "--swiper-pagination-bullet-size": "12px",
+              "--swiper-pagination-bullet-horizontal-gap": "10px"
+            }}
+            className="projectShowcaseSwiper"
           >
             <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              <img src="https://images.unsplash.com/photo-1686652655595-aeb97ff65577?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&auto=format&fit=crop&w=1925&q=80" />
             </SwiperSlide>
             <SwiperSlide>
               <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
