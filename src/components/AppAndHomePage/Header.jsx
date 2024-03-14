@@ -61,8 +61,8 @@ function Header() {
 
   return (
     <Box id="back-to-top-anchor" className="AppBar" position="static" sx={{display:"flex", alignItems:"center", height:"80px", backgroundColor:"#00000" }}>
-      <Container maxWidth="90%">
-        <Toolbar sx={{}}>
+      <Container>
+        <Toolbar>
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between", alignItems: "center" }}>
             <IconButton
@@ -104,13 +104,12 @@ function Header() {
                   <MenuItem 
                     key={page.id}
                     onClick={handleCloseNavMenu}
-                    textAlign="center"
-                    sx={{ color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary }}
-                    >
-                      {page.name}
+                    sx={{ color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary, textAlign: "center" }}
+                  >
+                    {page.name}
                   </MenuItem>
                 </Link>
-              ))}
+              ))};
             </Menu>
             <IconButton
               href="/"

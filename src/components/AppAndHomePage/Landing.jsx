@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -28,7 +28,7 @@ function Landing() {
 
   return (
     <Box>
-      <Grid className="landingWrapper" container spacing={2}>
+      <Grid className="landingWrapper" container spacing={0}>
         <Grid className="landingWelcomeImage" md={6} lg={6}>
           <ElearningHeroIllustration />
         </Grid>

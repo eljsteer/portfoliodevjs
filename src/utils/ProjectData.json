@@ -1,0 +1,101 @@
+[
+  {
+    "id":1,
+    "ProjectName": "Bonzai Collective",
+    "description": "adfasdfs",
+    "Image": "https://images.unsplash.com/photo-1686652655595-aeb97ff65577?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&auto=format&fit=crop&w=1925&q=80",
+    "Technologies": [
+      {
+        "id": 1,
+        "TechName": "React",
+        "Icon": "ReactIcon"
+      },
+      {
+        "id": 2,
+        "TechName": "NodeJS",
+        "Icon": "NodeJSIcon"
+      },
+      {
+        "id": 3,
+        "TechName": "Express",
+        "Icon": "ExpressIcon"
+      },
+      {
+        "id": 4,
+        "TechName": "GraphQL",
+        "Icon": "GraphQLIcon"
+      },
+      {
+        "id": 5,
+        "TechName": "MongoDB",
+        "Icon": "MongoDBIcon"
+      }
+    ]
+  },
+  {
+    "id":2,
+    "ProjectName": "FireStarter",
+    "description": "adfasdfs",
+    "Image": "https://source.unsplash.com/random/?bonzai",
+    "Technologies": [
+      {
+        "id": 1,
+        "TechName": "React",
+        "Icon": "ReactIcon"
+      },
+      {
+        "id": 2,
+        "TechName": "NodeJS",
+        "Icon": "NodeJSIcon"
+      },
+      {
+        "id": 3,
+        "TechName": "Express",
+        "Icon": "ExpressIcon"
+      },
+      {
+        "id": 4,
+        "TechName": "GraphQL",
+        "Icon": "GraphQLIcon"
+      },
+      {
+        "id": 5,
+        "TechName": "MongoDB",
+        "Icon": "MongoDBIcon"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "ProjectName": "Marvellous",
+    "description": "adfasdfs",
+    "Image": "https://source.unsplash.com/random/?bonzai",
+    "Technologies": [
+      {
+        "id": 1,
+        "TechName": "React",
+        "Icon": "ReactIcon"
+      },
+      {
+        "id": 2,
+        "TechName": "NodeJS",
+        "Icon": "NodeJSIcon"
+      },
+      {
+        "id": 3,
+        "TechName": "Express",
+        "Icon": "ExpressIcon"
+      },
+      {
+        "id": 4,
+        "TechName": "GraphQL",
+        "Icon": "GraphQLIcon"
+      },
+      {
+        "id": 5,
+        "TechName": "MongoDB",
+        "Icon": "MongoDBIcon"
+      }
+    ]
+  }
+]

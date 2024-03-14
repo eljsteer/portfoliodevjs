@@ -62,8 +62,8 @@ function ElearningHeroIllustration({ sx, ...other }) {
   return (
     <Box
       sx={{
-        width: 670,
-        height: 670,
+        width: 660,
+        height: 660,
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
@@ -78,7 +78,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           disabledEffect
           alt="DevJS"
           src="../../images/Profile_Image_Square.png"
-          sx={{ width: 546, height: 650 }}
+          sx={{ width: 520, height: 620 }}
         />
       </Box>
 
