@@ -1,8 +1,7 @@
-/* .swiper {
-  margin: 100px auto;
-  width: 700px;
-  height: 500px;
-} */
+#swiper-container {
+  display: flex;
+  justify-content: center;
+}
 
 .swiper-slide {
   display: flex;
@@ -11,12 +10,13 @@
   font-size: 22px;
   font-weight: bold;
   color: #fff;
+  width: min-content;
 }
 
 .swiper-slide img {
   display: flex;
-  height: 350px;
-  width: 500px;
+  height: 400px;
+  width: 600px;
 }
 
 .swiper-container .swiper-pagination {

@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
-import CardMedia from '@mui/material/CardMedia';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,9 +14,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 // import ProjectData from "../utils/ProjectData.json";
 // import ProjectSlide from "./ProjectSlide";
 
-const bonzaiCollectiveIMG = "https://images.unsplash.com/photo-1686652655595-aeb97ff65577?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&auto=format&fit=crop&w=1925&q=80"
-const fireStarterIMG = "src/assets/Projects/fireStarterHomePage.jpg"
-const Marvellous = "src/assets/Projects/MarvelUniverse_Project.png"
+const bonsaiCollectiveIMG = "https://images.unsplash.com/photo-1686652655595-aeb97ff65577?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+const fireStarterIMG = "https://images.unsplash.com/photo-1557951959-e3e30ee937e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+const Marvellous = "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 import { useTheme } from "../contexts/ThemeContext";
 import { darkTheme, lightTheme } from '../styles/Theme';
@@ -33,11 +32,11 @@ export default function ProjectShowcase() {
         backgroundColor: isDarkMode ? darkTheme.palette.background : lightTheme.palette.background
       }}
     >
-      <Grid container spacing={0}>
+      <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
         <Grid xs={5}>
           <div>Place Holder</div>
         </Grid>
-        <Grid xs={5} className="swiper-container">
+        <Grid xs={5} id="swiper-container" >
           <Swiper
             grabCursor={true}
             effect={'creative'}            
@@ -65,20 +64,21 @@ export default function ProjectShowcase() {
             className="projectShowcaseSwiper"
           >
             <SwiperSlide>
-              <CardMedia
-                component="img"
-                image={fireStarterIMG}
-                alt="green iguana"
+              <img
+                src={fireStarterIMG}
+                alt="FireStarter Application"
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bonzaiCollectiveIMG}></img>
+              <img
+                src={bonsaiCollectiveIMG}
+                alt="Bonsai Collective E-commerce Application"
+              />
             </SwiperSlide>
             <SwiperSlide>
-            <CardMedia
-                component="img"
-                image={Marvellous}
-                alt="green iguana"
+              <img
+                src={Marvellous}
+                alt="Marvel Universe Application"
               />
             </SwiperSlide>
           </Swiper>
