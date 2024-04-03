@@ -5,8 +5,6 @@ import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
 import { SwiperSlide } from 'swiper/react';
 
-
-
 // import { useTheme } from "../contexts/ThemeContext";
 // import { darkTheme, lightTheme } from '../styles/Theme';
 
