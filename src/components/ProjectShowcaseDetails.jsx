@@ -1,18 +1,24 @@
+import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Divider } from '@mui/material';
+import Stack from "@mui/material/Stack"
 
-export default function ProjectShowcaseDetails() {
+export default function ProjectShowcaseDetails( { project }) {
+
+  ProjectShowcaseDetails.propTypes = {
+    project: PropTypes.object,
+  };  
+
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography variant="h5" component="div" gutterBottom>
-          Hello
+    <Card sx={{ maxWidth: 600 }}>
+      <CardContent sx={{textAlign:"center"}}>
+        <Typography variant="h4" component="div" gutterBottom>
+          {project.ProjectName}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary" >
-          adjective
+          {project.description}
         </Typography>
         <Typography variant="body2">
           well meaning and kindly.
@@ -20,9 +26,14 @@ export default function ProjectShowcaseDetails() {
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      <Divider sx={{margin:"0 10%"}}/>
+      <CardContent>
+        <Stack>
+          {/* {Project.Technologies.map((Tech) => (
+            <div key={Tech.id}>{Tech.Icon}</div>
+          ))} */}
+        </Stack>
+      </CardContent>
     </Card>
   );
 }

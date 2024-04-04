@@ -8,7 +8,7 @@ import { SwiperSlide } from 'swiper/react';
 // import { useTheme } from "../contexts/ThemeContext";
 // import { darkTheme, lightTheme } from '../styles/Theme';
 
-export default function ProjectSlide({project}) {
+export default function ProjectSlide({ project }) {
 
   ProjectSlide.propTypes = {
     project: PropTypes.object,

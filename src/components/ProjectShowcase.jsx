@@ -1,3 +1,5 @@
+// import { useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
@@ -11,8 +13,17 @@ import 'swiper/css/pagination';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
-// import ProjectData from "../utils/ProjectData.json";
-// import ProjectSlide from "./ProjectSlide";
+// const [ProjectDetails, setProjectDetails] = useState({
+//   projectName: "",
+//   description:"",
+//   technologies: [],
+// })
+
+// const handleSlideChange () => {
+
+// }
+
+import ProjectShowcaseDetails from './ProjectShowcaseDetails';
 
 const bonsaiCollectiveIMG = "https://images.unsplash.com/photo-1686652655595-aeb97ff65577?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 const fireStarterIMG = "https://images.unsplash.com/photo-1557951959-e3e30ee937e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -34,7 +45,7 @@ export default function ProjectShowcase() {
     >
       <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
         <Grid xs={5}>
-          <div>Place Holder</div>
+          <ProjectShowcaseDetails/>
         </Grid>
         <Grid xs={5} id="swiper-container" >
           <Swiper
