@@ -1,11 +1,9 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
@@ -13,21 +11,9 @@ import 'swiper/css/pagination';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
-// const [ProjectDetails, setProjectDetails] = useState({
-//   projectName: "",
-//   description:"",
-//   technologies: [],
-// })
-
-// const handleSlideChange () => {
-
-// }
+import projectData from "../utils/ProjectData.json"
 
 import ProjectShowcaseDetails from './ProjectShowcaseDetails';
-
-const bonsaiCollectiveIMG = "https://images.unsplash.com/photo-1686652655595-aeb97ff65577?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-const fireStarterIMG = "https://images.unsplash.com/photo-1557951959-e3e30ee937e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-const Marvellous = "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 import { useTheme } from "../contexts/ThemeContext";
 import { darkTheme, lightTheme } from '../styles/Theme';
@@ -36,6 +22,11 @@ import "../styles/ProjectShowcase.css"
 
 export default function ProjectShowcase() {
   const { isDarkMode } = useTheme();
+  const [selectedProject, setSelectedProject] = useState(projectData[0])
+
+  const handleSlideChange = (swiper) => {
+    setSelectedProject(projectData[swiper.activeIndex]);
+  }
 
   return (
     <Box 
@@ -45,7 +36,7 @@ export default function ProjectShowcase() {
     >
       <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
         <Grid xs={5}>
-          <ProjectShowcaseDetails/>
+          <ProjectShowcaseDetails project={selectedProject}/>
         </Grid>
         <Grid xs={5} id="swiper-container" >
           <Swiper
@@ -73,25 +64,16 @@ export default function ProjectShowcase() {
               "--swiper-pagination-bullet-horizontal-gap": "10px"
             }}
             className="projectShowcaseSwiper"
+            onSlideChange={(swiper) => handleSlideChange(swiper)}
           >
-            <SwiperSlide>
-              <img
-                src={fireStarterIMG}
-                alt="FireStarter Application"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={bonsaiCollectiveIMG}
-                alt="Bonsai Collective E-commerce Application"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={Marvellous}
-                alt="Marvel Universe Application"
-              />
-            </SwiperSlide>
+            {projectData.map(project => (
+              <SwiperSlide key={project.id}>
+                <img
+                  src={project.image}
+                  alt={project.projectName}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Grid>
       </Grid>
