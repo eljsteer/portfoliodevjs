@@ -31,6 +31,7 @@ export default function ProjectShowcase() {
   return (
     <Box 
       sx={{
+        margin: "100px 5vw",
         backgroundColor: isDarkMode ? darkTheme.palette.background : lightTheme.palette.background
       }}
     >
