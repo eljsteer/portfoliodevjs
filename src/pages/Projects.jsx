@@ -1,8 +1,11 @@
+import { Box } from "@mui/material"
+import WIPproject from "../components/WIPproject";
+
 function Projects() {
   return (
-    <div>
-      Projects
-    </div>
+    <Box sx={{display:"flex", justifyContent:"center"}}>
+      <WIPproject/>
+    </Box>
   );
 }
 

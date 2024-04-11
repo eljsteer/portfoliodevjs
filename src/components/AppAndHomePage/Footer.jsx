@@ -1,9 +1,9 @@
-
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import Box from "@mui/material/Box";
 import { Divider } from '@mui/material';
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { NavList } from '../../layouts/NavList';
@@ -12,7 +12,17 @@ import { NavList } from '../../layouts/NavList';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-function Footer({ light }) {
+import { useTheme } from '../../contexts/ThemeContext';
+import { darkTheme, lightTheme } from "../../styles/Theme"; 
+
+import "./styles/Footer.css"
+
+let darkThemeText = darkTheme.palette.text
+let lightThemeText = lightTheme.palette.text
+
+function Footer() {
+
+const { isDarkMode } = useTheme();
 
   const socials = [
     {
@@ -34,8 +44,9 @@ function Footer({ light }) {
       key={link.name}
       component={Link}
       href={link.href}
-      variant="body2"
-      fontWeight="regular"
+      variant="body1"
+      sx={{textDecoration:"none"}}
+      color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary }
     >
       {link.name}
     </Typography>
@@ -43,11 +54,11 @@ function Footer({ light }) {
 
   const renderSocials = socials.map((social) => (
     <Typography
+      className="SocialsTypo"
       key={social.link}
       component={Link}
       href={social.link}
-      variant="body2"
-      fontWeight="regular"
+      color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary }
     >
       {social.icon}
     </Typography>
@@ -55,7 +66,7 @@ function Footer({ light }) {
 
   return (
     <Box component="footer" py={6}>
-      <Divider/>
+      <Divider sx={{margin:"5vh 5%"}}/>
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
           <Stack
@@ -74,15 +85,16 @@ function Footer({ light }) {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
-          <Typography variant="body2" color={light ? "white" : "secondary"}>
+          <Typography variant="body1" color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary}>
             Copyright &copy; {year} Created with ❤️ by{" "}
             <Typography
               component={Link}
               href={href}
               target="_blank"
               rel="noreferrer"
-              variant="body2"
-              color={light ? "white" : "secondary"}
+              variant="body1"
+              sx={{textDecoration:"none"}}
+              color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary}
             >
               Jason Steer
             </Typography>
@@ -113,7 +125,6 @@ Footer.propTypes = {
   company: PropTypes.objectOf(PropTypes.string),
   links: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
   socials: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
-  light: PropTypes.bool,
 };
 
 

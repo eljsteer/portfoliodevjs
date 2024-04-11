@@ -26,17 +26,19 @@ export default function ProjectShowcase() {
 
   const handleSlideChange = (swiper) => {
     setSelectedProject(projectData[swiper.activeIndex]);
+    console.log(selectedProject)
   }
 
   return (
     <Box 
+      className="ShowcaseSection"
       sx={{
-        margin: "100px 5vw",
-        backgroundColor: isDarkMode ? darkTheme.palette.background : lightTheme.palette.background
+        padding: "100px 0px",
+        backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.dark
       }}
     >
       <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
-        <Grid xs={5}>
+        <Grid xs={5} sx={{ display:"flex", alignItems: "center" }}>
           <ProjectShowcaseDetails project={selectedProject}/>
         </Grid>
         <Grid xs={5} id="swiper-container" >
@@ -56,7 +58,6 @@ export default function ProjectShowcase() {
               },
             }}
             modules={[EffectCreative, Pagination]}
-            loop={true}
             style={{
               "--swiper-pagination-color": isDarkMode ? darkTheme.palette.accents.main : lightTheme.palette.accents.main,
               "--swiper-pagination-bullet-inactive-color": "#fff",

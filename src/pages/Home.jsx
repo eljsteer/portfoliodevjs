@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="homePage">
       <Landing />
-      <ProjectShowcase />
+      <ProjectShowcase/>
     </div>
   ) 
 }
