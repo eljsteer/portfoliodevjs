@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Card, CardActionArea, CardMedia } from "@mui/material"
 
-export default function WIPproject( { project }) {
+export default function WIPproject() {
 
   WIPproject.propTypes = {
     project: PropTypes.object,
