@@ -1,0 +1,22 @@
+.landingWrapper {
+  height: 100svh;
+}
+
+.landingWelcomeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingWelcomeImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {  
+  .logo {
+    display: none;
+  }
+}
