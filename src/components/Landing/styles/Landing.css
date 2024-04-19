@@ -23,7 +23,9 @@
 
 @media screen and (max-width: 1200px) {  
   .landingWelcomeText {
-    margin: 10vh;
+    margin: 10svh;
+  }
+  .landingWrapper {
+    height: 110svh;
   }
 }
-
