@@ -1,7 +1,7 @@
 
-import Landing from "../components/AppAndHomePage/Landing";
-import ProjectShowcase from "../components/ProjectShowcase";
-import LandingContact from "../components/landingContact";
+import Landing from "../components/Landing/Landing";
+import ProjectShowcase from "../components/ProjectShowcase/ProjectShowcase";
+import HomeContact from "../components/HomeContact/HomeContact";
 
 // import "../styles/Header.css"
 
@@ -10,7 +10,7 @@ function Home() {
     <div className="homePage">
       <Landing />
       <ProjectShowcase/>
-      <LandingContact/>
+      <HomeContact/>
     </div>
   ) 
 }

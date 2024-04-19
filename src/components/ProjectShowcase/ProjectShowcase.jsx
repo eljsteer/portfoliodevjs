@@ -18,7 +18,7 @@ import ProjectShowcaseDetails from './ProjectShowcaseDetails';
 import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from '../../styles/Theme';
 
-import "../styles/ProjectShowcase.css"
+import "./styles/ProjectShowcase.css"
 
 export default function ProjectShowcase() {
   const { isDarkMode } = useTheme();

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/AppAndHomePage/Header";
-import Footer from "../components/AppAndHomePage/Footer";
-import ScrollUpTop from "../components/AppAndHomePage/ScrollUpTop";
+import Header from "../components/AppComponents/Header";
+import Footer from "../components/AppComponents/Footer";
+import ScrollUpTop from "../components/AppComponents/ScrollUpTop";
 
 import { Paper } from "@mui/material"
 

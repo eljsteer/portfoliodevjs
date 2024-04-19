@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
 import Button from "@mui/material/Button"
 
-import "../styles/landingContact.css"
+import "./styles/HomeContact.css"
 
 function HomeContact() {
   return (
