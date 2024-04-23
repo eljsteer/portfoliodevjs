@@ -1,6 +1,7 @@
 #swiper-container {
   display: flex;
   justify-content: center;
+  width: 600px;
 }
 
 .swiper-slide {
@@ -10,13 +11,12 @@
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  width: min-content;
 }
 
 .swiper-slide img {
   display: flex;
-  height: 400px;
-  width: 600px;
+  max-height: 400px;
+  width: 100%;
 }
 
 .swiper-container .swiper-pagination {

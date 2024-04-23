@@ -40,7 +40,7 @@ export default function ProjectShowcaseDetails( { project }) {
     }
   }
   return (
-    <Card sx={{ maxWidth: 600 }}>
+    <Card elevation={3} sx={{ maxWidth: 600 }}>
       <CardContent sx={{textAlign:"center"}}>
         <Typography variant="h4" component="div" gutterBottom>
           {project.projectName}

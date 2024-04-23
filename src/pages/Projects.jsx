@@ -1,5 +1,5 @@
 import { Box } from "@mui/material"
-import WIPproject from "../components/ProjectShowcase/WIPproject";
+import WIPproject from "../components/WIPproject";
 
 function Projects() {
   return (

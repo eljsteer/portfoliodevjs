@@ -34,7 +34,7 @@ export default function ProjectShowcase() {
       className="ShowcaseSection"
       sx={{
         padding: "10% 0px",
-        backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.dark
+        backgroundColor: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main
       }}
     >
       <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
@@ -71,7 +71,7 @@ export default function ProjectShowcase() {
             {projectData.map(project => (
               <SwiperSlide key={project.id}>
                 <img
-                  src={project.image}
+                  srcSet={project.image}
                   alt={project.projectName}
                 />
               </SwiperSlide>
