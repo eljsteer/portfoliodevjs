@@ -5,11 +5,11 @@ import "./styles/HomeContact.css"
 
 function HomeContact() {
   return (
-    <Box class="banner">
-      <Box class="gradientContainer">
+    <Box className="banner">
+      <Box className="gradientContainer">
       </Box>
-      <Box class="textContainer">
-        <Box class="contactText">
+      <Box className="textContainer">
+        <Box className="contactText">
           <Typography>
             Let&apos;s connect and explore how we can collaborate. Reach out to learn more about me and discuss working together!
           </Typography>

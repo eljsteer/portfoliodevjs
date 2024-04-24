@@ -68,12 +68,21 @@ export default function ProjectShowcase() {
             className="projectShowcaseSwiper"
             onSlideChange={(swiper) => handleSlideChange(swiper)}
           >
-            {projectData.map(project => (
+            {projectData.map((project) => (
               <SwiperSlide key={project.id}>
-                <img
-                  srcSet={project.image}
-                  alt={project.projectName}
-                />
+                {project.images && project.images.length > 0 ? (
+                  <img
+                    className="projectShowcaseIMG"
+                    src={project.images[0].src}
+                    srcSet={project.images.map(
+                      (image) => `${image.src} ${image.width}w`
+                    ).join(", ")}
+                    loading="lazy"
+                    alt={project.projectName}
+                  />
+                ) : (
+                  <div>No image available</div>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>
@@ -82,3 +91,4 @@ export default function ProjectShowcase() {
     </Box>
   );
 }
+
