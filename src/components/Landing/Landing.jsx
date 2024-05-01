@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
-import ElearningHeroIllustration from "../../assets/animations/elearning-hero-illustration";
+import ElearningHeroIllustration from "../../utils/animations/elearning-hero-illustration";
 
 import "./styles/Landing.css"
 // typed-js

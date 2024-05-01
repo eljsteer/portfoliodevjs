@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import projectData from "../../utils/ProjectData.json"
+import ProjectData from "../../utils/ProjectData.json"
 
 import ProjectShowcaseDetails from './ProjectShowcaseDetails';
 
@@ -21,13 +21,28 @@ import { darkTheme, lightTheme } from '../../styles/Theme';
 import "./styles/ProjectShowcase.css"
 
 export default function ProjectShowcase() {
+  const swiperRef = useRef(null);
   const { isDarkMode } = useTheme();
-  const [selectedProject, setSelectedProject] = useState(projectData[0])
+  const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
+  const [swiperKey, setSwiperKey] = useState(0); 
 
-  const handleSlideChange = (swiper) => {
-    setSelectedProject(projectData[swiper.activeIndex]);
-    console.log(selectedProject)
-  }
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.on('slideChange', handleSlideChange);
+    }
+  }, [swiperRef]);
+
+  useEffect(() => {
+    setSwiperKey((prevKey) => prevKey + 1);
+  }, []);
+
+  const handleSlideChange = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const activeIndex = swiperRef.current.swiper.activeIndex;
+      setSelectedProject(ProjectData[activeIndex]);
+    }
+  };
+
 
   return (
     <Box 
@@ -41,8 +56,10 @@ export default function ProjectShowcase() {
         <Grid xs={5} sx={{ display:"flex", alignItems: "center" }}>
           <ProjectShowcaseDetails project={selectedProject}/>
         </Grid>
-        <Grid xs={5} id="swiper-container" >
+        <Grid xs={5} id="swiper-container">
           <Swiper
+            key={swiperKey}
+            ref={swiperRef}
             grabCursor={true}
             effect={'creative'}            
             pagination={{
@@ -68,7 +85,7 @@ export default function ProjectShowcase() {
             className="projectShowcaseSwiper"
             onSlideChange={(swiper) => handleSlideChange(swiper)}
           >
-            {projectData.map((project) => (
+            {ProjectData.map((project) => (
               <SwiperSlide key={project.id}>
                 {project.images && project.images.length > 0 ? (
                   <img
@@ -77,7 +94,6 @@ export default function ProjectShowcase() {
                     srcSet={project.images.map(
                       (image) => `${image.src} ${image.width}w`
                     ).join(", ")}
-                    loading="lazy"
                     alt={project.projectName}
                   />
                 ) : (
