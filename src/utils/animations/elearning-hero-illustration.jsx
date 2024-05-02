@@ -72,16 +72,15 @@ function ElearningHeroIllustration({ sx, ...other }) {
       }}
       {...other}
     >
-      <Box sx={{ position: 'absolute', right: 18, bottom: 28, zIndex: 8 }}>
+      <Box sx={{ position: 'absolute', right: 70, bottom: 100, zIndex: 5 }}>
         <Image
           visibleByDefault
           disabledEffect
           alt="DevJS"
-          src="../../images/Profile_Image_Square.png"
-          sx={{ width: 520, height: 620 }}
+          src="src/assets/images/Profile_Image1_Square.png"
+          sx={{ width: 440, height: 600, borderRadius: "25%" }}
         />
       </Box>
-
       <Box
         {...varDown}
         component={motion.div}
@@ -91,7 +90,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           style={{fontSize: "52px" }}
         />
       </Box>
-
+      
       <Box
         {...varRight}
         component={motion.div}
@@ -125,7 +124,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           }}
         />
       </Box>
-
+      
       {/* Icon */}
 
       <Box
@@ -155,7 +154,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           sx={{ transform: 'scale(1.2) translateY(20px) rotate(15deg)' }}
         />
       </Box>
-
+      
       <Box {...varDown} component={motion.div} sx={{ zIndex: 8, position: 'absolute' }}>
         <Icon
           color={BLUE}
@@ -168,7 +167,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
 
       <Pattern01 sx={{ left: 0, top: 0 }} />
       <Pattern02 sx={{ top: 0, left: 0, opacity: 0.24, transform: 'scale(1.2)' }} />
-      <Shape sx={{ position: 'absolute', right: 32, bottom: 32 }} />
+      <Shape sx={{ position: 'absolute', right: 32, bottom: 32, zIndex: 2 }} />
     </Box>
   );
 }

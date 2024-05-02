@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCreative } from 'swiper/modules';
+// import { EffectCreative } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
@@ -21,28 +21,13 @@ import { darkTheme, lightTheme } from '../../styles/Theme';
 import "./styles/ProjectShowcase.css"
 
 export default function ProjectShowcase() {
-  const swiperRef = useRef(null);
   const { isDarkMode } = useTheme();
   const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
-  const [swiperKey, setSwiperKey] = useState(0); 
 
-  useEffect(() => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.on('slideChange', handleSlideChange);
-    }
-  }, [swiperRef]);
-
-  useEffect(() => {
-    setSwiperKey((prevKey) => prevKey + 1);
-  }, []);
-
-  const handleSlideChange = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      const activeIndex = swiperRef.current.swiper.activeIndex;
-      setSelectedProject(ProjectData[activeIndex]);
-    }
+  const handleSlideChange = (swiper) => {
+    const activeIndex = swiper.activeIndex;
+    setSelectedProject(ProjectData[activeIndex]);
   };
-
 
   return (
     <Box 
@@ -58,8 +43,6 @@ export default function ProjectShowcase() {
         </Grid>
         <Grid xs={5} id="swiper-container">
           <Swiper
-            key={swiperKey}
-            ref={swiperRef}
             grabCursor={true}
             effect={'creative'}            
             pagination={{
@@ -74,7 +57,7 @@ export default function ProjectShowcase() {
                 translate: ['100%', 0, 0],
               },
             }}
-            modules={[EffectCreative, Pagination]}
+            modules={[Pagination]}
             style={{
               "--swiper-pagination-color": isDarkMode ? darkTheme.palette.accents.main : lightTheme.palette.accents.main,
               "--swiper-pagination-bullet-inactive-color": "#fff",
@@ -107,4 +90,3 @@ export default function ProjectShowcase() {
     </Box>
   );
 }
-
