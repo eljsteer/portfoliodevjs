@@ -13,13 +13,13 @@ import { SiApollographql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-
+import ProjectButtons from "../AppComponents/ProjectButtons"
 
 export default function ProjectShowcaseDetails( { project }) {
 
   ProjectShowcaseDetails.propTypes = {
     project: PropTypes.object,
-  };  
+  }; 
 
   const mapIcon = (TechName) => {
     switch (TechName) {
@@ -39,6 +39,7 @@ export default function ProjectShowcaseDetails( { project }) {
         return <SiMongodb />;
     }
   }
+
   return (
     <Card elevation={3} sx={{ maxWidth: 600 }}>
       <CardContent sx={{textAlign:"center"}}>
@@ -53,8 +54,14 @@ export default function ProjectShowcaseDetails( { project }) {
       <CardContent>
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           {project.technologies.map((tech) => (
-            <Typography variant="h5" key={tech.id}>{mapIcon(tech.TechName)}</Typography>
+            <Typography variant="h4" key={tech.id}>{mapIcon(tech.TechName)}</Typography>
           ))}
+        </Stack>
+      </CardContent>
+      <CardContent sx={{display: "flex", justifyContent:"center"}}>
+        <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
+          <ProjectButtons text="View Live" href={project.deployedLink}/>
+          <ProjectButtons text="View Github" href={project.github}/>
         </Stack>
       </CardContent>
     </Card>

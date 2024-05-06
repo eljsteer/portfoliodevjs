@@ -1,6 +1,6 @@
 
-import Landing from "../components/Landing/Landing";
-import ProjectShowcase from "../components/ProjectShowcase/ProjectShowcase";
+import Landing from "../components/HomeLanding/Landing";
+import ProjectShowcase from "../components/HomeProjectShowcase/ProjectShowcase";
 import HomeContact from "../components/HomeContact/HomeContact";
 
 // import "../styles/Header.css"

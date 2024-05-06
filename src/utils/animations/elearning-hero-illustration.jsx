@@ -72,13 +72,13 @@ function ElearningHeroIllustration({ sx, ...other }) {
       }}
       {...other}
     >
-      <Box sx={{ position: 'absolute', right: 70, bottom: 100, zIndex: 5 }}>
+      <Box sx={{ position: 'absolute', right: 80, bottom: 100, zIndex: 5 }}>
         <Image
           visibleByDefault
           disabledEffect
           alt="DevJS"
           src="src/assets/images/Profile_Image1_Square.png"
-          sx={{ width: 440, height: 600, borderRadius: "25%" }}
+          sx={{ width: 420, height: 600, borderRadius: "60px" }}
         />
       </Box>
       <Box
