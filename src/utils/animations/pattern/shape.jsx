@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import Box from '@mui/material/Box';
 import { useTheme } from "../../../contexts/ThemeContext";
-import { darkTheme, lightTheme } from "../../../styles/Theme"; 
+import { darkTheme, lightTheme } from "../../../Theme.jsx"; 
 
 // ----------------------------------------------------------------------
 

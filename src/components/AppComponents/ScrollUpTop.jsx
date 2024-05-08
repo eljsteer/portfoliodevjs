@@ -7,11 +7,11 @@ import { useScrollTrigger } from "@mui/material";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-import "./styles/Header.css"
+import "../../styles/header.scss"
 
 import { useTheme } from '../../contexts/ThemeContext';
 
-import { darkTheme, lightTheme } from "../../styles/Theme"; 
+import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 
 //// --- Scroll to Top Arrow JSX function --- //// 
 function ScrollTop(props) {

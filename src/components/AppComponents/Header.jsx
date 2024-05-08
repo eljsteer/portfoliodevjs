@@ -10,14 +10,14 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { IoLogoJavascript } from "react-icons/io";
 
-import "./styles/Header.css"
+import "../../styles/header.scss"
 
 import { useTheme } from '../../contexts/ThemeContext';
 
 import { NavList } from "../../layouts/NavList"
 import ToggleThemeButton from './toggleThemeButton';
 
-import { darkTheme, lightTheme } from "../../styles/Theme"; 
+import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 import { Link } from 'react-router-dom';
 
 let darkThemeText = darkTheme.palette.text

@@ -13,9 +13,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { useTheme } from '../../contexts/ThemeContext';
-import { darkTheme, lightTheme } from "../../styles/Theme"; 
+import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 
-import "./styles/Footer.css"
+import "../../styles/footer.scss"
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text

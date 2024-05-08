@@ -5,7 +5,7 @@ import ScrollUpTop from "../components/AppComponents/ScrollUpTop";
 
 import { Paper } from "@mui/material"
 
-import "../styles/RootLayout.css"
+import "./rootlayout.css"
 
 export default function RootLayout() {
   return (

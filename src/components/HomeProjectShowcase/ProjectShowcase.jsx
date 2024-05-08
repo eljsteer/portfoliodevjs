@@ -16,7 +16,7 @@ import ProjectData from "../../utils/ProjectData.json"
 import ProjectShowcaseDetails from './ProjectShowcaseDetails';
 
 import { useTheme } from "../../contexts/ThemeContext";
-import { darkTheme, lightTheme } from '../../styles/Theme';
+import { darkTheme, lightTheme } from "../../Theme.jsx";
 
 import "./styles/ProjectShowcase.css"
 

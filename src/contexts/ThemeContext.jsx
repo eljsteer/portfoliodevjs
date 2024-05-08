@@ -3,7 +3,7 @@
 import { PropTypes } from 'prop-types';
 // ThemeContext.jsx
 import { createContext, useContext, useEffect, useState, useMemo } from 'react';
-import { lightTheme, darkTheme } from '../styles/Theme';
+import { lightTheme, darkTheme } from '../Theme';
 import { useMediaQuery, ThemeProvider } from '@mui/material';
 
 const ThemeContext = createContext();

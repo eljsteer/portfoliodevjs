@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import { FiSun } from "react-icons/fi";
 import { FiMoon } from "react-icons/fi";
 
-import { darkTheme, lightTheme } from "../../styles/Theme"; 
+import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text
