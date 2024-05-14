@@ -10,33 +10,17 @@
   place-items: center;
 }
 
-.contactButton {
-  border-radius: 0;
-  border: 2px solid;
-  margin: 10px;
-}
-
 .contactText {
   font-weight: 600;
   color: #fff;
 }
-
-/* .banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0.5), transparent);
-} */
 
 .gradientContainer {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 75%;
+  width: 80%;
   height: 100%;
   background: linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0.9), transparent);
 }
@@ -52,4 +36,16 @@
   z-index: 1;
   color: #fff;
   width: 30%;
+}
+
+.ContactButton.lightTheme:hover {
+  border: 2px solid white;
+  background-color: var(--light-secondary-dark);
+  transition: background-color 0.8s ease;
+}
+
+.ContactButton.darkTheme:hover {
+  border: 2px solid var(--dark-text-primary);
+  background-color: var(--dark-secondary-dark);
+  transition: background-color 0.8s ease;
 }

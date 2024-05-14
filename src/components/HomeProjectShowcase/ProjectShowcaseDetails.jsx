@@ -13,7 +13,7 @@ import { SiApollographql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-import ProjectButtons from "../AppComponents/ProjectButtons"
+import ProjectButton from "./ProjectButton"
 
 export default function ProjectShowcaseDetails( { project }) {
 
@@ -60,8 +60,8 @@ export default function ProjectShowcaseDetails( { project }) {
       </CardContent>
       <CardContent sx={{display: "flex", justifyContent:"center"}}>
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
-          <ProjectButtons text="View Live" href={project.deployedLink}/>
-          <ProjectButtons text="View Github" href={project.github}/>
+          <ProjectButton text="View Live" href={project.deployedLink}/>
+          <ProjectButton text="View Github" href={project.github}/>
         </Stack>
       </CardContent>
     </Card>

@@ -64,29 +64,29 @@ export const darkTheme = createTheme({
       main: "#041025",
       light: "#082049",
       dark: "#020812",
-      contrastText: "#020812"
+      contrastText: "#F3EDE2"
     },
     secondary: {
       main: "#5AC4C4",
       light: "#87D4D4",
       dark: "#3BA5A5",
-      contrastText: "#020812"
+      contrastText: "#F3EDE2"
     },
     tertiary: {
       main: "#84A98C",
       light: "#9FBCA5",
       dark: "#64906E",
-      contrastText: "#020812"
+      contrastText: "#F3EDE2"
     },
     accents: {
       main: "#E07A5F",
       light: "#F79C82",
       dark: "#BC4524",
-      contrastText: "#020812"
+      contrastText: "#F3EDE2"
     },
     text: {
       primary: "#fff",
-      secondary: "#020812"
+      secondary: "#F3EDE2"
     },
     background: {
       default: "#020812",

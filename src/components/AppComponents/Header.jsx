@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { IoLogoJavascript } from "react-icons/io";
 
-import "../../styles/header.scss"
+import "./styles/header.css"
 
 import { useTheme } from '../../contexts/ThemeContext';
 

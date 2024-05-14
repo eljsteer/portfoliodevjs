@@ -7,7 +7,7 @@ import { useScrollTrigger } from "@mui/material";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-import "../../styles/header.scss"
+import "./styles/header.css"
 
 import { useTheme } from '../../contexts/ThemeContext';
 

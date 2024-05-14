@@ -1,0 +1,11 @@
+.ProjectButton.lightTheme:hover {
+  border: 2px solid var(--light-text-primary);
+  background-color: var(--light-secondary-light);
+  transition: background-color 0.8s ease;
+}
+
+.ProjectButton.darkTheme:hover {
+  border: 2px solid var(--dark-text-primary);
+  background-color: var(--dark-secondary-dark);
+  transition: background-color 0.8s ease;
+}

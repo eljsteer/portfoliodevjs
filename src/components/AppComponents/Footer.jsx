@@ -15,7 +15,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTheme } from '../../contexts/ThemeContext';
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 
-import "../../styles/footer.scss"
+import "./styles/footer.css"
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text
