@@ -2,11 +2,7 @@ import { Box, Typography } from "@mui/material"
 import Button from "@mui/material/Button"
 
 import { useTheme } from "../../contexts/ThemeContext.jsx";
-import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 import "./styles/homeContact.css"
-
-let darkThemeText = darkTheme.palette.text
-let lightThemeText = lightTheme.palette.text
 
 function HomeContact() {
 
