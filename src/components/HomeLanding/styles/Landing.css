@@ -22,10 +22,11 @@
 }
 
 @media screen and (max-width: 1200px) {  
-  .landingWelcomeText {
-    margin: 10svh;
-  }
   .landingWrapper {
     height: 110svh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 }

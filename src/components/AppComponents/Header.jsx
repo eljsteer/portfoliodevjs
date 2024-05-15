@@ -50,11 +50,11 @@ function Header() {
   };
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+    setAnchorElNav(event.currentTarget)
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    setAnchorElNav(null)
   };
 
   return (
@@ -107,7 +107,7 @@ function Header() {
                     {page.name}
                   </MenuItem>
                 </Link>
-              ))};
+              ))}
             </Menu>
             <IconButton
               href="/"

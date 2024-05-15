@@ -8,15 +8,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
+  max-height: 400px;
+  padding: 0;
+  margin: 0;
 }
 
 .swiper-slide img {
-  display: flex;
-  max-height: 400px;
-  width: 100%;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.ShowDetails {
+  justify-content: center;
+  margin: 20px;
+}
+.ShowImages {
+  justify-content: center;
+  margin: 20px;
 }
 
 .swiper-container .swiper-pagination {
@@ -26,4 +35,13 @@
 
 .swiper-container:hover .swiper-pagination {
   opacity: 1; /* show pagination on hover */
+}
+
+@media screen and (max-width: 800px) {  
+  .ShowDetails {
+    margin: 30px;
+  }
+  .ShowImages {
+    margin: 30px;
+  }
 }

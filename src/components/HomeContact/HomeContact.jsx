@@ -15,7 +15,7 @@ function HomeContact() {
       <Box className="textContainer">
         <Box className="contactText">
           <Typography>
-            Let&apos;s connect and explore how we can collaborate. Reach out to learn more about me and discuss working together!
+            Let&apos;s connect and explore how we can collaborate. Reach out to learn more about me and discuss working together.
           </Typography>
         </Box>
         <Button 

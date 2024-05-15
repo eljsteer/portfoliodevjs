@@ -27,6 +27,7 @@ export default function ProjectShowcase() {
   const handleSlideChange = (swiper) => {
     const activeIndex = swiper.activeIndex;
     setSelectedProject(ProjectData[activeIndex]);
+    console.log(ProjectData[activeIndex])
   };
 
   return (
@@ -34,14 +35,14 @@ export default function ProjectShowcase() {
       className="ShowcaseSection"
       sx={{
         padding: "10% 0px",
-        backgroundColor: isDarkMode ? darkTheme.palette.primary.main : lightTheme.palette.primary.main
+        backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main
       }}
     >
-      <Grid container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
-        <Grid xs={5} sx={{ display:"flex", alignItems: "center" }}>
+      <Grid className="ShowcaseWrapper" container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
+        <Grid className="ShowDetails" sx={{ display:"flex", alignItems: "center" }}>
           <ProjectShowcaseDetails project={selectedProject}/>
         </Grid>
-        <Grid xs={5} id="swiper-container">
+        <Grid className="ShowImages" xs={6} id="swiper-container">
           <Swiper
             grabCursor={true}
             effect={'creative'}            
