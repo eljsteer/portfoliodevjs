@@ -14,8 +14,11 @@ function HomeContact() {
       </Box>
       <Box className="textContainer">
         <Box className="contactText">
-          <Typography>
+          <Typography className="contactTextLargeScreen">
             Let&apos;s connect and explore how we can collaborate. Reach out to learn more about me and discuss working together.
+          </Typography>
+          <Typography className="contactTextSmallScreen">
+            Let&apos;s connect!
           </Typography>
         </Box>
         <Button 

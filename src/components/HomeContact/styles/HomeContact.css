@@ -32,10 +32,14 @@
 .textContainer {
   position: absolute;
   text-align: center;
-  left: 5%;
+  left: 10%;
   z-index: 1;
   color: #fff;
   width: 30%;
+}
+
+.contactTextSmallScreen {
+  display: none;
 }
 
 .ContactButton.lightTheme:hover {
@@ -48,4 +52,38 @@
   border: 2px solid var(--dark-text-primary);
   background-color: var(--dark-secondary-dark);
   transition: background-color 0.8s ease;
+}
+
+@media screen and (max-width: 500px) {  
+  .banner {
+    background: url("src/assets/images/tim-marshall-wHgcJ4gVCQY-unsplash_400px.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contactTextLargeScreen {
+    display: none;
+  }
+  .contactTextSmallScreen {
+    display: none;
+  }
+
+  .gradientContainer {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,1),rgba(0,0,0,0.82), transparent);
+  }
+
+  .textContainer {
+    display: flex;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    z-index: 1;
+    color: #fff;
+  }
 }
