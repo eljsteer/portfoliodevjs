@@ -4,6 +4,10 @@
   width: 600px;
 }
 
+.ShowcaseSection {
+  padding: 10svh 0svh;
+}
+
 .swiper-slide {
   display: flex;
   align-items: center;
@@ -38,6 +42,9 @@
 }
 
 @media screen and (max-width: 800px) {  
+  .ShowcaseSection {
+    padding: 30px;
+  }
   .ShowDetails {
     margin: 30px;
   }

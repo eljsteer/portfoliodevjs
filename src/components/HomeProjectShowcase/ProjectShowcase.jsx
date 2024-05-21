@@ -34,7 +34,6 @@ export default function ProjectShowcase() {
     <Box 
       className="ShowcaseSection"
       sx={{
-        padding: "10% 0px",
         backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main
       }}
     >
