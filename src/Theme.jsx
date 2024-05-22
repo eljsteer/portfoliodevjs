@@ -1,8 +1,14 @@
 import { createTheme } from "@mui/material";
 
 export const lightTheme = createTheme({
-  typography: {
-    fontFamily: 'Montserrat, sans-serif',
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1800,
+    },
   },
   palette: {
     mode: "light",
@@ -39,6 +45,47 @@ export const lightTheme = createTheme({
       paper: "#F3EDE2",
     },
   },
+  typography: {
+    fontFamily: 'Montserrat, sans-serif',
+    h2: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h3: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h4: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h5: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h6: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    subtitle1: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    body1: {
+      '@media (max-width:600px)': {
+        fontSize: "1rem",
+      },
+    }
+  },
+});
+
+export const darkTheme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -47,12 +94,6 @@ export const lightTheme = createTheme({
       lg: 1200,
       xl: 1800,
     },
-  },
-});
-
-export const darkTheme = createTheme({
-  typography: {
-    fontFamily: 'Montserrat, sans-serif',
   },
   palette: {
     mode: "dark",
@@ -94,14 +135,43 @@ export const darkTheme = createTheme({
       transparent: "#00000"
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1800,
+  typography: {
+    fontFamily: 'Montserrat, sans-serif',
+    h2: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
     },
+    h3: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h4: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h5: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    h6: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    subtitle1: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    },
+    body1: {
+      '@media (max-width:600px)': {
+        fontSize: "1.5rem",
+      },
+    }
   },
 });
 

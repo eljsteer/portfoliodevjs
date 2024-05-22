@@ -15,6 +15,8 @@ import { SiExpress } from "react-icons/si";
 
 import ProjectButton from "./ProjectButton"
 
+import "./styles/projectShowcaseDetails.css"
+
 export default function ProjectShowcaseDetails( { project }) {
 
   ProjectShowcaseDetails.propTypes = {
@@ -41,24 +43,24 @@ export default function ProjectShowcaseDetails( { project }) {
   }
 
   return (
-    <Card elevation={3} sx={{ maxWidth: 600 }}>
-      <CardContent sx={{textAlign:"center"}}>
-        <Typography variant="h4" component="div" gutterBottom>
+    <Card className="detailsCardContainer" elevation={3}>
+      <CardContent className="detailsCardContent">
+        <Typography>
           {project.projectName}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} >
+        <Typography className="detailsDecription">
           {project.description}
         </Typography>
       </CardContent>
-      <Divider sx={{margin:"0 10%"}}/>
+      <Divider className="detailsDivider"/>
       <CardContent>
-        <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
+        <Stack className="detailsTechIcons" display="flex" direction="row" justifyContent="center" spacing={2}>
           {project.technologies.map((tech) => (
             <Typography variant="h4" key={tech.id}>{mapIcon(tech.TechName)}</Typography>
           ))}
         </Stack>
       </CardContent>
-      <CardContent sx={{display: "flex", justifyContent:"center"}}>
+      <CardContent className="detailsButtons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           <ProjectButton text="View Live" href={project.deployedLink}/>
           <ProjectButton text="View Github" href={project.github}/>

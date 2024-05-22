@@ -4,6 +4,11 @@
   width: 600px;
 }
 
+.ShowcaseWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .ShowcaseSection {
   padding: 10svh 0svh;
 }
@@ -24,6 +29,8 @@
 }
 
 .ShowDetails {
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin: 20px;
 }

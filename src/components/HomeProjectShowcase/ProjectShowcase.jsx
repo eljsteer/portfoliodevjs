@@ -31,14 +31,9 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <Box 
-      className="ShowcaseSection"
-      sx={{
-        backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main
-      }}
-    >
-      <Grid className="ShowcaseWrapper" container spacing={0} sx={{display:"flex", justifyContent:"center"}}>
-        <Grid className="ShowDetails" sx={{ display:"flex", alignItems: "center" }}>
+    <Box className="ShowcaseSection"sx={{ backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main}}>
+      <Grid className="ShowcaseWrapper" container spacing={0}>
+        <Grid className="ShowDetails">
           <ProjectShowcaseDetails project={selectedProject}/>
         </Grid>
         <Grid className="ShowImages" xs={6} id="swiper-container">

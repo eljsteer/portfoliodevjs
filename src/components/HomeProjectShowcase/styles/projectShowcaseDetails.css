@@ -1,0 +1,17 @@
+.detailsCardContainer {
+  max-width: 600;
+}
+.detailsCardContent {
+  text-align: center;
+}
+.detailsDescription {
+  margin-bottom: 1.5;
+}
+
+.detailsDivider {
+  margin: 0 10%;
+}
+.detailsButtons {
+  display: flex;
+  justify-content: center;
+}
