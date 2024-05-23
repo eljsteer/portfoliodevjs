@@ -48,8 +48,15 @@ export const lightTheme = createTheme({
   typography: {
     fontFamily: 'Montserrat, sans-serif',
     h2: {
+      fontSize: "4rem",
+      '@media (max-width:800px)': {
+        fontSize: "3rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "2.2rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "1.8rem",
       },
     },
     h3: {
@@ -58,23 +65,45 @@ export const lightTheme = createTheme({
       },
     },
     h4: {
+      fontSize: "2rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.6rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1.4rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "1rem",
       },
     },
     h5: {
+      fontSize: "1.6rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.4rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1.3rem",
       },
     },
     h6: {
+      fontSize: "1.6rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.2rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "0.8rem",
       },
     },
     subtitle1: {
-      '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+      fontSize: "1.3rem",
+      '@media (max-width:1000px)': {
+        fontSize: "1.2rem",
+      },
+      '@media (max-width:800px)': {
+        fontSize: "1.1rem",
       },
     },
     body1: {
@@ -138,8 +167,15 @@ export const darkTheme = createTheme({
   typography: {
     fontFamily: 'Montserrat, sans-serif',
     h2: {
+      fontSize: "4rem",
+      '@media (max-width:800px)': {
+        fontSize: "3rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "2.2rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "1.8rem",
       },
     },
     h3: {
@@ -148,28 +184,50 @@ export const darkTheme = createTheme({
       },
     },
     h4: {
+      fontSize: "2rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.6rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1.4rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "1rem",
       },
     },
     h5: {
+      fontSize: "1.6rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.4rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1.3rem",
       },
     },
     h6: {
+      fontSize: "1.6rem",
+      '@media (max-width:800px)': {
+        fontSize: "1.2rem",
+      },
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1rem",
+      },
+      '@media (max-width:400px)': {
+        fontSize: "0.8rem",
       },
     },
     subtitle1: {
-      '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+      fontSize: "1.3rem",
+      '@media (max-width:1000px)': {
+        fontSize: "1.2rem",
+      },
+      '@media (max-width:800px)': {
+        fontSize: "1.1rem",
       },
     },
     body1: {
       '@media (max-width:600px)': {
-        fontSize: "1.5rem",
+        fontSize: "1rem",
       },
     }
   },

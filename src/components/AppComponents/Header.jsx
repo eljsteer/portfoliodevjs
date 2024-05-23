@@ -58,7 +58,7 @@ function Header() {
   };
 
   return (
-    <Box id="back-to-top-anchor" className="AppBar" position="static" sx={{display:"flex", alignItems:"center", height:"80px", backgroundColor:"#00000" }}>
+    <Box id="back-to-top-anchor" className="AppBar" >
       <Container>
         <Toolbar>
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
@@ -142,7 +142,7 @@ function Header() {
                 }}
               />
             </IconButton>
-            <Box className="Navbar" sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+            <Box className="Navbar">
               {NavList.map((navlink) => (
                   <Button
                     className="navLinksButton"
@@ -155,7 +155,7 @@ function Header() {
                   </Button>
               ))}
             </Box>
-            <Box sx={{ height:{ md:"60px" }, width:{ md:"60px" }, padding:{ md: "5px"}, display:"flex", alignItems: "center",justifyContent:"center"}}>
+            <Box id="toggleThemeContainer">
               <ToggleThemeButton/>
             </Box>
           </Box>

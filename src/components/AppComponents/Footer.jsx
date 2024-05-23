@@ -44,7 +44,7 @@ const { isDarkMode } = useTheme();
       key={link.name}
       component={Link}
       href={link.href}
-      variant="body1"
+      variant="subtitle1"
       sx={{textDecoration:"none"}}
       color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary }
     >

@@ -43,9 +43,9 @@ export default function ProjectShowcaseDetails( { project }) {
   }
 
   return (
-    <Card className="detailsCardContainer" elevation={3}>
+    <Card id="detailsCardContainer" sx={{maxWidth:600}} elevation={3}>
       <CardContent className="detailsCardContent">
-        <Typography>
+        <Typography variant="h5">
           {project.projectName}
         </Typography>
         <Typography className="detailsDecription">
