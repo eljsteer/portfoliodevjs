@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Divider } from '@mui/material';
+import { Divider, Tooltip } from '@mui/material';
+import Fade from '@mui/material/Fade';
 import Stack from "@mui/material/Stack"
 
 import { FaReact } from "react-icons/fa6";
@@ -42,25 +43,40 @@ export default function ProjectShowcaseDetails( { project }) {
     }
   }
 
+  const toolTipProps = {
+    popper: {
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, -15],
+          },
+        },
+      ],
+    },
+  }
+
   return (
     <Card id="detailsCardContainer" sx={{maxWidth:600}} elevation={3}>
       <CardContent className="detailsCardContent">
         <Typography variant="h5">
           {project.projectName}
         </Typography>
-        <Typography className="detailsDecription">
+        <Typography variant="body1" id="detailsDecription">
           {project.description}
         </Typography>
       </CardContent>
-      <Divider className="detailsDivider"/>
-      <CardContent>
-        <Stack className="detailsTechIcons" display="flex" direction="row" justifyContent="center" spacing={2}>
+      <Divider id="detailsDivider"/>
+      <CardContent id="detailsTechIcons">
+        <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           {project.technologies.map((tech) => (
-            <Typography variant="h4" key={tech.id}>{mapIcon(tech.TechName)}</Typography>
+            <Tooltip key={tech.id} title={tech.TechName} slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
+              <Typography sx={{ fontSize:{ xs: "22px", sm: "28px", md: "32px"}}}>{mapIcon(tech.TechName)}</Typography>
+            </Tooltip>
           ))}
         </Stack>
       </CardContent>
-      <CardContent className="detailsButtons">
+      <CardContent id="detailsButtons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           <ProjectButton text="View Live" href={project.deployedLink}/>
           <ProjectButton text="View Github" href={project.github}/>

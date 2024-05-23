@@ -2,14 +2,35 @@
 .detailsCardContent {
   text-align: center;
 }
-.detailsDescription {
+#detailsDescription {
   margin-bottom: 1.5;
 }
 
-.detailsDivider {
+#detailsDivider {
   margin: 0 10%;
 }
 .detailsButtons {
   display: flex;
   justify-content: center;
+}
+
+#detailsButtons {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 400px) {  
+  #detailsTechIcons {
+    display: none;
+  }
+  #detailsDivider {
+    display: none;
+  }
+  #detailsDecription {
+    margin: 20px 0 0 0;
+
+  }
+  #detailsButtons {
+    padding: 12px;
+  }
 }

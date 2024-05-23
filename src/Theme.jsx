@@ -107,8 +107,9 @@ export const lightTheme = createTheme({
       },
     },
     body1: {
+      fontSize: "1rem",
       '@media (max-width:600px)': {
-        fontSize: "1rem",
+        fontSize: "0.8rem",
       },
     }
   },
@@ -226,8 +227,9 @@ export const darkTheme = createTheme({
       },
     },
     body1: {
+      fontSize: "1rem",
       '@media (max-width:600px)': {
-        fontSize: "1rem",
+        fontSize: "0.8rem",
       },
     }
   },

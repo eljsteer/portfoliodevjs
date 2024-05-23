@@ -26,11 +26,11 @@ const { isDarkMode } = useTheme();
 
   const socials = [
     {
-      icon: <LinkedInIcon />,
+      icon: <LinkedInIcon/>,
       link: "https://www.linkedin.com/in/devjs-jason-steer/",
     },
     { 
-      icon: <GitHubIcon />, 
+      icon: <GitHubIcon/>, 
       link: "https://github.com/eljsteer" 
     },
   ];
