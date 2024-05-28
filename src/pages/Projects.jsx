@@ -1,10 +1,16 @@
-import { Box } from "@mui/material"
+import { Box, Container } from "@mui/material"
 import WIPproject from "../components/WIPproject";
+import Imageboard from "../components/ImageBoard/Imageboard";
+
+import "../styles/projects.css"
 
 function Projects() {
   return (
-    <Box sx={{display:"flex", justifyContent:"center"}}>
-      <WIPproject/>
+    <Box id="projectPageContainer">
+      <Container id="WIPContainer">
+        <WIPproject/>
+        <Imageboard/>
+      </Container>
     </Box>
   );
 }
