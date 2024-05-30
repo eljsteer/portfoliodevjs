@@ -1,9 +1,9 @@
 #projectPageContainer {
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: auto;
+  flex-direction: column;
   margin: 10svh 5svh;
-  background-color: aqua;
 }
 
 #WIPContainer {
@@ -12,4 +12,13 @@
   justify-content: center;
   align-items: center;
   height: fit-content;
+  margin: 10svh;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  align-items: center;
 }

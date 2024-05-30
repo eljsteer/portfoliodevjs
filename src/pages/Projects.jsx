@@ -1,15 +1,16 @@
-import { Box, Container } from "@mui/material"
-import WIPproject from "../components/WIPproject";
+import { Box, Container } from "@mui/material";
 import Imageboard from "../components/ImageBoard/Imageboard";
-
-import "../styles/projects.css"
+import WIPproject from "../components/WIPproject"
+import "../styles/projects.css";
 
 function Projects() {
   return (
     <Box id="projectPageContainer">
       <Container id="WIPContainer">
-        <WIPproject/>
-        <Imageboard/>
+        <WIPproject />
+      </Container>
+      <Container id="mainContainer">
+        <Imageboard />
       </Container>
     </Box>
   );

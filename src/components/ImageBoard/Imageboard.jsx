@@ -6,27 +6,34 @@ import ProjectData from "../../utils/ProjectData.json"
 
 import "./styles/imageboard.css"
 
-function Projects() {
+function Imageboard() {
   const gridRef = useRef(null);
-  const stampRef = useRef(null);
 
-  const randomWidth = () => {
-    const Size = Math.floor(Math.random()*(500-200)+200)
-    console.log(Size)
-    return Size;
-  }
+  const randomSize = () => {
+    const sizes = [200, 300, 400, 500]
+    return sizes[Math.floor(Math.random() * sizes.length)];
+  } 
+
 
   useEffect(() => {
-    const pckry = new 
-    Packery(gridRef.current, {
+    const pckry = new Packery(gridRef.current, {
       itemSelector: ".grid-item",
+      transitionDuration: "0.5s",
       gutter: 10,
-      horizontal: true,
-      stamp: ".stamp"
     });
 
-    pckry.stamp(stampRef.current);
-    pckry.layout();
+    const handleImageLoad = () => {
+      pckry.layout();
+    };
+
+    const images = gridRef.current.querySelectorAll("img");
+    images.forEach(img => {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad, { once: true });
+      }
+    });
 
     return () => {
       pckry.destroy();
@@ -35,20 +42,22 @@ function Projects() {
 
   return (
     <Box className="grid" ref={gridRef}> 
-      <Box className="stamp grid-item" ref={stampRef}>
-        PROJECTS
-      </Box>
       {ProjectData.map((project) => (
-        <img
+        <Box
           key={project.id}
           className="grid-item"
-          src={project.images[2].src}
-          width={randomWidth()}
-        />
+          style={{ width: randomSize(), height: randomSize() }}
+        >
+          <img
+            src={project.images[2].src}
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
+            alt={project.name}
+          />
+        </Box>
       ))}
     </Box>
   );
 }
 
-export default Projects;
+export default Imageboard;
 

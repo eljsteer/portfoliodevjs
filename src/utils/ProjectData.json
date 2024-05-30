@@ -201,7 +201,7 @@
   },
   {
     "id": 5,
-    "projectName": "Password Genie",
+    "projectName": "Password-Genie",
     "projectWIP": false,
     "deployedLink": "https://eljsteer.github.io/password-genie/",
     "gitHub": "https://github.com/eljsteer/password-genie",
@@ -249,7 +249,7 @@
   },
   {
     "id": 6,
-    "projectName": "https://eljsteer.github.io/weather-man/",
+    "projectName": "Weather-Man",
     "projectWIP": false,
     "deployedLink": "https://eljsteer.github.io/weather-man/",
     "gitHub": "https://github.com/eljsteer/weather-man",
