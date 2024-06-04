@@ -11,7 +11,6 @@
 
 .grid-item {
   margin-bottom: 10px; /* Adjust according to your gutter size */
-  background-color: #ddd;
   transition: transform 0.8s;
   display: flex;
   align-items: center;

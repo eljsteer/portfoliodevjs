@@ -50,7 +50,7 @@ function Imageboard() {
         >
           <img
             src={project.images[2].src}
-            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
+            style={{ Width: '100%', height: '100%', objectFit: 'cover' }}
             alt={project.name}
           />
         </Box>
