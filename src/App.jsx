@@ -21,26 +21,27 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element = {<RootLayout />} errorElement= {<ErrorPage/>} >
-      <Route index element = {<Home />} />
-      <Route path="/about" element = {<About/>} />
-      <Route path="/projects" element = {<Projects/>} />
-      <Route path="/resume" element = {<Resume/>} />
-      <Route path="/contact" element = {<Contact/>} />
-    </Route>
-  )
-)
+const basename = '/portfolioDevJS';
+
+const routes = createRoutesFromElements(
+  <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
+    <Route index element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/projects" element={<Projects />} />
+    <Route path="/resume" element={<Resume />} />
+    <Route path="/contact" element={<Contact />} />
+  </Route>
+);
+
+const router = createBrowserRouter(routes, { basename });  // Add basename here
 
 function App() {
   return (
     <ThemeContextProvider>
       <CssBaseline />
-      <RouterProvider router={router} basename="/portfolioDevJS"/>
+      <RouterProvider router={router} />
     </ThemeContextProvider>
   );
 }
 
-
-export default App
+export default App;
