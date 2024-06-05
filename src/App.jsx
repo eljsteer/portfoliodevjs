@@ -37,7 +37,7 @@ function App() {
   return (
     <ThemeContextProvider>
       <CssBaseline />
-      <RouterProvider router={router} />
+      <RouterProvider router={router} basename="/portfolioDevJS"/>
     </ThemeContextProvider>
   );
 }
