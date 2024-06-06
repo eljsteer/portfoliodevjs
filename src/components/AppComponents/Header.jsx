@@ -109,39 +109,46 @@ function Header() {
                 </Link>
               ))}
             </Menu>
-            <IconButton
-              href="/"
-              sx={{
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
+            <Link
+              to="/"
             >
-              <IoLogoJavascript style={{ fontSize:"30px", color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary  }} />
-            </IconButton>
+              <IconButton
+
+                sx={{
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                <IoLogoJavascript style={{ fontSize:"30px", color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary  }} />
+              </IconButton>
+            </Link>
             <ToggleThemeButton/>
           </Box>
 
   {/* <<------ Monitor Larger Screens ----->>*/}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between", alignItems:"center" }}>
-            <IconButton 
-              href="/"
-              sx={{ 
-                display: { xs: 'none', md: 'flex' },
-                height:"fit-content",
-                textDecoration: "none",
-                padding:"5px" 
-              }} 
+            <Link
+              to="/"
             >
-              <IoLogoJavascript 
-                style={{ 
-                  fontSize: "50px", 
-                  padding:"5px",
-                  color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary
-                }}
-              />
-            </IconButton>
+              <IconButton 
+                sx={{ 
+                  display: { xs: 'none', md: 'flex' },
+                  height:"fit-content",
+                  textDecoration: "none",
+                  padding:"5px" 
+                }} 
+              >
+                <IoLogoJavascript 
+                  style={{ 
+                    fontSize: "50px", 
+                    padding:"5px",
+                    color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary
+                  }}
+                />
+              </IconButton>
+            </Link>
             <Box className="Navbar">
               {NavList.map((navlink) => (
               <Link
