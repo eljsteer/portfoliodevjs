@@ -144,15 +144,19 @@ function Header() {
             </IconButton>
             <Box className="Navbar">
               {NavList.map((navlink) => (
-                  <Button
-                    className="navLinksButton"
-                    key={navlink.id}
-                    href={navlink.url}
-                    onClick={handleCloseNavMenu}
-                    sx={navLinksButtonStyle}
-                  >
+              <Link
+                key={navlink.id}
+                to={`${navlink.url}`}
+                style={{textDecoration:"none"}}
+              >
+                <Button
+                  className="navLinksButton"
+                  onClick={handleCloseNavMenu}
+                  sx={navLinksButtonStyle}
+                >
                     {navlink.name}
-                  </Button>
+                </Button>
+              </Link>
               ))}
             </Box>
             <Box id="toggleThemeContainer">
