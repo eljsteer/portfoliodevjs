@@ -109,11 +109,9 @@ function Header() {
                 </Link>
               ))}
             </Menu>
-            <Link
-              to="/"
-            >
               <IconButton
-
+                component={Link}
+                to="/"
                 sx={{
                   flexDirection: "column",
                   alignItems: "center",
@@ -123,32 +121,29 @@ function Header() {
               >
                 <IoLogoJavascript style={{ fontSize:"30px", color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary  }} />
               </IconButton>
-            </Link>
             <ToggleThemeButton/>
           </Box>
 
   {/* <<------ Monitor Larger Screens ----->>*/}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between", alignItems:"center" }}>
-            <Link
+            <IconButton 
+              component={Link}
               to="/"
+              sx={{ 
+                display: { xs: 'none', md: 'flex' },
+                height:"fit-content",
+                textDecoration: "none",
+                padding:"5px" 
+              }} 
             >
-              <IconButton 
-                sx={{ 
-                  display: { xs: 'none', md: 'flex' },
-                  height:"fit-content",
-                  textDecoration: "none",
-                  padding:"5px" 
-                }} 
-              >
-                <IoLogoJavascript 
-                  style={{ 
-                    fontSize: "50px", 
-                    padding:"5px",
-                    color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary
-                  }}
-                />
-              </IconButton>
-            </Link>
+              <IoLogoJavascript 
+                style={{ 
+                  fontSize: "50px", 
+                  padding:"5px",
+                  color: isDarkMode ? darkThemeText.primary  : lightThemeText.primary
+                }}
+              />
+            </IconButton>
             <Box className="Navbar">
               {NavList.map((navlink) => (
               <Link
