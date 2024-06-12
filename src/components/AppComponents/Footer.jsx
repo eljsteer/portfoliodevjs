@@ -17,23 +17,22 @@ import { darkTheme, lightTheme } from "../../Theme.jsx";
 
 import "./styles/footer.css"
 
-let darkThemeText = darkTheme.palette.text
-let lightThemeText = lightTheme.palette.text
+let darkThemeText = darkTheme.palette.text;
+let lightThemeText = lightTheme.palette.text;
 
-function Footer() {
-
-const { isDarkMode } = useTheme();
-
-  const socials = [
+function Footer({
+  socials = [
     {
-      icon: <LinkedInIcon/>,
+      icon: <LinkedInIcon />,
       link: "https://www.linkedin.com/in/devjs-jason-steer/",
     },
     { 
-      icon: <GitHubIcon/>, 
+      icon: <GitHubIcon />, 
       link: "https://github.com/eljsteer" 
     },
-  ];
+  ]
+}) {
+  const { isDarkMode } = useTheme();
 
   const { href } = NavList;
 
@@ -106,26 +105,11 @@ const { isDarkMode } = useTheme();
   );
 }
 
-// Setting default values for the props of CenteredFooter
-Footer.defaultProps = {
-  socials: [
-    {
-      icon: <LinkedInIcon />,
-      link: "https://www.linkedin.com/in/devjs-jason-steer/",
-    },
-    { 
-      icon: <GitHubIcon />, 
-      link: "https://github.com/eljsteer" 
-    },
-  ],
-};
-
 // Typechecking props for the CenteredFooter
 Footer.propTypes = {
   company: PropTypes.objectOf(PropTypes.string),
   links: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
   socials: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
 };
-
 
 export default Footer;

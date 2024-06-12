@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import Image from "../../utils/image";
+import profileImage from "../../assets/images/Profile_Image1_Square.png"
 
 import { FcCommandLine } from "react-icons/fc"; 
 import { FcMultipleDevices } from "react-icons/fc";
@@ -59,8 +60,6 @@ function ElearningHeroIllustration({ sx, ...other }) {
     fontWeight: 'fontWeightBold',
   };
 
-  const baseURL = import.meta.env.BASE_URL;
-
   return (
     <Box
       sx={{
@@ -79,7 +78,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           visibleByDefault
           disabledEffect
           alt="DevJS"
-          src={`${baseURL}src/assets/images/Profile_Image1_Square.png`}
+          src={profileImage}
           sx={{ width: 420, height: 600, borderRadius: "60px" }}
         />
       </Box>

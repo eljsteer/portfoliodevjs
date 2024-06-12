@@ -56,6 +56,10 @@ export default function ProjectShowcaseDetails( { project }) {
     },
   }
 
+  ProjectButton.propTypes = {
+    href: PropTypes.string,
+  };
+
   return (
     <Card id="detailsCardContainer" sx={{maxWidth:600}} elevation={3}>
       <CardContent className="detailsCardContent">

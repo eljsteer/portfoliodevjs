@@ -15,7 +15,7 @@ import "./styles/header.css"
 import { useTheme } from '../../contexts/ThemeContext';
 
 import { NavList } from "../../layouts/NavList"
-import ToggleThemeButton from './toggleThemeButton';
+import ToggleThemeButton from './ToggleThemeButton';
 
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 import { Link } from 'react-router-dom';
