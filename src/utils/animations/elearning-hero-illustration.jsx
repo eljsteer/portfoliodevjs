@@ -59,6 +59,8 @@ function ElearningHeroIllustration({ sx, ...other }) {
     fontWeight: 'fontWeightBold',
   };
 
+  const baseURL = import.meta.env.BASE_URL;
+
   return (
     <Box
       sx={{
@@ -77,7 +79,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           visibleByDefault
           disabledEffect
           alt="DevJS"
-          src="src/assets/images/Profile_Image1_Square.png"
+          src={`${baseURL}src/assets/images/Profile_Image1_Square.png`}
           sx={{ width: 420, height: 600, borderRadius: "60px" }}
         />
       </Box>
