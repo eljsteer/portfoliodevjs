@@ -7,16 +7,16 @@
     "github": "https://github.com/eljsteer/Bonsai_Collective",
     "description": "Ecommerce Site that has all your bonsai growing needs! Connect and share your Bonsai Journey with other users",
     "images": [
-      { "src": "src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_4k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_4k.jpg",
         "width": 3840
       },
-      { "src": "src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_2k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_2k.jpg",
         "width": 1920
       },
-      { "src": "src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_960p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_960p.jpg",
         "width": 960
       },
-      { "src": "src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_480p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Bonsai/jean-beller-R7MeaYXe1mA-unsplash_Bonsai_480p.jpg",
         "width": 480
       }
     ],
@@ -59,16 +59,16 @@
     "gitHub": "https://github.com/eljsteer/fireStarter",
     "description": "Dao inspired Incubator and Developer Program to connect and build the projects of tomorrow",
     "images": [
-      { "src": "src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_4k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_4k.jpg",
         "width": 3840
       },
-      { "src": "src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_2k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_2k.jpg",
         "width": 1920
       },
-      { "src": "src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_960p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_960p.jpg",
         "width": 960
       },
-      { "src": "src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_480p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_480p.jpg",
         "width": 480
       }
     ],
@@ -111,16 +111,16 @@
     "gitHub": "https://github.com/eljsteer/marvel_universe",
     "description": "A Marvel Fan Application to view collection of marvel character images",
     "images": [
-      { "src": "src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_4k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_4k.jpg",
         "width": 3840
       },
-      { "src": "src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_2k.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_2k.jpg",
         "width": 1920
       },
-      { "src": "src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_960p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_960p.jpg",
         "width": 960
       },
-      { "src": "src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_480p.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_480p.jpg",
         "width": 480
       }
     ],
@@ -207,16 +207,16 @@
     "gitHub": "https://github.com/eljsteer/password-genie",
     "description": "A Marvel Fan Application to view collection of marvel character images",
     "images": [
-      { "src": "src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
         "width": 3840
       },
-      { "src": "src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
         "width": 1920
       },
-      { "src": "src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
         "width": 960
       },
-      { "src": "src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
+      { "src": "/portfolioDevJS/src/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
         "width": 480
       }
     ],
