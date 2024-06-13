@@ -6,6 +6,9 @@ import ProjectData from "../../utils/ProjectData.json"
 
 import "./styles/imageboard.css"
 
+const baseURL = import.meta.env.BASE_URL;
+const isExternalLink = (url) => url.startsWith('http');
+
 function Imageboard() {
   const gridRef = useRef(null);
 
@@ -49,7 +52,11 @@ function Imageboard() {
           style={{ width: randomSize(), height: randomSize() }}
         >
           <img
-            src={project.images[2].src}
+            src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
+            srcSet={project.images.map((image) => {
+              const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
+              return `${imagePath} ${image.width}w`;
+            }).join(", ")}
             style={{ Width: '100%', height: '100%', objectFit: 'cover' }}
             alt={project.name}
           />

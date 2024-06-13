@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 import ProjectData from "../utils/ProjectData.json"
 
+const baseURL = import.meta.env.BASE_URL;
+
 export default function WIPproject() {
 
   const [projectWIP, setProjectWIP] = useState(null)
@@ -11,7 +13,7 @@ export default function WIPproject() {
   useEffect(() => {
     ProjectData.forEach(project => {
       if(project.projectWIP === true ) {
-        setProjectWIP(project.images[0].src)
+        setProjectWIP(`${baseURL}${project.images[0].src}`)
       }
     });
   },[]);
