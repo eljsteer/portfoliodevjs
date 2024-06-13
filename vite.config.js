@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base: "/portfolioDevJS/",
   plugins: [react()],
+  publicDir: 'public', 
   optimizeDeps: {
     include: ['@mui/icons-material','@emotion/styled', '@mui/material/Unstable_Grid2']
   }

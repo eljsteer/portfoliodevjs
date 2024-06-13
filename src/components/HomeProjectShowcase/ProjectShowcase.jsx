@@ -14,14 +14,16 @@ import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../Theme.jsx";
 import "./styles/ProjectShowcase.css";
 
-const loadImage = (path) => {
-  try {
-    return new URL(`${import.meta.env.BASE_URL}${path}`, import.meta.url).href;
-  } catch (error) {
-    console.error(`Error loading image: ${path}`, error);
-    return null;
-  }
-};
+// const loadImage = (path) => {
+//   try {
+//     return new URL(`${import.meta.env.BASE_URL}${path}`, import.meta.url).href;
+//   } catch (error) {
+//     console.error(`Error loading image: ${path}`, error);
+//     return null;
+//   }
+// };
+
+const baseURL = import.meta.env.BASE_URL;
 
 const isExternalLink = (url) => url.startsWith('http');
 
@@ -66,9 +68,9 @@ export default function ProjectShowcase() {
                 {project.images && project.images.length > 0 ? (
                   <img
                     className="projectShowcaseIMG"
-                    src={isExternalLink(project.images[0].src) ? project.images[0].src : loadImage(project.images[0].src)}
+                    src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
                     srcSet={project.images.map((image) => {
-                      const imagePath = isExternalLink(image.src) ? image.src : loadImage(image.src);
+                      const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
                       return `${imagePath} ${image.width}w`;
                     }).join(", ")}
                     alt={project.projectName}
