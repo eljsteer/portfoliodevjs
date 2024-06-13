@@ -56,7 +56,7 @@
 
 @media screen and (max-width: 500px) {  
   .banner {
-    background: url("src/assets/images/tim-marshall-wHgcJ4gVCQY-unsplash_400px.jpg");
+    background: url("/assets/images/ContactImage/tim-marshall-wHgcJ4gVCQY-unsplash_400px.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
