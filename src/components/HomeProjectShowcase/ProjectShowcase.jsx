@@ -64,7 +64,7 @@ export default function ProjectShowcase() {
             onSlideChange={(swiper) => handleSlideChange(swiper)}
           >
             {ProjectData.map((project) => (
-              <SwiperSlide key={project.id}>
+              <SwiperSlide key={project.id} className="swiper-slide">
                 {project.images && project.images.length > 0 ? (
                   <img
                     className="projectShowcaseIMG"
