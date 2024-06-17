@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 import { useTheme } from "../../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
-import "./styles/projectbutton.css"
+import "./styles/projectButton.css"
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text

@@ -14,7 +14,7 @@ import { SiApollographql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-import ProjectButton from "./ProjectButton"
+import ProjectButton from "../AppComponents/ProjectButton"
 
 import "./styles/projectShowcaseDetails.css"
 

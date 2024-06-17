@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Card, CardActionArea, CardMedia } from "@mui/material"
 import { useState, useEffect } from 'react';
 
-import ProjectData from "../utils/ProjectData.json"
+import ProjectData from "../../utils/ProjectData.json"
 
 const baseURL = import.meta.env.BASE_URL;
 

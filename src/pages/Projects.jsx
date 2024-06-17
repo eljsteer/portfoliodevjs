@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import Imageboard from "../components/ImageBoard/Imageboard";
-import WIPproject from "../components/WIPproject"
+import WIPproject from "../components/AppComponents/WIPproject"
 import "../styles/projects.css";
 
 function Projects() {
@@ -10,7 +10,7 @@ function Projects() {
         <WIPproject />
       </Container>
       <Container id="mainContainer">
-        <Imageboard />
+        <Imageboard/>
       </Container>
     </Box>
   );

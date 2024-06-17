@@ -5,9 +5,7 @@ import { Box } from "@mui/material"
 import ProjectData from "../../utils/ProjectData.json"
 
 import "./styles/imageboard.css"
-
-const baseURL = import.meta.env.BASE_URL;
-const isExternalLink = (url) => url.startsWith('http');
+import ProjectCard from "../AppComponents/ProjectCard";
 
 function Imageboard() {
   const gridRef = useRef(null);
@@ -46,21 +44,11 @@ function Imageboard() {
   return (
     <Box className="grid" ref={gridRef}> 
       {ProjectData.map((project) => (
-        <Box
+        <ProjectCard
           key={project.id}
-          className="grid-item"
-          style={{ width: randomSize(), height: randomSize() }}
-        >
-          <img
-            src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
-            srcSet={project.images.map((image) => {
-              const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
-              return `${imagePath} ${image.width}w`;
-            }).join(", ")}
-            style={{ Width: '100%', height: '100%', objectFit: 'cover' }}
-            alt={project.name}
-          />
-        </Box>
+          project={project}
+          randomSize={randomSize}
+        />
       ))}
     </Box>
   );

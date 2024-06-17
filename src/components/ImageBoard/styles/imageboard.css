@@ -8,18 +8,3 @@
   position: relative; 
   width: 100%; 
 }
-
-.grid-item {
-  margin-bottom: 10px; /* Adjust according to your gutter size */
-  transition: transform 0.8s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.grid-item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
