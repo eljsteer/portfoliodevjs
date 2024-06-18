@@ -56,7 +56,7 @@
     "projectName": "FireStarter",
     "projectWIP": false,
     "deployedLink": "https://firestarter.herokuapp.com/",
-    "gitHub": "https://github.com/eljsteer/fireStarter",
+    "github": "https://github.com/eljsteer/fireStarter",
     "description": "Dao inspired Incubator and Developer Program to connect and build the projects of tomorrow",
     "images": [
       { "src": "/assets/images/ProjectImages/FireStarter/peter-yost-ah9tydIdlKA-unsplash_4k.jpg",
@@ -108,7 +108,7 @@
     "projectName": "Marvellous",
     "projectWIP": false,
     "deployedLink": "https://eljsteer.github.io/marvel_universe/",
-    "gitHub": "https://github.com/eljsteer/marvel_universe",
+    "github": "https://github.com/eljsteer/marvel_universe",
     "description": "A Marvel Fan Application to view collection of marvel character images",
     "images": [
       { "src": "/assets/images/ProjectImages/Marvellous/erik-mclean-8SeJUmfahu0-unsplash_4k.jpg",
@@ -156,7 +156,7 @@
     "projectName": "Movie-God",
     "projectWIP": false,
     "deployedLink": "https://movie-god.herokuapp.com/",
-    "gitHub": "https://github.com/eljsteer/Movie-God",
+    "github": "https://github.com/eljsteer/Movie-God",
     "description": "This Application is your one-stop-shop for all your latest Movie information. Leave Reviews and Ratings on movie greats or new and upcoming movie releases.",
     "images": [
       { "src": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -204,7 +204,7 @@
     "projectName": "Password-Genie",
     "projectWIP": false,
     "deployedLink": "https://eljsteer.github.io/password-genie/",
-    "gitHub": "https://github.com/eljsteer/password-genie",
+    "github": "https://github.com/eljsteer/password-genie",
     "description": "A Marvel Fan Application to view collection of marvel character images",
     "images": [
       { "src": "/assets/images/ProjectImages/PasswordGenie/PasswordGenieApp2024-05-29 180152.jpg",
@@ -252,7 +252,7 @@
     "projectName": "Weather-Man",
     "projectWIP": false,
     "deployedLink": "https://eljsteer.github.io/weather-man/",
-    "gitHub": "https://github.com/eljsteer/weather-man",
+    "github": "https://github.com/eljsteer/weather-man",
     "description": "A 7 Day Global Weather forecast and daily Report Application",
     "images": [
       { "src": "https://images.unsplash.com/photo-1708759284407-5b9f6fc8b231?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -300,7 +300,7 @@
     "projectName": "ICryptoPortfolio",
     "projectWIP": false,
     "deployedLink": "https://placehold.co/1900x960/c1ebeb/000?text=App+Coming+Soon...&Font=Montserrat",
-    "gitHub": "",
+    "github": "https://github.com/eljsteer/ICryptoPortfolio",
     "description": "A Personal Crypto Portfolio and Trading Application to help track Investment performance",
     "images": [
       { "src": "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -348,7 +348,7 @@
     "projectName": "TravelPlanner",
     "projectWIP": false,
     "deployedLink": "https://placehold.co/1900x960/c1ebeb/000?text=App+Coming+Soon...&Font=Montserrat",
-    "gitHub": "",
+    "github": "https://github.com/eljsteer/travelPlanner",
     "description": "A Travel Planner to keep track of all your bucket list Destinations and Budgets",
     "images": [
       { "src": "https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
