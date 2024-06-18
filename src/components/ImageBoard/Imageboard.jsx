@@ -18,7 +18,7 @@ function Imageboard() {
 
   useEffect(() => {
     const pckry = new Packery(gridRef.current, {
-      itemSelector: ".grid-item",
+      itemSelector: ".flip-card",
       transitionDuration: "0.5s",
       gutter: 10,
     });
@@ -48,6 +48,7 @@ function Imageboard() {
           key={project.id}
           project={project}
           randomSize={randomSize}
+          className
         />
       ))}
     </Box>
