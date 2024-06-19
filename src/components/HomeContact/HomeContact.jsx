@@ -1,8 +1,9 @@
-import { Box, Typography } from "@mui/material"
-import Button from "@mui/material/Button"
+import { Link } from "react-router-dom";
+import { Box, Button, Typography } from "@mui/material"
 
 import { useTheme } from "../../contexts/ThemeContext.jsx";
 import "./styles/homeContact.css"
+
 
 function HomeContact() {
 
@@ -23,7 +24,8 @@ function HomeContact() {
         </Box>
         <Button 
           className={`ContactButton ${isDarkMode ? "darkTheme" : "lightTheme"}`}
-          href="/contact" 
+          component={Link}
+          to="/contact"
           variant="outlined"
           sx={{
             color: "white",
