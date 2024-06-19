@@ -50,7 +50,6 @@ function Imageboard() {
           key={project.id}
           project={project}
           randomSize={randomSize}
-          className
         />
       ))}
     </Box>

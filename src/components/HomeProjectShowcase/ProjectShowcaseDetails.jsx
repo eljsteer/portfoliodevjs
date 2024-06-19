@@ -70,7 +70,7 @@ export default function ProjectShowcaseDetails( { project }) {
           {project.description}
         </Typography>
       </CardContent>
-      <Divider id="detailsDivider"/>
+      <Divider id="detailsDivider" variant="middle" aria-hidden="true"/>
       <CardContent id="detailsTechIcons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           {project.technologies.map((tech) => (
@@ -82,8 +82,8 @@ export default function ProjectShowcaseDetails( { project }) {
       </CardContent>
       <CardContent id="detailsButtons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
-          <ProjectButton text="View Live" href={project.deployedLink}/>
-          <ProjectButton text="View Github" href={project.github}/>
+          <ProjectButton href={project.deployedLink}/>
+          <ProjectButton href={project.github}/>
         </Stack>
       </CardContent>
     </Card>

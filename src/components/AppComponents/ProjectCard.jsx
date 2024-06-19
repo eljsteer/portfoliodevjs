@@ -1,5 +1,16 @@
 import PropTypes from "prop-types";
-import { Box, CardContent, Typography, Divider, Stack } from "@mui/material"
+import { Box, CardContent, Typography } from "@mui/material"
+import { Divider, Tooltip } from '@mui/material';
+import Fade from '@mui/material/Fade';
+import Stack from "@mui/material/Stack"
+import { FaReact } from "react-icons/fa6";
+import { DiJavascript } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { GrGraphQl } from "react-icons/gr";
+import { SiApollographql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+
 
 import ProjectButton from "../AppComponents/ProjectButton"
 import { useTheme } from '../../contexts/ThemeContext';
@@ -13,10 +24,37 @@ const isExternalLink = (url) => url.startsWith('http');
 function ProjectCard({ project, randomSize }) {
   const { isDarkMode } = useTheme();
 
-  ProjectCard.propTypes = {
-    project: PropTypes.element.isRequired,
-    randomSize: PropTypes.element.isRequired,
-  };
+  const mapIcon = (TechName) => {
+    switch (TechName) {
+      case "React":
+        return <FaReact />;
+      case "Javascript":
+        return <DiJavascript />;
+      case "NodeJS":
+        return <FaNodeJs />;
+      case "Express":
+        return <SiExpress />;
+      case "GraphQL":
+        return <GrGraphQl />;
+      case "Apollographql":
+        return <SiApollographql />;
+      case "MongoDB":
+        return <SiMongodb />;
+    }
+  }
+
+  const toolTipProps = {
+    popper: {
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, -15],
+          },
+        },
+      ],
+    },
+  }
 
   return (
         <Box
@@ -33,7 +71,7 @@ function ProjectCard({ project, randomSize }) {
                   const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
                   return `${imagePath} ${image.width}w`;
                 }).join(", ")}
-                alt={project.name}
+                alt={project.projectName}
               />
             </Box>
             <Box 
@@ -45,12 +83,21 @@ function ProjectCard({ project, randomSize }) {
                 <Typography variant="h5">
                   {project.projectName}
                 </Typography>
-                <Typography variant="body1" id="detailsDecription">
+                <Typography variant="body1" className="detailsDecription">
                   {project.description}
                 </Typography>
               </CardContent>
-              <Divider id="detailsDivider"/>
-              <CardContent id="detailsButtons">
+              <Divider className="detailsDivider" aria-hidden="true" variant="middle" sx={{border: "0.1px solid white"}}/>
+              <CardContent className="detailsTechIcons">
+                <Stack display="flex" direction="row" justifyContent="center" flexWrap="wrap" spacing={2}>
+                  {project.technologies.map((tech) => (
+                    <Tooltip key={tech.id} title={tech.TechName} slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
+                      <Typography sx={{ fontSize:{ xs: "18px", sm: "24px", md: "28px"}}}>{mapIcon(tech.TechName)}</Typography>
+                    </Tooltip>
+                  ))}
+                </Stack>
+              </CardContent>
+              <CardContent className="detailsButtons">
                 <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
                   <ProjectButton text="View Live" href={project.deployedLink}/>
                   <ProjectButton text="View Github" href={project.github}/>
@@ -61,5 +108,28 @@ function ProjectCard({ project, randomSize }) {
         </Box>
   );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        width: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+    projectName: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        TechName: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    deployedLink: PropTypes.string.isRequired,
+    github: PropTypes.string.isRequired,
+  }).isRequired,
+  randomSize: PropTypes.func.isRequired,
+};
 
 export default ProjectCard;
