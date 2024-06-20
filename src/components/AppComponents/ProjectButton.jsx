@@ -12,8 +12,8 @@ export default function ProjectButton({text, href}) {
   const { isDarkMode } = useTheme();
 
   ProjectButton.propTypes = {
-    text: PropTypes.element.isRequired,
-    href: PropTypes.element.isRequired,
+    text: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
   };
 
   return (
