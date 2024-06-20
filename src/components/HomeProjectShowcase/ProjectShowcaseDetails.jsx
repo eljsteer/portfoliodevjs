@@ -82,8 +82,8 @@ export default function ProjectShowcaseDetails( { project }) {
       </CardContent>
       <CardContent id="detailsButtons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
-          <ProjectButton href={project.deployedLink}/>
-          <ProjectButton href={project.github}/>
+          <ProjectButton text="View Live" href={project.deployedLink}/>
+          <ProjectButton text="View Github" href={project.github}/>
         </Stack>
       </CardContent>
     </Card>

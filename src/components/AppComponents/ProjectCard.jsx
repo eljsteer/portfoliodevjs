@@ -87,7 +87,7 @@ function ProjectCard({ project, randomSize }) {
                   {project.description}
                 </Typography>
               </CardContent>
-              <Divider className="detailsDivider" aria-hidden="true" variant="middle" sx={{border: "0.1px solid white"}}/>
+              <Divider className="detailsDivider" aria-hidden="true" variant="middle" />
               <CardContent className="detailsTechIcons">
                 <Stack display="flex" direction="row" justifyContent="center" flexWrap="wrap" spacing={2}>
                   {project.technologies.map((tech) => (
