@@ -1,4 +1,6 @@
-// import React from "react";
+import { useRef } from "react"
+import emailjs from '@emailjs/browser';
+
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -13,6 +15,25 @@ const bgImage = "https://images.unsplash.com/photo-1519455953755-af066f52f1a6?q=
 
 function Contact() {
   const { isDarkMode } = useTheme();
+  const form = useRef();
+
+  // const messageSent = () => {
+
+  // }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_iyn7iwb", "template_e78547h", form.current, "GumlAi18HzddL4L07")
+      .then((result) => {
+          // if(result.text === "OK") {
+          //   messageSent();
+          // }
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <Box component="section" py={{ xs: 0, lg: 6 }}>
@@ -20,9 +41,6 @@ function Contact() {
         <Grid container item px={6}>
           <Box
             width="100%"
-            bgColor="white"
-            borderRadius="xl"
-            shadow="xl"
             mb={6}
             sx={{ overflow: "hidden" }}
           >
@@ -37,12 +55,13 @@ function Contact() {
                       DROP ME A MESSAGE
                     </Typography>
                   </Box>
-                  <Box pt={0.5} pb={3} px={3}>
+                  <form style={{padding: "0.5px 3px 0px 3px"}} >
                     <Grid container>
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
                           variant="standard"
                           label="My name is"
+                          name="user_name"
                           placeholder="Full Name"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
@@ -52,6 +71,7 @@ function Contact() {
                         <TextField
                           variant="standard"
                           label="Subject"
+                          name="user_subject"
                           placeholder="Message summary"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
@@ -61,6 +81,7 @@ function Contact() {
                         <TextField
                           variant="standard"
                           label="Your message"
+                          name="user_message"
                           placeholder="I want to say that..."
                           InputLabelProps={{ shrink: true }}
                           fullWidth
@@ -81,6 +102,7 @@ function Contact() {
                       <Button
                         className="sendButton"
                         variant="outlined"
+                        onSubmit={sendEmail}
                         sx={{
                           borderRadius: 0,
                           color: isDarkMode ? darkTheme.palette.text.primary : lightTheme.palette.text.primary,
@@ -94,7 +116,7 @@ function Contact() {
                         Send Message
                       </Button>
                     </Grid>
-                  </Box>
+                  </form>
                 </Box>
               </Grid>
               <Grid
