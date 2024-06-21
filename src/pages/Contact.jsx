@@ -17,18 +17,18 @@ function Contact() {
   const { isDarkMode } = useTheme();
   const form = useRef();
 
-  // const messageSent = () => {
+  const messageSent = () => {
 
-  // }
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_iyn7iwb", "template_e78547h", form.current, "GumlAi18HzddL4L07")
+    emailjs.sendForm("service_xiqdyhi", "template_e78547h", form.current, "GumlAi18HzddL4L07")
       .then((result) => {
-          // if(result.text === "OK") {
-          //   messageSent();
-          // }
+          if(result.text === "OK") {
+            messageSent();
+          }
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
@@ -46,7 +46,7 @@ function Contact() {
           >
             <Grid container spacing={3}>
               <Grid item xs={12} lg={7}>
-                <Box component="form" p={2} method="post">
+                <Box component="form" p={2} ref={form} onSubmit={sendEmail}>
                   <Box px={3} py={{ xs: 2, sm: 6 }}>
                     <Typography variant="h2" mb={1} sx={{fontFamily: isDarkMode ? darkTheme.fontFamily : lightTheme.fontFamily}}>
                       SAY HI.
@@ -55,7 +55,7 @@ function Contact() {
                       DROP ME A MESSAGE
                     </Typography>
                   </Box>
-                  <form style={{padding: "0.5px 3px 0px 3px"}} >
+                  <Box pt={0.5} pb={3} px={3}>
                     <Grid container>
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
@@ -102,7 +102,8 @@ function Contact() {
                       <Button
                         className="sendButton"
                         variant="outlined"
-                        onSubmit={sendEmail}
+                        type="submit"
+                        // onSubmit={sendEmail}
                         sx={{
                           borderRadius: 0,
                           color: isDarkMode ? darkTheme.palette.text.primary : lightTheme.palette.text.primary,
@@ -116,7 +117,7 @@ function Contact() {
                         Send Message
                       </Button>
                     </Grid>
-                  </form>
+                  </Box>
                 </Box>
               </Grid>
               <Grid
