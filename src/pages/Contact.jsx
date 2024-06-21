@@ -4,10 +4,16 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { Box, Button, TextField, Typography } from "@mui/material";
 
+import { useTheme } from "../contexts/ThemeContext.jsx";
+import { darkTheme, lightTheme } from "../Theme.jsx";
+import "../styles/contact.css"
+
 // Images
 const bgImage = "https://images.unsplash.com/photo-1519455953755-af066f52f1a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 function Contact() {
+  const { isDarkMode } = useTheme();
+
   return (
     <Box component="section" py={{ xs: 0, lg: 6 }}>
       <Container>
@@ -24,11 +30,11 @@ function Contact() {
               <Grid item xs={12} lg={7}>
                 <Box component="form" p={2} method="post">
                   <Box px={3} py={{ xs: 2, sm: 6 }}>
-                    <Typography variant="h2" mb={1}>
-                      Say Hi!
+                    <Typography variant="h2" mb={1} sx={{fontFamily: isDarkMode ? darkTheme.fontFamily : lightTheme.fontFamily}}>
+                      SAY HI.
                     </Typography>
-                    <Typography variant="body1" color="text" mb={2}>
-                      We&apos;d like to talk with you.
+                    <Typography variant="body1" color="text" mb={2} sx={{fontFamily: isDarkMode ? darkTheme.fontFamily : lightTheme.fontFamily}}>
+                      DROP ME A MESSAGE
                     </Typography>
                   </Box>
                   <Box pt={0.5} pb={3} px={3}>
@@ -45,8 +51,8 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
                           variant="standard"
-                          label="I'm looking for"
-                          placeholder="What you love"
+                          label="Subject"
+                          placeholder="Message summary"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -72,7 +78,19 @@ function Contact() {
                       textAlign="right"
                       ml="auto"
                     >
-                      <Button color="info">
+                      <Button
+                        className="sendButton"
+                        variant="outlined"
+                        sx={{
+                          borderRadius: 0,
+                          color: isDarkMode ? darkTheme.palette.text.primary : lightTheme.palette.text.primary,
+                          borderColor: 'transparent',
+                          transition: 'all 0.3s ease-in-out',
+                          '&:hover': {
+                            borderColor: isDarkMode ? darkTheme.palette.text.primary : lightTheme.palette.text.primary,
+                          },
+                        }}
+                      >
                         Send Message
                       </Button>
                     </Grid>
@@ -81,33 +99,13 @@ function Contact() {
               </Grid>
               <Grid
                 item
-                xs={12}
+                className="contactImage"
                 lg={5}
-                position="relative"
-                px={0}
                 sx={{
                   backgroundImage: `url(${bgImage})`,
                   backgroundSize: "cover",
                 }}
               >
-                <Box
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  width="100%"
-                  height="100%"
-                >
-                  <Box py={6} pl={6} pr={{ xs: 6, sm: 12 }} my="auto">
-                    <Typography variant="h3" color="white" mb={1}>
-                      Contact Information
-                    </Typography>
-                    <Typography variant="body2" color="white" opacity={0.8} mb={3}>
-                      Fill up the form and our Team will get back to you within 24 hours.
-                    </Typography>
-                    <Box mt={3}>
-                    </Box>
-                  </Box>
-                </Box>
               </Grid>
             </Grid>
           </Box>
