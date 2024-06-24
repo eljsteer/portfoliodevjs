@@ -12,8 +12,11 @@ function Imageboard() {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
 
   const imageSize = () => {
-    if (window.innerWidth > 900) {
-      const sizes = [300, 350, 400, 450];
+    if (window.innerWidth > 1200) {
+      const sizes = [300, 350, 400, 450, 500];
+      return sizes[Math.floor(Math.random() * sizes.length)];
+    } else if (window.innerWidth > 900) {
+      const sizes = [300, 350, 400];
       return sizes[Math.floor(Math.random() * sizes.length)];
     } else {
       return 500;

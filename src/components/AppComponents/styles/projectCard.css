@@ -41,9 +41,6 @@
 }
 
 @media (max-width: 900px) {
-  .Grid {
-    padding: 10px; /* Ensure padding to prevent overflow */
-  }
 
   .flip-card {
     max-width: 500px;

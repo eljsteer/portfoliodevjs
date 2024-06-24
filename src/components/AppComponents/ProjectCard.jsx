@@ -71,7 +71,6 @@ function ProjectCard({ project, imageSize }) {
                   const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
                   return `${imagePath} ${image.width}w`;
                 }).join(", ")}
-                sizes="(max-width: 600px) 400px, (min-width: 600px) 100vw"
                 alt={project.projectName}
               />
             </Box>

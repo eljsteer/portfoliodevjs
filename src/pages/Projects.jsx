@@ -9,9 +9,9 @@ function Projects() {
       <Container id="WIPContainer">
         <WIPproject />
       </Container>
-      <Container id="mainContainer">
+      <Box id="mainContainer">
         <Imageboard/>
-      </Container>
+      </Box>
     </Box>
   );
 }
