@@ -21,7 +21,7 @@ import "./styles/projectCard.css"
 const baseURL = import.meta.env.BASE_URL;
 const isExternalLink = (url) => url.startsWith('http');
 
-function ProjectCard({ project, randomSize }) {
+function ProjectCard({ project, imageSize }) {
   const { isDarkMode } = useTheme();
 
   const mapIcon = (TechName) => {
@@ -60,7 +60,7 @@ function ProjectCard({ project, randomSize }) {
         <Box
           key={project.id}
           className="flip-card"
-          style={{ width: randomSize(), height: randomSize() }}
+          style={{ width: imageSize(), height: imageSize() }}
         >
           <Box className="flip-card-inner">
             <Box className="flip-card-front">
@@ -71,6 +71,7 @@ function ProjectCard({ project, randomSize }) {
                   const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
                   return `${imagePath} ${image.width}w`;
                 }).join(", ")}
+                sizes="(max-width: 600px) 400px, (min-width: 600px) 100vw"
                 alt={project.projectName}
               />
             </Box>
@@ -129,7 +130,7 @@ ProjectCard.propTypes = {
     deployedLink: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
   }).isRequired,
-  randomSize: PropTypes.func.isRequired,
+  imageSize: PropTypes.func.isRequired,
 };
 
 export default ProjectCard;

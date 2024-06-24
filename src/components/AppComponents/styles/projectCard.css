@@ -1,8 +1,7 @@
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
   perspective: 1000px;
+  margin: 10px;
 }
 
 .flip-card-inner {
@@ -39,4 +38,16 @@
   flex-direction: column;
   justify-content: center;
   transform: rotateY(180deg);
+}
+
+@media (max-width: 900px) {
+  .Grid {
+    padding: 10px; /* Ensure padding to prevent overflow */
+  }
+
+  .flip-card {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 5px; /* Adjust margin to ensure spacing */
+  }
 }
