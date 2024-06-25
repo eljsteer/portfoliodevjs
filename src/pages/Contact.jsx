@@ -48,10 +48,10 @@ function Contact() {
               <Grid item xs={12} lg={7}>
                 <Box component="form" p={2} ref={form} onSubmit={sendEmail}>
                   <Box px={3} py={{ xs: 2, sm: 6 }}>
-                    <Typography variant="h2" mb={1} sx={{fontFamily: isDarkMode ? darkTheme.fontFamily : lightTheme.fontFamily}}>
+                    <Typography variant="h2" mb={1} sx={{fontFamily: isDarkMode ? darkTheme.typography.fontFamily : lightTheme.typography.fontFamily}}>
                       SAY HI.
                     </Typography>
-                    <Typography variant="body1" color="text" mb={2} sx={{fontFamily: isDarkMode ? darkTheme.fontFamily : lightTheme.fontFamily}}>
+                    <Typography variant="body1" color="text" mb={2} sx={{fontFamily: isDarkMode ? darkTheme.typography.fontFamily : lightTheme.typography.fontFamily}}>
                       DROP ME A MESSAGE
                     </Typography>
                   </Box>

@@ -6,6 +6,20 @@
   margin: 10svh 20svh
 }
 
+.Title {
+  width: 100%;
+  font-weight: lighter;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.Subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  /* border-bottom: 1px solid; */
+}
+
 #WIPContainer {
   display: flex;
   flex-direction: column;
@@ -13,6 +27,7 @@
   align-items: center;
   height: fit-content;
   margin: 10svh;
+  width: fit-content;
 }
 
 #mainContainer {
@@ -22,8 +37,13 @@
   width: 100%;
   height: fit-content;
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
+  #WIPContainer {
+    margin: 5svh 2svh;
+  }
+}
 
+@media (max-width: 1200px) {
   #projectPageContainer {
     margin: 10svh 5svh;
   }

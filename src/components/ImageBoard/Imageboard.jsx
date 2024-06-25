@@ -9,7 +9,7 @@ import ProjectCard from "../AppComponents/ProjectCard";
 function Imageboard() {
   const { isDarkMode } = useTheme();
   const gridRef = useRef(null);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900);
 
   const imageSize = () => {
     if (window.innerWidth > 1200) {
@@ -64,12 +64,12 @@ function Imageboard() {
 
   return (
     <Box
-      className={`Grid ${isSmallScreen ? "center-grid" : ""}`}
+      className="Grid"
       ref={gridRef}
     >
       {ProjectData.map((project) => (
         <ProjectCard
-          className="largeScreenCard"
+          className="flip-card"
           key={project.id}
           project={project}
           imageSize={imageSize}
