@@ -3,8 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import ProjectData from "../../utils/ProjectData.json";
 import { useTheme } from "../../contexts/ThemeContext";
-import "./styles/imageboard.css";
 import ProjectCard from "../AppComponents/ProjectCard";
+import GridProjectCard from "../AppComponents/GridProjectCard";
+import "./styles/imageBoard.css";
 
 function Imageboard() {
   const { isDarkMode } = useTheme();
@@ -18,8 +19,6 @@ function Imageboard() {
     } else if (window.innerWidth > 900) {
       const sizes = [300, 350, 400];
       return sizes[Math.floor(Math.random() * sizes.length)];
-    } else {
-      return 500;
     }
   };
 
@@ -63,17 +62,22 @@ function Imageboard() {
   }, [isDarkMode, isSmallScreen]);
 
   return (
-    <Box
-      className="Grid"
-      ref={gridRef}
-    >
+    <Box className="Grid" ref={gridRef}>
       {ProjectData.map((project) => (
-        <ProjectCard
-          className="flip-card"
-          key={project.id}
-          project={project}
-          imageSize={imageSize}
-        />
+        isSmallScreen ? (
+          <GridProjectCard
+            className="grid-card"
+            key={project.id}
+            project={project}
+          />
+        ) : (
+          <ProjectCard
+            className="flip-card"
+            key={project.id}
+            project={project}
+            imageSize={imageSize()}
+          />
+        )
       ))}
     </Box>
   );

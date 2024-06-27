@@ -15,12 +15,12 @@ import ProjectButton from "../AppComponents/ProjectButton";
 import { useTheme } from '../../contexts/ThemeContext';
 import { darkTheme, lightTheme } from "../../Theme.jsx";
 
-import "./styles/projectCard.css";
+import "./styles/gridProjectCard.css";
 
 const baseURL = import.meta.env.BASE_URL;
 const isExternalLink = (url) => url.startsWith('http');
 
-function ProjectCard({ project, imageSize }) {
+function GridProjectCard({ project }) {
   const { isDarkMode } = useTheme();
 
   const mapIcon = (TechName) => {
@@ -58,13 +58,12 @@ function ProjectCard({ project, imageSize }) {
   return (
     <Box
       key={project.id}
-      className="flip-card"
-      style={{ width: imageSize, height: imageSize }}
+      className="grid-card"
     >
-      <Box className="flip-card-inner">
-        <Box className="flip-card-front">
+      <Box className="grid-card-inner">
+        <Box className="grid-card-front">
           <img
-            className="flip-card-img"
+            className="grid-card-img"
             src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
             srcSet={project.images.map((image) => {
               const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
@@ -75,7 +74,7 @@ function ProjectCard({ project, imageSize }) {
           />
         </Box>
         <Box 
-          className="flip-card-back"
+          className="grid-card-back"
           spacing={2}
           sx={{backgroundColor: isDarkMode ? darkTheme.palette.accents.main : lightTheme.palette.accents.main }}
         >
@@ -109,7 +108,7 @@ function ProjectCard({ project, imageSize }) {
   );
 }
 
-ProjectCard.propTypes = {
+GridProjectCard.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
     images: PropTypes.arrayOf(
@@ -129,7 +128,6 @@ ProjectCard.propTypes = {
     deployedLink: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
   }).isRequired,
-  imageSize: PropTypes.number.isRequired,
 };
 
-export default ProjectCard;
+export default GridProjectCard;
