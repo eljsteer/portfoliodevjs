@@ -48,7 +48,7 @@ function ProjectCard({ project, imageSize }) {
         {
           name: 'offset',
           options: {
-            offset: [0, -15],
+            offset: [0, -8],
           },
         },
       ],
@@ -91,7 +91,7 @@ function ProjectCard({ project, imageSize }) {
           <CardContent className="detailsTechIcons">
             <Stack display="flex" direction="row" justifyContent="center" flexWrap="wrap" spacing={2}>
               {project.technologies.map((tech) => (
-                <Tooltip key={tech.id} title={tech.TechName} slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
+                <Tooltip key={tech.id} title={tech.TechName} slotProps={toolTipProps} placement="top" TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
                   <Typography sx={{ fontSize:{ xs: "18px", sm: "24px", md: "28px"}}}>{mapIcon(tech.TechName)}</Typography>
                 </Tooltip>
               ))}
