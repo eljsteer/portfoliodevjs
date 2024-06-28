@@ -19,7 +19,8 @@ function Imageboard() {
     } else if (window.innerWidth > 900) {
       const sizes = [300, 350, 400];
       return sizes[Math.floor(Math.random() * sizes.length)];
-    }
+    } 
+    return "100%";
   };
 
   useEffect(() => {
