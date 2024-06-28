@@ -14,15 +14,6 @@ import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../Theme.jsx";
 import "./styles/ProjectShowcase.css";
 
-// const loadImage = (path) => {
-//   try {
-//     return new URL(`${import.meta.env.BASE_URL}${path}`, import.meta.url).href;
-//   } catch (error) {
-//     console.error(`Error loading image: ${path}`, error);
-//     return null;
-//   }
-// };
-
 const baseURL = import.meta.env.BASE_URL;
 
 const isExternalLink = (url) => url.startsWith('http');

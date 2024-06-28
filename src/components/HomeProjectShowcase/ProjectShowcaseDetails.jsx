@@ -6,12 +6,20 @@ import { Divider, Tooltip } from '@mui/material';
 import Fade from '@mui/material/Fade';
 import Stack from "@mui/material/Stack"
 
+import { SiHtml5 } from "react-icons/si";
+import { SiCss3 } from "react-icons/si";
+import { SiBootstrap } from "react-icons/si";
+import { SiMui } from "react-icons/si";
 import { FaReact } from "react-icons/fa6";
-import { DiJavascript } from "react-icons/di";
+import { SiJavascript } from "react-icons/si";
+import { SiHandlebarsdotjs } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
 import { SiApollographql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiSequelize } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
 import ProjectButton from "../AppComponents/ProjectButton"
@@ -26,10 +34,20 @@ export default function ProjectShowcaseDetails( { project }) {
 
   const mapIcon = (TechName) => {
     switch (TechName) {
+      case "HTML5":
+        return <SiHtml5 />;
       case "React":
         return <FaReact />;
+      case "CSS3":
+        return <SiCss3 />;
+      case "Bootstrap":
+        return <SiBootstrap />;
+      case "MaterialUI":
+        return <SiMui />;
       case "Javascript":
-        return <DiJavascript />;
+        return <SiJavascript />;
+      case "Handlebars.JS":
+        return <SiHandlebarsdotjs />;
       case "NodeJS":
         return <FaNodeJs />;
       case "Express":
@@ -40,6 +58,12 @@ export default function ProjectShowcaseDetails( { project }) {
         return <SiApollographql />;
       case "MongoDB":
         return <SiMongodb />;
+      case "MySQL":
+        return <SiMysql />;
+      case "Sequelize":
+        return <SiSequelize />;
+      case "RESTful API":
+        return <TbApi />;
     }
   }
 

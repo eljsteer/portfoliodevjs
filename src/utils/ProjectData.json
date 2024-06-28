@@ -131,23 +131,19 @@
       },
       {
         "id": 2,
-        "TechName": "NodeJS"
+        "TechName": "HTML5"
       },
       {
         "id": 3,
-        "TechName": "Express"
+        "TechName": "CSS3"
       },
       {
         "id": 4,
-        "TechName": "GraphQL"
+        "TechName": "Bootstrap"
       },
       {
         "id": 5,
-        "TechName": "Apollographql"
-      },
-      {
-        "id": 6,
-        "TechName": "MongoDB"
+        "TechName": "RESTful API"
       }
     ]
   },
@@ -187,11 +183,11 @@
       },
       {
         "id": 4,
-        "TechName": "GraphQL"
+        "TechName": "MySQL"
       },
       {
         "id": 5,
-        "TechName": "Apollographql"
+        "TechName": "Handlebars.JS"
       },
       {
         "id": 6,
@@ -227,23 +223,11 @@
       },
       {
         "id": 2,
-        "TechName": "NodeJS"
+        "TechName": "HTML5"
       },
       {
         "id": 3,
-        "TechName": "Express"
-      },
-      {
-        "id": 4,
-        "TechName": "GraphQL"
-      },
-      {
-        "id": 5,
-        "TechName": "Apollographql"
-      },
-      {
-        "id": 6,
-        "TechName": "MongoDB"
+        "TechName": "CSS3"
       }
     ]
   },
@@ -275,23 +259,19 @@
       },
       {
         "id": 2,
-        "TechName": "NodeJS"
+        "TechName": "HTML5"
       },
       {
         "id": 3,
-        "TechName": "Express"
+        "TechName": "CSS3"
       },
       {
         "id": 4,
-        "TechName": "GraphQL"
+        "TechName": "Bootstrap"
       },
       {
         "id": 5,
-        "TechName": "Apollographql"
-      },
-      {
-        "id": 6,
-        "TechName": "MongoDB"
+        "TechName": "RESTful API"
       }
     ]
   },
@@ -323,23 +303,23 @@
       },
       {
         "id": 2,
-        "TechName": "NodeJS"
+        "TechName": "React"
       },
       {
         "id": 3,
-        "TechName": "Express"
+        "TechName": "NodeJS"
       },
       {
         "id": 4,
-        "TechName": "GraphQL"
+        "TechName": "Express"
       },
       {
         "id": 5,
-        "TechName": "Apollographql"
+        "TechName": "MySQL"
       },
       {
         "id": 6,
-        "TechName": "MongoDB"
+        "TechName": "Sequelize"
       }
     ]
   },
@@ -371,23 +351,23 @@
       },
       {
         "id": 2,
-        "TechName": "NodeJS"
+        "TechName": "React"
       },
       {
         "id": 3,
-        "TechName": "Express"
+        "TechName": "NodeJS"
       },
       {
         "id": 4,
-        "TechName": "GraphQL"
+        "TechName": "Express"
       },
       {
         "id": 5,
-        "TechName": "Apollographql"
+        "TechName": "MySQL"
       },
       {
         "id": 6,
-        "TechName": "MongoDB"
+        "TechName": "Sequelize"
       }
     ]
   }
