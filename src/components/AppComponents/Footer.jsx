@@ -23,10 +23,12 @@ let lightThemeText = lightTheme.palette.text;
 function Footer({
   socials = [
     {
+      id: 1,
       icon: <LinkedInIcon />,
       link: "https://www.linkedin.com/in/devjs-jason-steer/",
     },
     { 
+      id: 2,
       icon: <GitHubIcon />, 
       link: "https://github.com/eljsteer" 
     },
@@ -40,9 +42,9 @@ function Footer({
 
   const renderLinks = NavList.map((link) => (
     <Typography
-      key={link.name}
+      key={link.id}
       component={Link}
-      href={link.href}
+      to={link.url}
       variant="subtitle1"
       sx={{textDecoration:"none"}}
       color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary }
@@ -54,10 +56,12 @@ function Footer({
   const renderSocials = socials.map((social) => (
     <Typography
       className="SocialsTypo"
-      key={social.link}
-      component={Link}
+      key={social.id}
+      component="a"
       href={social.link}
-      color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary }
+      target="_blank"
+      rel="noopener noreferrer"
+      color={isDarkMode ? darkThemeText.primary : lightThemeText.primary}
     >
       {social.icon}
     </Typography>
