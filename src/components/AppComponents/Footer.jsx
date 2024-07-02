@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Box from "@mui/material/Box";
-// import { Divider } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -68,8 +67,7 @@ function Footer({
   ));
 
   return (
-    <Box component="footer" py={6}>
-      {/* <Divider sx={{margin:"5vh 5%"}}/> */}
+    <Box component="footer" py={6} className="stickyFooter">
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
           <Stack

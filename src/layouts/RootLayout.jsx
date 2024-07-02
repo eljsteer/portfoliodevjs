@@ -11,7 +11,7 @@ export default function RootLayout() {
   return (
     <Paper className="Root-layout">
       <Header/>
-      <main>
+      <main className="main-content">
         <Outlet/>
       </main>
       <Footer className="Footer"/>
