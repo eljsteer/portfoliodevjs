@@ -19,6 +19,10 @@
   justify-content: center;
 }
 
+#detailsTechIcons {
+  padding: 10px 10px 0px 10px;
+}
+
 @media screen and (max-width: 400px) {  
   #detailsTechIcons {
     display: none;

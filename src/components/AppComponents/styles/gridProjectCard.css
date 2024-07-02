@@ -43,3 +43,7 @@
   justify-content: center;
   transform: rotateY(180deg);
 }
+
+.grid-card-back .detailsTechIcons {
+  padding: 10px 10px 0px 10px;
+}

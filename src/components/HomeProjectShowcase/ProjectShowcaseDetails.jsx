@@ -98,7 +98,7 @@ export default function ProjectShowcaseDetails( { project }) {
       <CardContent id="detailsTechIcons">
         <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
           {project.technologies.map((tech) => (
-            <Tooltip key={tech.id} title={tech.TechName} slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
+            <Tooltip key={tech.id} title={tech.TechName} placement="top" slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
               <Typography sx={{ fontSize:{ xs: "22px", sm: "28px", md: "32px"}}}>{mapIcon(tech.TechName)}</Typography>
             </Tooltip>
           ))}
