@@ -59,6 +59,7 @@ function Contact() {
                     <Grid container>
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
+                          className="contactTextfield"
                           variant="standard"
                           label="My name is"
                           name="user_name"
@@ -69,6 +70,7 @@ function Contact() {
                       </Grid>
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
+                          className="contactTextfield"
                           variant="standard"
                           label="Subject"
                           name="user_subject"
@@ -79,6 +81,7 @@ function Contact() {
                       </Grid>
                       <Grid item xs={12} pr={1} mb={3}>
                         <TextField
+                          className="contactTextfield"
                           variant="standard"
                           label="Your message"
                           name="user_message"
