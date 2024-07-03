@@ -7,10 +7,13 @@ import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import Image from "../../utils/image";
-import profileImage from "../../assets/images/Profile_Image1_Square.png"
+import profileImagePlaceholder from "../../assets/images/Profile_Image1_Square_20Placeholder.png"
+import profileImage240 from "../../assets/images/Profile_Image1_Square_240px.png"
+import profileImage480 from "../../assets/images/Profile_Image1_Square_480px.png"
+import profileImage960 from "../../assets/images/Profile_Image1_Square_960px.png"
+import profileImage1980 from "../../assets/images/Profile_Image1_Square_1980px.png"
 
-import { FcCommandLine } from "react-icons/fc"; 
-import { FcMultipleDevices } from "react-icons/fc";
+import { FcCommandLine, FcMultipleDevices } from "react-icons/fc";
 import { RiReactjsLine } from "react-icons/ri";
 
 import Icon from './pattern/icon';
@@ -20,6 +23,22 @@ import Pattern01 from './pattern/pattern-01';
 import Pattern02 from './pattern/pattern-02';
 
 // ----------------------------------------------------------------------
+
+const placeholderImgStyle = {
+  backgroundImage: `url(${profileImagePlaceholder})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  width: 420, 
+  height: 600, 
+  borderRadius: "60px", 
+  overflow: "hidden"
+}
+
+const profileImgStyle = {
+  width: 420, 
+  height: 600, 
+  borderRadius: "60px" 
+}
 
 const varUp = {
   animate: { y: [-8, 8, -8], x: [-4, 4, -4] },
@@ -74,13 +93,18 @@ function ElearningHeroIllustration({ sx, ...other }) {
       {...other}
     >
       <Box sx={{ position: 'absolute', right: 80, bottom: 100, zIndex: 5 }}>
-        <Image
-          visibleByDefault
-          disabledEffect
-          alt="DevJS"
-          src={profileImage}
-          sx={{ width: 420, height: 600, borderRadius: "60px" }}
-        />
+        <div className="blur-load" style={placeholderImgStyle}>
+          <Image
+            id="profileImg"
+            visibleByDefault
+            disabledEffect
+            alt="DevJS"
+            src={profileImage1980}
+            srcSet={`${profileImage240} 240w, ${profileImage480} 480w, ${profileImage960} 960w, ${profileImage1980} 1980w`}
+            loading="lazy"
+            sx={profileImgStyle}
+          />
+        </div>
       </Box>
       <Box
         {...varDown}
