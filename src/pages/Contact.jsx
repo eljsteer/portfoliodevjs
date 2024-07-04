@@ -39,11 +39,7 @@ function Contact() {
     <Box component="section" py={{ xs: 0, lg: 6 }}>
       <Container>
         <Grid container item px={6}>
-          <Box
-            width="100%"
-            mb={6}
-            sx={{ overflow: "hidden" }}
-          >
+          <Box width="100%" mb={6} sx={{ overflow: "hidden" }}>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={7}>
                 <Box component="form" p={2} ref={form} onSubmit={sendEmail}>
@@ -106,7 +102,6 @@ function Contact() {
                         className="sendButton"
                         variant="outlined"
                         type="submit"
-                        // onSubmit={sendEmail}
                         sx={{
                           borderRadius: 0,
                           color: isDarkMode ? darkTheme.palette.text.primary : lightTheme.palette.text.primary,
