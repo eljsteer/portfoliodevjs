@@ -116,7 +116,7 @@ function GridProjectCard({ project }) {
           </CardContent>
           <Divider className="detailsDivider" aria-hidden="true" variant="middle" />
           <CardContent className="detailsTechIcons">
-            <Stack display="flex" direction="row" justifyContent="center" flexWrap="wrap" spacing={2}>
+            <Stack display="flex" direction="row" justifyContent="center" spacing={2}>
               {project.technologies.map((tech) => (
                 <Tooltip key={tech.id} title={tech.TechName} placement="top" slotProps={toolTipProps} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
                   <Typography sx={{ fontSize:{ xs: "18px", sm: "24px", md: "28px"}}}>{mapIcon(tech.TechName)}</Typography>

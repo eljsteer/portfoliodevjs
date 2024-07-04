@@ -28,6 +28,13 @@ export default function ProjectShowcase() {
     console.log(ProjectData[activeIndex]);
   };
 
+  // const placeholderImgStyle = {
+  //   backgroundImage: `url(${})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   overflow: "hidden"
+  // }
+
   return (
     <Box className="ShowcaseSection" sx={{ backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main }}>
       <Grid className="ShowcaseWrapper" container spacing={0}>
@@ -57,15 +64,17 @@ export default function ProjectShowcase() {
             {ProjectData.map((project) => (
               <SwiperSlide key={project.id} className="swiper-slide">
                 {project.images && project.images.length > 0 ? (
-                  <img
-                    className="projectShowcaseIMG"
-                    src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
-                    srcSet={project.images.map((image) => {
-                      const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
-                      return `${imagePath} ${image.width}w`;
-                    }).join(", ")}
-                    alt={project.projectName}
-                  />
+                  // <Box className="blur-load" sx={}>
+                    <img
+                      className="projectShowcaseIMG"
+                      src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
+                      srcSet={project.images.map((image) => {
+                        const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
+                        return `${imagePath} ${image.width}w`;
+                      }).join(", ")}
+                      alt={project.projectName}
+                    />
+                  // </Box>
                 ) : (
                   <div>No image available</div>
                 )}

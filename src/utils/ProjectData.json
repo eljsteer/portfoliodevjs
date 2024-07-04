@@ -20,6 +20,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -72,6 +76,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -124,6 +132,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -153,7 +165,7 @@
     "projectWIP": false,
     "deployedLink": "https://movie-god.herokuapp.com/",
     "github": "https://github.com/eljsteer/Movie-God",
-    "description": "This Application is your one-stop-shop for all your latest Movie information. Leave Reviews and Ratings on movie greats or new and upcoming movie releases.",
+    "description": "This Application is your one-stop-shop for all your latest Movie information.",
     "images": [
       { "src": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "width": 3840
@@ -168,6 +180,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -216,6 +232,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -252,6 +272,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -296,6 +320,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
@@ -344,6 +372,10 @@
         "width": 480
       }
     ],
+    "placeholder": {
+      "src": "/",
+      "width": "/"
+    },
     "technologies": [
       {
         "id": 1,
