@@ -90,16 +90,21 @@ function ProjectCard({ project, imageSize }) {
     >
       <Box className="flip-card-inner">
         <Box className="flip-card-front">
-          <img
-            className="flip-card-img"
-            src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
-            srcSet={project.images.map((image) => {
-              const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
-              return `${imagePath} ${image.width}w`;
-            }).join(", ")}
-            loading="lazy"
-            alt={project.projectName}
-          />
+          <Box 
+            className="blur-load"
+            sx={{backgroundImage: `url(${project.placeholder})`}}
+          >
+            <img
+              className="flip-card-img"
+              src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
+              srcSet={project.images.map((image) => {
+                const imagePath = isExternalLink(image.src) ? image.src : `${baseURL}${image.src}`;
+                return `${imagePath} ${image.width}w`;
+              }).join(", ")}
+              loading="lazy"
+              alt={project.projectName}
+            />
+          </Box>
         </Box>
         <Box 
           className="flip-card-back"
@@ -145,6 +150,7 @@ ProjectCard.propTypes = {
         width: PropTypes.number.isRequired,
       })
     ).isRequired,
+    placeholder: PropTypes.string.isRequired,
     projectName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(

@@ -43,3 +43,8 @@
 .flip-card-back .detailsTechIcons {
   padding: 10px 10px 0px 10px;
 }
+
+.blur-load {
+  width: 100%;
+  height: 100%;
+}
