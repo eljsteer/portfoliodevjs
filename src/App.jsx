@@ -19,7 +19,7 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-const basename = '/portfolioDevJS';
+const basename = '/portfoliodevjs';
 
 // const routes = createRoutesFromElements(
 //   <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
