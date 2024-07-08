@@ -28,13 +28,6 @@ export default function ProjectShowcase() {
     console.log(ProjectData[activeIndex]);
   };
 
-  // const placeholderImgStyle = {
-  //   backgroundImage: `url(${})`,
-  //   backgroundSize: "cover",
-  //   backgroundPosition: "center",
-  //   overflow: "hidden"
-  // }
-
   return (
     <Box className="ShowcaseSection" sx={{ backgroundColor: isDarkMode ? darkTheme.palette.primary.dark : lightTheme.palette.primary.main }}>
       <Grid className="ShowcaseWrapper" container spacing={0}>
@@ -64,7 +57,13 @@ export default function ProjectShowcase() {
             {ProjectData.map((project) => (
               <SwiperSlide key={project.id} className="swiper-slide">
                 {project.images && project.images.length > 0 ? (
-                  // <Box className="blur-load" sx={}>
+                  <Box 
+                    className="blur-load" 
+                    sx={{
+                      backgroundImage: `url(${project.placeholder})`,  
+                      backgroundSize: "cover",
+                      backgroundPosition: "center"
+                    }}>
                     <img
                       className="projectShowcaseIMG"
                       src={isExternalLink(project.images[0].src) ? project.images[0].src : `${baseURL}${project.images[0].src}`}
@@ -74,7 +73,7 @@ export default function ProjectShowcase() {
                       }).join(", ")}
                       alt={project.projectName}
                     />
-                  // </Box>
+                  </Box>
                 ) : (
                   <div>No image available</div>
                 )}

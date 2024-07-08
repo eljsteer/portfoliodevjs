@@ -5,16 +5,16 @@ import emailjs from '@emailjs/browser';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { Box, Button, TextField, Typography } from "@mui/material";
-
+// Styles
 import { useTheme } from "../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../Theme.jsx";
 import "../styles/contact.css"
 
-// Images
-const bgImage = "https://images.unsplash.com/photo-1519455953755-af066f52f1a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 function Contact() {
   const { isDarkMode } = useTheme();
+  const baseURL = "/portfoliodevjs";
+  const contactImagePath = `${baseURL}/assets/images/contactImage/alex-perez-wEgR12N01Tk-unsplash_Contact.jpg`;
   const form = useRef();
 
   const messageSent = () => {
@@ -123,7 +123,7 @@ function Contact() {
                 className="contactImage"
                 lg={5}
                 sx={{
-                  backgroundImage: `url(${bgImage})`,
+                  backgroundImage: `url(${contactImagePath})`,
                   backgroundSize: "cover",
                 }}
               >
