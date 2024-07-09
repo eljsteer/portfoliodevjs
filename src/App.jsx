@@ -1,25 +1,22 @@
-import { CssBaseline } from '@mui/material'
-import { ThemeContextProvider } from "./contexts/ThemeContext.jsx"
-
+import { CssBaseline } from '@mui/material';
+import { ThemeContextProvider } from "./contexts/ThemeContext.jsx";
 import {
-  createBrowserRouter,
-  // createRoutesFromElements,
-  // Route,
+  createHashRouter,
   RouterProvider,
-} from "react-router-dom"
+} from "react-router-dom";
 
 ////// <<-- Layouts -->> //////
-import RootLayout from "./layouts/RootLayout"
+import RootLayout from "./layouts/RootLayout";
 
 ////// <<-- Pages -->> //////
-import ErrorPage from "./utils/error-page.jsx"
+import ErrorPage from "./utils/error-page.jsx";
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-const basename = '/portfoliodevjs';
+// const basename = '/portfoliodevjs';
 
 // const routes = createRoutesFromElements(
 //   <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
@@ -33,7 +30,7 @@ const basename = '/portfoliodevjs';
 
 // const router = createBrowserRouter(routes, { basename });  // Add basename here
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
@@ -46,7 +43,7 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> }
     ]
   }
-], { basename });
+]);
 
 function App() {
   return (
