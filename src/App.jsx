@@ -16,8 +16,6 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
-// const basename = '/portfoliodevjs';
-
 // const routes = createRoutesFromElements(
 //   <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
 //     <Route index element={<Home />} />
@@ -27,8 +25,6 @@ import Contact from "./pages/Contact";
 //     <Route path="/contact" element={<Contact />} />
 //   </Route>
 // );
-
-// const router = createBrowserRouter(routes, { basename });  // Add basename here
 
 const router = createHashRouter([
   {

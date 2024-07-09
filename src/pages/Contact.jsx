@@ -126,6 +126,7 @@ function Contact() {
                   backgroundImage: `url(${contactImagePath})`,
                   backgroundSize: "cover",
                 }}
+                alt="Water Drop Photo by Alex Perez"
               >
               </Grid>
             </Grid>

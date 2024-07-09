@@ -1,6 +1,16 @@
+#detailsCardContainer {
+  width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  ;
+}
 
 .detailsCardContent {
   text-align: center;
+  width: 100%;
 }
 #detailsDescription {
   margin-bottom: 1.5;
@@ -23,18 +33,25 @@
   padding: 10px 10px 0px 10px;
 }
 
+@media screen and (max-width: 600px) {
+  #detailsCardContainer {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {  
   #detailsTechIcons {
     display: none;
   }
   #detailsDivider {
-    display: none;
+    margin: none;
   }
-  #detailsDecription {
-    margin: 20px 0 0 0;
+  #detailsDescription {
+    margin: 10px 0px 0px 0px;
 
   }
   #detailsButtons {
-    padding: 12px;
+    margin: 0 10px;
+    padding: 5px;
   }
 }
