@@ -1,24 +1,64 @@
-import { useRef } from "react"
+import { useRef, useState} from "react"
 import emailjs from '@emailjs/browser';
 
-// @mui material components
+// @mui material components 
+import Alert from '@mui/material/Alert';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import { Snackbar, TextField } from '@mui/material';
+
+import CheckIcon from '@mui/icons-material/Check';
+
+
+
 // Styles
 import { useTheme } from "../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../Theme.jsx";
 import "../styles/contact.css"
 
 
-function Contact() {
+export default function Contact() {
   const { isDarkMode } = useTheme();
+  const form = useRef();
+  const [openAlert, setOpentAlert] = useState(false);
+
   const baseURL = "/portfoliodevjs";
   const contactImagePath = `${baseURL}/assets/images/contactImage/alex-perez-wEgR12N01Tk-unsplash_Contact.jpg`;
-  const form = useRef();
 
   const messageSent = () => {
+    setOpentAlert(true)
+  }
 
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpentAlert(false);
+  };
+
+  const SuccessAlert = () => {
+    return (
+      <Snackbar
+        open={openAlert}
+        autoHideDuration={3000}
+        anchorOrigin={{ vertical: "top", horizontal: "center"}}
+        onClose={handleClose}
+      >
+        <Alert
+          icon={<CheckIcon fontSize="inherit" />} 
+          onClose={handleClose}
+          variant="filled"
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+            Thank you, your message was successfully sent
+        </Alert>
+      </Snackbar>
+    );
   }
 
   const sendEmail = (e) => {
@@ -62,6 +102,8 @@ function Contact() {
                           placeholder="Full Name"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
+                          multiline
+                          rows={1}
                         />
                       </Grid>
                       <Grid item xs={12} pr={1} mb={3}>
@@ -73,6 +115,8 @@ function Contact() {
                           placeholder="Message summary"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
+                          multiline
+                          rows={1}
                         />
                       </Grid>
                       <Grid item xs={12} pr={1} mb={3}>
@@ -133,8 +177,7 @@ function Contact() {
           </Box>
         </Grid>
       </Container>
+      <SuccessAlert/>
     </Box>
   );
 }
-
-export default Contact;
