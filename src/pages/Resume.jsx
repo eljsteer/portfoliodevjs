@@ -1,9 +1,12 @@
-function Resume() {
+import { Box, Grid } from "@mui/material";
+import ResumeCard from "../components/AppComponents/ResumeCard";
+
+export default function Resume() {
   return (
-    <div>
-      Resume
-    </div>
+    <Box>
+      <Grid>
+        <ResumeCard/>
+      </Grid>
+    </Box>
   );
 }
-
-export default Resume;
