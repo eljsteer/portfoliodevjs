@@ -1,31 +1,75 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
-export default function ResumeCard() {
+export default function ResumeCard({ type, data }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        {type === "Education" ? (
+          <Stack>
+            <Box>
+              <Typography variant="h5" component="div">
+                {data.courseName}
+              </Typography>
+              <Typography gutterBottom variant="subtitle1" component="div">
+                {data.university}
+              </Typography>
+            </Box>
+            <Box>
+              <Typography gutterBottom variant="subtitle2" component="div">
+                {data.startDate} - {data.endDate}
+              </Typography>
+            </Box>
+          </Stack>
+        ) : (
+          <Stack>
+            <Box>
+              <Typography variant="h5" component="div">
+                {data.jobTitle}
+              </Typography>
+              <Typography gutterBottom variant="subtitle1" component="div">
+                {data.companyName}
+              </Typography>
+            </Box>
+            <Box>
+              <Typography gutterBottom variant="subtitle2" component="div">
+                {data.startDate} - {data.endDate}
+              </Typography>
+            </Box>
+            <Typography variant="body2" color="text.secondary">
+              <ul>
+                {data.keyAchievements.map((achieve) => (
+                  <li key={achieve.achieveID}>{achieve.achieveDescr}</li>
+                ))}
+              </ul>
+            </Typography>
+          </Stack>
+        )}
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
+
+ResumeCard.propTypes = {
+  type: PropTypes.oneOf(["Education", "Experience"]).isRequired,
+  data: PropTypes.shape({
+    courseID: PropTypes.number,
+    courseName: PropTypes.string,
+    university: PropTypes.string,
+    startDate: PropTypes.string,
+    endDate: PropTypes.string,
+    jobId: PropTypes.number,
+    jobTitle: PropTypes.string,
+    companyName: PropTypes.string,
+    keyAchievements: PropTypes.arrayOf(
+      PropTypes.shape({
+        achieveID: PropTypes.number,
+        achieveDescr: PropTypes.string,
+      })
+    ),
+  }).isRequired,
+};
