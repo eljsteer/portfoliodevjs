@@ -7,12 +7,12 @@ import Typography from "@mui/material/Typography";
 
 export default function ResumeCard({ type, data }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 1000 }}>
       <CardContent>
         {type === "Education" ? (
           <Stack>
             <Box>
-              <Typography variant="h5" component="div">
+              <Typography variant="subtitle1" component="div">
                 {data.courseName}
               </Typography>
               <Typography gutterBottom variant="subtitle1" component="div">
@@ -28,10 +28,10 @@ export default function ResumeCard({ type, data }) {
         ) : (
           <Stack>
             <Box>
-              <Typography variant="h5" component="div">
+              <Typography variant="subtitle1" component="div">
                 {data.jobTitle}
               </Typography>
-              <Typography gutterBottom variant="subtitle1" component="div">
+              <Typography gutterBottom variant="subtitle2" component="div">
                 {data.companyName}
               </Typography>
             </Box>
@@ -40,13 +40,13 @@ export default function ResumeCard({ type, data }) {
                 {data.startDate} - {data.endDate}
               </Typography>
             </Box>
-            <Typography variant="body2" color="text.secondary">
+            <Box variant="body2" color="text.secondary">
               <ul>
                 {data.keyAchievements.map((achieve) => (
                   <li key={achieve.achieveID}>{achieve.achieveDescr}</li>
                 ))}
               </ul>
-            </Typography>
+            </Box>
           </Stack>
         )}
       </CardContent>

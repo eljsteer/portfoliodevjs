@@ -1,0 +1,54 @@
+.resumeContainer {
+  margin: 10svh 0svh;
+}
+
+#downloadContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#stackWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#stackContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-width: 300px;
+  height: 300px;
+  max-height: 300px;
+}
+
+.iconButton {
+  max-width: 50px;
+  max-height: 50px; 
+  border-radius: 0;
+}
+
+.iconButton:hover {
+  border-radius: 0;
+}
+
+#downloadIcon {
+  font-size: 48px;
+}
+
+#educationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#qualificationContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#workContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
