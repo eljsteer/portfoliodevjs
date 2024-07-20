@@ -1,7 +1,30 @@
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#stackContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 #resumeDownload {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 500px;
   max-width: 500px;
   height: 700px;
@@ -12,6 +35,8 @@
   max-width: 50px;
   max-height: 50px; 
   border-radius: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .iconButton:hover {
@@ -22,33 +47,36 @@
   font-size: 48px;
 }
 
-#stackContainer {
-  display: flex;
-  justify-content: center;
-}
-
 .menu {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: -550px;
+  left: -270px;
+  display: grid;
+  place-items: center;
+  transform-origin: center;
+  animation: orbit 60s linear infinite;
+}
+
+.menu:hover {
+  animation-play-state: paused;
+  --orbit-play-state: paused;
 }
 
 .iconBox {
   font-size: 36px;
   list-style: none;
   position: absolute;
-  transform-origin: 300px;
-  transform: rotate(calc(360deg/13 * var(--i)));
   width: 6rem;
-  aspect-ratio: 1/1;
+  height: 6rem;
   border-radius: 50%;
   overflow: hidden;
   display: grid;
   place-content: center;
   background-color: aquamarine;
   transition: opacity 0.3s ease;
+  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px) rotate(calc(-360deg / 13 * var(--i)));
+  transform-origin: center;
+  animation: reverseOrbit 60s linear infinite;
+  animation-play-state: var(--orbit-play-state, running);
 }
 
 .iconBox:hover .icon {
@@ -75,4 +103,10 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   color: white;
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
 }
