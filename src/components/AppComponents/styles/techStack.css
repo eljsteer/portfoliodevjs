@@ -1,16 +1,11 @@
-#stackContainer {
-  display: flex;
-  justify-content: center;
-}
-
 #resumeDownload {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  max-width: 300px;
-  height: 300px;
-  max-height: 300px;
+  width: 500px;
+  max-width: 500px;
+  height: 700px;
+  max-height: 700px;
 }
 
 .iconButton {
@@ -25,4 +20,59 @@
 
 #downloadIcon {
   font-size: 48px;
+}
+
+#stackContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -550px;
+}
+
+.iconBox {
+  font-size: 36px;
+  list-style: none;
+  position: absolute;
+  transform-origin: 300px;
+  transform: rotate(calc(360deg/13 * var(--i)));
+  width: 6rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  background-color: aquamarine;
+  transition: opacity 0.3s ease;
+}
+
+.iconBox:hover .icon {
+  opacity: 0;
+}
+
+.iconBox:hover .iconText {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 36px;
+  transition: opacity 0.3s ease;
+}
+
+.iconText {
+  text-align: center;
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-content: center;
+  background-color: blue;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
 }
