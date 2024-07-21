@@ -48,10 +48,10 @@
 }
 
 .menu {
-  position: relative;
-  left: -270px;
   display: grid;
   place-items: center;
+  position: relative;
+  left: -270px;
   transform-origin: center;
   animation: orbit 60s linear infinite;
 }
@@ -70,13 +70,16 @@
   border-radius: 50%;
   overflow: hidden;
   display: grid;
-  place-content: center;
+  place-items: center;
   background-color: aquamarine;
   transition: opacity 0.3s ease;
-  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px) rotate(calc(-360deg / 13 * var(--i)));
-  transform-origin: center;
-  animation: reverseOrbit 60s linear infinite;
-  animation-play-state: var(--orbit-play-state, running);
+  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px);
+
+  & > * {
+    position: absolute;
+    animation: orbit 60s linear reverse infinite;
+    animation-play-state: var(--orbit-play-state, running)
+  }
 }
 
 .iconBox:hover .icon {
@@ -108,5 +111,10 @@
 @keyframes orbit {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes hold-position {
+  100% {
+    transform: rotate(-360deg);
   }
 }
