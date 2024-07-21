@@ -51,7 +51,7 @@
   display: grid;
   place-items: center;
   position: relative;
-  left: -270px;
+  left: -275px;
   transform-origin: center;
   animation: orbit 60s linear infinite;
 }
@@ -73,7 +73,7 @@
   place-items: center;
   background-color: aquamarine;
   transition: opacity 0.3s ease;
-  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px) rotate(calc(-360deg / 13 * var(--i)));
+  transform: rotate(calc(360deg / 12 * var(--i))) translate(220px) rotate(calc(-360deg / 12 * var(--i)));
 
   & > * {
     position: absolute;
