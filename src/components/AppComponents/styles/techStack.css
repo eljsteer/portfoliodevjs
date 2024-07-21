@@ -73,7 +73,7 @@
   place-items: center;
   background-color: aquamarine;
   transition: opacity 0.3s ease;
-  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px);
+  transform: rotate(calc(360deg / 13 * var(--i))) translate(250px) rotate(calc(-360deg / 13 * var(--i)));
 
   & > * {
     position: absolute;
