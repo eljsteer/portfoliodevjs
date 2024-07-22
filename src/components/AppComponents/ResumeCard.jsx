@@ -5,9 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+import "./styles/resumeCard.css"
+
 export default function ResumeCard({ type, data }) {
   return (
-    <Card sx={{ maxWidth: 1000 }}>
+    <Card className="cardContainer" sx={{ maxWidth: 1000 }}>
       <CardContent>
         {type === "Education" ? (
           <Stack>
