@@ -18,7 +18,7 @@ export default function TechStack() {
   const { isDarkMode } = useTheme();
 
   return (
-    <Box id="stackContainer">
+    <Box id="techStackContainer">
       <Box id="resumeDownload">
         <a href={ResumeFile} download="Jason_Steer_Resumé.pdf">
           <Tooltip title="Download Resume" TransitionComponent={Fade} TransitionProps={{ timeout: 600 }}>
