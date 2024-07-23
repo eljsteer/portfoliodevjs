@@ -1,11 +1,6 @@
-import { Box, IconButton, Tooltip, Typography } from "@mui/material";
-import Fade from '@mui/material/Fade';
-
-import StackGrid from "./StackSmall.jsx"
-import ResumeFile from "/assets/resume/Jason_Steer_Resumé.pdf"
+import { Box, Typography } from "@mui/material";
 
 // React Icons Imports
-import { BsDownload } from "react-icons/bs";
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiMui } from "react-icons/si";
@@ -14,7 +9,6 @@ import { SiJavascript } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
-// import { SiApollographql } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { SiSequelize } from "react-icons/si";
