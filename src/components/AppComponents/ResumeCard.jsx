@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import { Container } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import "./styles/resumeCard.css"
 
+
 export default function ResumeCard({ type, data }) {
   return (
-    <Card className="cardContainer" sx={{ maxWidth: 1000 }}>
-      <CardContent>
+    <Box className="cardContainer" sx={{ maxWidth: 1000 }}>
+      <Container>
         {type === "Education" ? (
           <Stack>
             <Box>
@@ -51,8 +51,8 @@ export default function ResumeCard({ type, data }) {
             </Box>
           </Stack>
         )}
-      </CardContent>
-    </Card>
+      </Container>
+    </Box>
   );
 }
 
