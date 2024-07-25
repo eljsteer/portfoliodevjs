@@ -1,24 +1,24 @@
-import * as React from 'react';
+import * as React from "react";
 
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 import { IoLogoJavascript } from "react-icons/io";
 
 import "./styles/header.css"
 
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from "../../contexts/ThemeContext";
 
 import { NavList } from "../../layouts/NavList"
-import ToggleThemeButton from './ToggleThemeButton';
+import ToggleThemeButton from "./ToggleThemeButton";
 
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 let darkThemeText = darkTheme.palette.text
 let lightThemeText = lightTheme.palette.text
@@ -32,20 +32,28 @@ function Header() {
     mx: { md: "5px", lg: "20px"},
     fontSize: { md: "18px", lg: "20px"},
     color: isDarkMode ? darkThemeText.primary : lightThemeText.primary,
-    display: 'block',
-    position: 'relative',
-    borderBottom: '2px solid transparent',
-    transition: 'all 0.3s ease-in-out',
-    '&:hover::before': {
+    display: "block",
+    position: "relative",
+    borderBottom: "2px solid transparent",
+    transition: "all 0.3s ease-in-out",
+    "&:hover::before": {
       content: '""',
-      position: 'absolute',
+      position: "absolute",
       bottom: 0,
       left: 0,
       right: 0,
-      height: '2px',
+      height: "2px",
       borderBottom: `2px solid ${isDarkMode ? lightTheme.palette.primary.main : darkTheme.palette.primary.dark}`,
-      transform: 'scaleX(1)',
-      transformOrigin: '0 50%',
+      transform: "scaleX(1)",
+      transformOrigin: "0 50%",
+    },
+  };
+
+  const menuStyle = {
+    display: { xs: "block", md: "none" },
+    "& .MuiPaper-root": {
+      paddingLeft: "10px",
+      paddingRight: "10px",
     },
   };
 
@@ -62,7 +70,7 @@ function Header() {
       <Container>
         <Toolbar>
   {/* <<------ Tablet/Mobile Smaller Screens ----->>*/}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent:"space-between", alignItems: "center" }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent:"space-between", alignItems: "center" }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -79,25 +87,23 @@ function Header() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+              sx={menuStyle}
             >
               {NavList.map((page) => (
                 <Link
                   key={page.id}
                   to={`${page.url}`}
-                  style={{textDecoration:"none"}}
+                  style={{textDecoration:"none" }}
                 >
                   <MenuItem 
                     key={page.id}
@@ -125,12 +131,12 @@ function Header() {
           </Box>
 
   {/* <<------ Monitor Larger Screens ----->>*/}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:"space-between", alignItems:"center" }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent:"space-between", alignItems:"center" }}>
             <IconButton 
               component={Link}
               to="/"
               sx={{ 
-                display: { xs: 'none', md: 'flex' },
+                display: { xs: "none", md: "flex" },
                 height:"fit-content",
                 textDecoration: "none",
                 padding:"5px" 
