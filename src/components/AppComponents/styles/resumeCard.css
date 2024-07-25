@@ -1,5 +1,16 @@
+:root {
+  --border-color: #020812; /* Default light theme color */
+  --circle-color: #020812; /* Default light theme color */
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  --border-color: #fff; /* Dark theme color */
+  --circle-color: #fff; /* Dark theme color */
+}
+
 .cardContainer {
-  border-left: 1px solid;
+  border-left: 1px solid var(--border-color);
   padding: 0 0 20px 20px;
   position: relative;
 }
@@ -12,6 +23,6 @@
   border-radius: 50px;
   left: -8px;
   top: 10px;
-  /* background-color: ; */
   border: 2px solid;
+  background-color: var(--circle-color);
 }

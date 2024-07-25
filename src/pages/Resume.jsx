@@ -19,7 +19,7 @@ export default function Resume() {
         <TechStack/>
       </Box>
       <Box id="educationContainer">
-        <Typography variant="h4" gutterBottom>
+        <Typography sx={{ margin: "10px" }} variant="h4">
           Education
         </Typography>
         <Divider/>
@@ -32,7 +32,7 @@ export default function Resume() {
         </Grid>
       </Box>
       <Box id="experienceContainer">
-        <Typography variant="h4" gutterBottom>
+        <Typography sx={{ margin: "10px" }} variant="h4">
           Experience
         </Typography>
         <Divider/>

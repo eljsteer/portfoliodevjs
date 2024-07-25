@@ -4,12 +4,20 @@ import { Container } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+import { useTheme } from "../../contexts/ThemeContext.jsx";
 import "./styles/resumeCard.css"
 
 
 export default function ResumeCard({ type, data }) {
+  const { isDarkMode } = useTheme();
+
+  document.body.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+
   return (
-    <Box className="cardContainer" sx={{ maxWidth: 1000 }}>
+    <Box 
+      className="cardContainer"
+      sx={{ maxWidth: 1000 }}
+    >
       <Container>
         {type === "Education" ? (
           <Stack>
