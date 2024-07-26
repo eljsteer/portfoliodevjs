@@ -1,0 +1,48 @@
+#WIPprojectContainer {
+  position: relative;
+}
+
+#imageCardDescription {
+  margin: 12px 0px;
+}
+
+#imageOverlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 5px;
+  color: white;
+}
+
+#imageOverlay > * {
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+#imageOverlay:hover {
+  opacity: 1;
+}
+#imageOverlay:hover > * {
+  transform: translateY(0);
+}
+
+#imageOverlay .WIPButtonStyle {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+
+#imageOverlay .WIPButtonStyle:hover {
+  color: #020812;
+  background-color: #C3E9E9;
+}
