@@ -6,10 +6,13 @@ import ProjectData from "../../utils/ProjectData.json"
 
 import "./styles/wipProject.css"
 
+import { useTheme } from "../../contexts/ThemeContext.jsx";
+import { darkTheme, lightTheme } from "../../Theme.jsx";
+
 const baseURL = import.meta.env.BASE_URL;
 
 export default function WIPproject() {
-
+  const { isDarkMode } = useTheme();
   const [projectWIP, setProjectWIP] = useState(null)
 
   useEffect(() => {
@@ -38,8 +41,12 @@ export default function WIPproject() {
           <Typography variant="h5" id="imageCardTitle">{projectWIP.projectName}</Typography>
           <Typography variant="body1" id="imageCardDescription">{projectWIP.description}</Typography>
           <Stack direction="row" spacing={2}>
-            <Button className="WIPButtonStyle" href={projectWIP.deployedLink}>View Live</Button>
-            <Button className="WIPButtonStyle" href={projectWIP.github}>View Github</Button>
+            <Button className="WIPButtonStyle" href={projectWIP.deployedLink}>
+              <Typography variant="body1">View Live</Typography>
+            </Button>
+            <Button className="WIPButtonStyle">
+              <Typography>View Github</Typography>
+            </Button>
           </Stack>
         </Box>
       </Box>

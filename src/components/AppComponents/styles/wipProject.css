@@ -3,6 +3,7 @@
 }
 
 #imageCardDescription {
+  padding: 10px 10px;
   margin: 12px 0px;
 }
 
@@ -45,4 +46,11 @@
 #imageOverlay .WIPButtonStyle:hover {
   color: #020812;
   background-color: #C3E9E9;
+}
+
+
+@media (max-width: 350px) {
+  #imageCardDescription {
+    padding: 1px 5px;
+  }
 }

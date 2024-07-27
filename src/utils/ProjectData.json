@@ -43,10 +43,6 @@
         "TechName": "GraphQL"
       },
       {
-        "id": 6,
-        "TechName": "Apollographql"
-      },
-      {
         "id": 7,
         "TechName": "MongoDB"
       }
@@ -94,10 +90,6 @@
       {
         "id": 5,
         "TechName": "GraphQL"
-      },
-      {
-        "id": 6,
-        "TechName": "Apollographql"
       },
       {
         "id": 7,

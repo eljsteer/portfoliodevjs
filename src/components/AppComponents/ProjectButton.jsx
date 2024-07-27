@@ -26,6 +26,7 @@ export default function ProjectButton({text, href}) {
           color: isDarkMode ? darkThemeText.primary : lightThemeText.primary,
           border: `2px solid ${isDarkMode ? lightTheme.palette.primary.main : darkTheme.palette.primary.main}`,
           borderRadius: 0,
+          fontSize: isDarkMode ? darkTheme.typography.body1 : lightTheme.typography.body1
         }}
           >
           {text}

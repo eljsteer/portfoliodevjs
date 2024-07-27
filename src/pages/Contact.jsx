@@ -76,9 +76,9 @@ export default function Contact() {
   };
 
   return (
-    <Box component="section" py={{ xs: 0, lg: 6 }}>
+    <Box id="contactContainer" component="section" py={{ xs: 12, sm: 8, lg: 8 }}>
       <Container>
-        <Grid container item px={6}>
+        <Grid container item px={{ xs: 0, sm: 8, md: 8, lg: 10}}>
           <Box width="100%" mb={6} sx={{ overflow: "hidden" }}>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={7}>

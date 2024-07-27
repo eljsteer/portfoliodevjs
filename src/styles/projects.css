@@ -37,14 +37,23 @@
   width: 100%;
   height: fit-content;
 }
-@media (max-width: 900px) {
-  #WIPContainer {
-    margin: 5svh 2svh;
-  }
-}
 
 @media (max-width: 1200px) {
   #projectPageContainer {
     margin: 10svh 5svh;
   }
 }
+
+@media (max-width: 900px) {
+  #WIPContainer {
+    margin: 5svh 0svh;
+  }
+}
+
+@media (max-width: 500px) {
+  #projectPageContainer {
+    margin: 5svh 1svh;
+  }
+}
+
+
