@@ -6,13 +6,10 @@ import ProjectData from "../../utils/ProjectData.json"
 
 import "./styles/wipProject.css"
 
-import { useTheme } from "../../contexts/ThemeContext.jsx";
-import { darkTheme, lightTheme } from "../../Theme.jsx";
-
 const baseURL = import.meta.env.BASE_URL;
 
 export default function WIPproject() {
-  const { isDarkMode } = useTheme();
+
   const [projectWIP, setProjectWIP] = useState(null)
 
   useEffect(() => {
