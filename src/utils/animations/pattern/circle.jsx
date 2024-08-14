@@ -1,10 +1,12 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
+// -----MaterialUI Imports
 import Box from '@mui/material/Box';
 
 // ----------------------------------------------------------------------
 
+// ------ Component Function - Circle for Animation 
 function Circle({ children, hide = false, sx, ...other }) {
   return (
     <Box sx={{ width: 460, height: 460, position: 'absolute', ...sx }} {...other}>
@@ -30,6 +32,7 @@ function Circle({ children, hide = false, sx, ...other }) {
   );
 }
 
+// ----- Component Proptypes
 Circle.propTypes = {
   children: PropTypes.node,
   hide: PropTypes.bool,

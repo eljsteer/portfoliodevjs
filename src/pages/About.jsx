@@ -1,8 +1,20 @@
-import { Box, Container, Typography } from "@mui/material";
+// ------ MaterialUI Imports ----->>
+import { 
+  Box, 
+  Container, 
+  Typography } from "@mui/material";
 
+// --- CSS Style Sheet
 import "../styles/about.css"
 
-function About() {
+
+// ---------------------------------------------------------------------------------
+
+
+// ------------------------->>
+// ------ About Page ------->>
+// ------------------------->>
+export default function About() {
   return (
     <Box id="about">
       <Container id="aboutContainer">
@@ -29,5 +41,3 @@ function About() {
     </Box>
   );
 }
-
-export default About;

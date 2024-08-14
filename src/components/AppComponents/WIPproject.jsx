@@ -1,15 +1,25 @@
 import PropTypes from 'prop-types';
-import { Box, Button, Card, CardMedia, Stack, Typography } from "@mui/material"
 import { useState, useEffect } from 'react';
 
+// ------- MaterialUI Imports ------>>
+import { 
+  Box, 
+  Button,
+  Card,
+  CardMedia, 
+  Stack, 
+  Typography 
+} from "@mui/material";
+
+// ------- Data Imports ------>>
 import ProjectData from "../../utils/ProjectData.json"
 
+// ------- CSS import ------->>
 import "./styles/wipProject.css"
 
-const baseURL = import.meta.env.BASE_URL;
-
+// ------ Component Function ------>>
 export default function WIPproject() {
-
+  const baseURL = import.meta.env.BASE_URL;
   const [projectWIP, setProjectWIP] = useState(null)
 
   useEffect(() => {
@@ -38,10 +48,10 @@ export default function WIPproject() {
           <Typography variant="h5" id="imageCardTitle">{projectWIP.projectName}</Typography>
           <Typography variant="body1" id="imageCardDescription">{projectWIP.description}</Typography>
           <Stack direction="row" spacing={2}>
-            <Button className="WIPButtonStyle" href={projectWIP.deployedLink}>
+            <Button className="WIPButtonStyle" target="_blank" rel="noopener noreferrer" href={projectWIP.deployedLink}>
               <Typography variant="body1">View Live</Typography>
             </Button>
-            <Button className="WIPButtonStyle">
+            <Button className="WIPButtonStyle" target="_blank" rel="noopener noreferrer" href={projectWIP.github}>
               <Typography>View Github</Typography>
             </Button>
           </Stack>

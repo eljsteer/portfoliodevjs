@@ -1,29 +1,33 @@
 import { memo } from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-
+// ---- MaterialUI Imports ------->>
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
-
-import Image from "../../utils/image";
-import profileImagePlaceholder from "../../assets/images/Profile_Image1_Square_20Placeholder.png"
-import profileImage240 from "../../assets/images/Profile_Image1_Square_240px.png"
-import profileImage480 from "../../assets/images/Profile_Image1_Square_480px.png"
-import profileImage960 from "../../assets/images/Profile_Image1_Square_960px.png"
-import profileImage1980 from "../../assets/images/Profile_Image1_Square_1980px.png"
-
+// ----- React-Icons Imports ------>>
 import { FcCommandLine, FcMultipleDevices } from "react-icons/fc";
 import { RiReactjsLine } from "react-icons/ri";
 
+// ------ Component Imports ------>>
+import Image from "../../utils/image";
 import Icon from './pattern/icon';
 import Label from './pattern/label';
 import Shape from './pattern/shape';
 import Pattern01 from './pattern/pattern-01';
 import Pattern02 from './pattern/pattern-02';
 
+// ------ Responsive Profile Image Imports ------>>
+import profileImagePlaceholder from "../../assets/images/Profile_Image1_Square_20Placeholder.png"
+import profileImage240 from "../../assets/images/Profile_Image1_Square_240px.png"
+import profileImage480 from "../../assets/images/Profile_Image1_Square_480px.png"
+import profileImage960 from "../../assets/images/Profile_Image1_Square_960px.png"
+import profileImage1980 from "../../assets/images/Profile_Image1_Square_1980px.png"
+
 // ----------------------------------------------------------------------
 
+
+// <<---- Custom Element Syles ----->> //
 const placeholderImgStyle = {
   backgroundImage: `url(${profileImagePlaceholder})`,
   backgroundSize: "cover",
@@ -60,8 +64,11 @@ const varRight = {
   transition: { duration: 7, repeat: Infinity },
 };
 
-// ----------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------
 
+// <<------------------------------------------------------------------->> //
+// <<------ Component Function - Full Animation and Profile Image ------>> //
+// <<------------------------------------------------------------------->> //
 function ElearningHeroIllustration({ sx, ...other }) {
   const theme = useTheme();
 
@@ -106,6 +113,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           />
         </div>
       </Box>
+
       <Box
         {...varDown}
         component={motion.div}
@@ -115,7 +123,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
           style={{fontSize: "52px" }}
         />
       </Box>
-      
+
       <Box
         {...varRight}
         component={motion.div}
@@ -149,8 +157,6 @@ function ElearningHeroIllustration({ sx, ...other }) {
           }}
         />
       </Box>
-      
-      {/* Icon */}
 
       <Box
         {...varLeft}
@@ -197,6 +203,7 @@ function ElearningHeroIllustration({ sx, ...other }) {
   );
 }
 
+// ------ Component Proptypes
 ElearningHeroIllustration.propTypes = {
   sx: PropTypes.object,
 };

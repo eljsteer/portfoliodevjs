@@ -2,13 +2,18 @@ import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+// ------ MaterialUI Imports
 import Box from '@mui/material/Box';
 import { alpha, useTheme } from '@mui/material/styles';
 
+// ------ Component Imports
 import { getRatio } from './utils';
+
 
 // ----------------------------------------------------------------------
 
+
+// ------ Code for passing image attributes for Main Page Animation
 const Image = forwardRef(
   (
     {
@@ -49,6 +54,7 @@ const Image = forwardRef(
       },
     };
 
+  // ------ Component Function for applying styles for Images & animations
     const content = (
       <Box
         component={LazyLoadImage}
@@ -116,6 +122,7 @@ const Image = forwardRef(
   }
 );
 
+// ----- Component Proptypes
 Image.propTypes = {
   afterLoad: PropTypes.func,
   alt: PropTypes.string,

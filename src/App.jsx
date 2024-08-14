@@ -5,16 +5,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-////// <<-- Layouts -->> //////
+// ------ Layouts --->>
 import RootLayout from "./layouts/RootLayout";
 
-////// <<-- Pages -->> //////
+// ------ Pages ----->>
 import ErrorPage from "./utils/error-page.jsx";
 import Home from "./pages/Home";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+
+// ---------------------------------------------------------- //
+// --- React Router Dom using Create Routes from Elements --- //
+// ---------------------------------------------------------- //
 
 // const routes = createRoutesFromElements(
 //   <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
@@ -26,6 +30,9 @@ import Contact from "./pages/Contact";
 //   </Route>
 // );
 
+// ------------------------------------------ //
+// --- React Router Dom using Hash Router --- //
+// ------------------------------------------ //
 const router = createHashRouter([
   {
     path: "/",
@@ -41,6 +48,11 @@ const router = createHashRouter([
   }
 ]);
 
+// -----------------------------------------------------------//
+// App Function wrapped in ThemeContect provider
+// Utilising React Router and CSSBaseline to reset CSS,
+// React Router for Routing 
+// -----------------------------------------------------------//
 function App() {
   return (
     <ThemeContextProvider>

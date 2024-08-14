@@ -1,25 +1,31 @@
 import { useRef, useState} from "react"
 import emailjs from '@emailjs/browser';
 
-// @mui material components 
+// ------ MaterialUI components ------>>
 import Alert from '@mui/material/Alert';
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Snackbar, TextField } from '@mui/material';
-
+import Snackbar from "@mui/material/Snackbar";
+import { TextField } from "@mui/material";
+// ------ MaterialUI Icons ------>>
 import CheckIcon from '@mui/icons-material/Check';
 
-
-
-// Styles
+// ------- Custom Theming ------>>
 import { useTheme } from "../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../Theme.jsx";
+// ------ CSS Stylesheet ------>>
 import "../styles/contact.css"
 
 
+// -----------------------------------------------------------------------------------
+
+
+// --------------------------->>
+// ------ Contact Page ------->>
+// --------------------------->>
 export default function Contact() {
   const { isDarkMode } = useTheme();
   const form = useRef();
@@ -28,6 +34,7 @@ export default function Contact() {
   const baseURL = "/portfoliodevjs";
   const contactImagePath = `${baseURL}/assets/images/contactImage/alex-perez-wEgR12N01Tk-unsplash_Contact.jpg`;
 
+  // --- Functions to handle Alert opening on message sent successfully
   const messageSent = () => {
     setOpentAlert(true)
   }
@@ -40,6 +47,7 @@ export default function Contact() {
     setOpentAlert(false);
   };
 
+  // ---- Success Alert Component
   const SuccessAlert = () => {
     return (
       <Snackbar

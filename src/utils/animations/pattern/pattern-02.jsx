@@ -2,23 +2,30 @@ import { memo } from 'react';
 import { m } from 'framer-motion';
 import PropTypes from 'prop-types';
 
+// ------ MaterialUI Imports ------->>
 import Box from '@mui/material/Box';
 
+// ------ Component Imports ------->>
 import Dot from './dots';
 import Circle from './circle';
 
 // ----------------------------------------------------------------------
 
+// ------ Custom Component Styles ------>>
 const animateDown = (duration = 60) => ({
   animate: { rotate: [360, 0] },
   transition: { duration, repeat: Infinity, ease: 'linear' },
 });
 
+// ------ Custom Component Styles ------>>
 const animateUp = (duration = 60) => ({
   animate: { rotate: [0, 360] },
   transition: { duration, repeat: Infinity, ease: 'linear' },
 });
 
+// --------------------------------------------------------------------------
+
+// ------ Component Function - Pattern for Animation ------>>
 function Pattern02({ sx, ...other }) {
   return (
     <Box
@@ -52,6 +59,7 @@ function Pattern02({ sx, ...other }) {
   );
 }
 
+// ------- Component Proptypes ------>>
 Pattern02.propTypes = {
   sx: PropTypes.object,
 };

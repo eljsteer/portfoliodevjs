@@ -1,17 +1,29 @@
-import Packery from "packery";
 import { useEffect, useRef, useState } from "react";
+// ------ Packery package - used in displaying images in a masonry tiled layout
+import Packery from "packery";
 import { Box } from "@mui/material";
+
+// ------ Component & JSON Data Imports ------->>
 import ProjectData from "../../utils/ProjectData.json";
-import { useTheme } from "../../contexts/ThemeContext";
 import ProjectCard from "../AppComponents/ProjectCard";
 import GridProjectCard from "../AppComponents/GridProjectCard";
+// ------ Custom Theming Imports ------>>
+import { useTheme } from "../../contexts/ThemeContext";
 import "./styles/imageBoard.css";
 
-function Imageboard() {
+
+// ----------------------------------------------------------------------------------------------
+
+
+// --------------------------------------------------->>
+// ------ Imageboard Component - Projects Page ------->>
+// --------------------------------------------------->>
+export default function Imageboard() {
   const { isDarkMode } = useTheme();
   const gridRef = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 900);
 
+  // Function to return Random numbers dependent on window resolution to use in the image sizing height and width
   const imageSize = () => {
     if (window.innerWidth > 1200) {
       const sizes = [300, 350, 400, 450, 500];
@@ -23,6 +35,7 @@ function Imageboard() {
     return "100%";
   };
 
+  // Function to handle resize of the images when window resolution changes
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 900);
@@ -35,6 +48,7 @@ function Imageboard() {
     };
   }, []);
 
+  // Function to display images in a tiled, masonry layout using the "Packery" package when the screen state is not "Small Screen". 
   useEffect(() => {
     if (!isSmallScreen) {
       const pckry = new Packery(gridRef.current, {
@@ -83,5 +97,3 @@ function Imageboard() {
     </Box>
   );
 }
-
-export default Imageboard;

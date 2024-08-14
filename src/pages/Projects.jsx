@@ -1,11 +1,25 @@
-import { Box, Container, Typography } from "@mui/material";
+// ------- MaterialUI Imports ------>>
+import { 
+  Box, 
+  Container, 
+  Typography } from "@mui/material";
+
+// -------- Component Imports ------->>
 import Imageboard from "../components/ImageBoard/Imageboard";
 import WIPproject from "../components/AppComponents/WIPproject"
 import "../styles/projects.css";
 
+// ------- Custom Theming ------>>
 import { useTheme } from "../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../Theme.jsx"; 
 
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+
+// ----------------------------->>
+// ------- Projects Page ------->>
+// ----------------------------->>
 function Projects() {
   const { isDarkMode } = useTheme();
   return (

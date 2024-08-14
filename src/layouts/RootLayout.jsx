@@ -1,12 +1,20 @@
 import { Outlet } from "react-router-dom";
+// ------- MaterialUi Imports ------>>
+import { Paper } from "@mui/material"
+// ------- Component Imports ------->>
 import Header from "../components/AppComponents/Header";
 import Footer from "../components/AppComponents/Footer";
 import ScrollUpTop from "../components/AppComponents/ScrollUpTop";
-
-import { Paper } from "@mui/material"
-
+// -------CSS StyleSheet
 import "./rootlayout.css"
 
+
+// -----------------------------------------------------------------------
+
+
+// ------------------------------------------------>>
+// ------ Main Application Layout Structure ------->>
+// ------------------------------------------------>>
 export default function RootLayout() {
   return (
     <Paper className="Root-layout">

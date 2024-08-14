@@ -1,10 +1,23 @@
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+// ------ MaterialUi Imports
+import { Box, 
+  Container, 
+  Divider, 
+  Grid, 
+  Typography } from "@mui/material";
+// ------- Component Imports ------>>
 import ResumeCard from "../components/AppComponents/ResumeCard";
 import TechStack from "../components/AppComponents/TechStack";
 import ResumeData from "../utils/ResumeData.json";
-
+// ------ CSS Stylesheet ------->>
 import "../styles/resume.css"
 
+
+// --------------------------------------------------------------------------------------------------------
+
+
+// --------------------------->>
+// ------- Resume Page ------->>
+// --------------------------->>
 export default function Resume() {
   const educationData = ResumeData.Education || [];
   const experienceData = ResumeData.Experience || [];

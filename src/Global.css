@@ -1,6 +1,6 @@
-/* ----------- */
-/* Light Theme */
-/* ----------- */
+/* ----------------- */
+/* ---Light Theme--- */
+/* ----------------- */
 :root {
     --light-primary-main: #F3EDE2;
     --light-primary-light: #FFFDEB;
@@ -21,9 +21,9 @@
     --light-text-primary: #020812;
     --light-text-secondary: #C68606;
 }
-/* ---------- */
-/* Dark Theme */
-/* ---------- */
+/* ---------------- */
+/* ---Dark Theme--- */
+/* ---------------- */
 :root {
     --dark-primary-main: #041025;
     --dark-primary-light: #082049;

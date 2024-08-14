@@ -1,20 +1,29 @@
 import PropTypes from 'prop-types';
+// ------ MaterialUi Imports ------>>
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Divider, Tooltip } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import Stack from "@mui/material/Stack";
-
+// ------ React Icons Imports ------->>
 import { SiHtml5, SiCss3, SiBootstrap, SiMui, SiJavascript, SiHandlebarsdotjs, SiApollographql, SiMongodb, SiMysql, SiSequelize, SiExpress } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
 import { TbApi } from "react-icons/tb";
-
+// ------ Component Import ------->>
 import ProjectButton from "../AppComponents/ProjectButton";
-
+// ------ CSS Stylesheet ------>>
 import "./styles/projectShowcaseDetails.css";
 
+
+// --------------------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------->>
+// ------ Details of Projects In Showcase - Project Showcase ------->>
+// ----------------------------------------------------------------->>
 export default function ProjectShowcaseDetails({ project }) {
 
   ProjectShowcaseDetails.propTypes = {
@@ -56,6 +65,7 @@ export default function ProjectShowcaseDetails({ project }) {
     }
   };
 
+  // ------ Tooltip Styling ------->>
   const toolTipProps = {
     popper: {
       modifiers: [
@@ -69,12 +79,8 @@ export default function ProjectShowcaseDetails({ project }) {
     },
   };
 
-  ProjectButton.propTypes = {
-    href: PropTypes.string,
-  };
-
   return (
-    <Card id="detailsCardContainer" elevation={3}>
+    <Card id="detailsCardContainer" elevation={0}>
       <CardContent className="detailsCardContent">
         <Typography variant="h5">
           {project.projectName}
@@ -102,3 +108,8 @@ export default function ProjectShowcaseDetails({ project }) {
     </Card>
   );
 }
+
+// -------- Component Proptypes -------->>
+ProjectButton.propTypes = {
+  href: PropTypes.string,
+};

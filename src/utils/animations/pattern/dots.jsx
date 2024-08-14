@@ -1,10 +1,12 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
+// -----MaterialUI Imports
 import Box from '@mui/material/Box';
 
 // ----------------------------------------------------------------------
 
+// ------ Component Function - Dots for Animation 
 function Dot({ size = 24, color = 'primary', sx }) {
   return (
     <Box
@@ -23,9 +25,11 @@ function Dot({ size = 24, color = 'primary', sx }) {
   );
 }
 
+// ------ Component Proptypes
 Dot.propTypes = {
   color: PropTypes.string,
   size: PropTypes.number,
   sx: PropTypes.object,
 };
+
 export default memo(Dot);

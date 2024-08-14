@@ -1,19 +1,25 @@
 import { useEffect, useRef } from "react";
-
+// ------- Typed Component ------->>
+import Typed from 'typed.js';
+// -------- MaterialUi Import
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
+// ------ Component Import -------->>
 import ElearningHeroIllustration from "../../utils/animations/elearning-hero-illustration";
-
+// ------ CSS Stylesheet ------->>
 import "./styles/Landing.css"
-// typed-js
-import Typed from 'typed.js';
 
 
-function Landing() {
+// --------------------------------------------------------------------------------------
+
+// --------------------------------------------->>
+// ------ Home Page Landing Seciont View ------->>
+// --------------------------------------------->>
+export default function Landing() {
   const typedJSRef = useRef(null);
 
-  // Setting up typedJS
+  // ------- Function to setup Typed package, with different settings
   useEffect(() => {
     const typedJS = new Typed(typedJSRef.current, {
       strings: [ "Web development", "Creative Problem-Solving"],
@@ -43,5 +49,3 @@ function Landing() {
     </Box>
   );
 }
-
-export default Landing;

@@ -1,11 +1,14 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
+// ------MaterialUI Imports
 import Box from '@mui/material/Box';
 import { alpha, styled } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
+
+// <<---- Custom Element Syles ------>> //
 const StyledContent = styled('div')(({ theme }) => ({
   width: "fitContent",
   padding:"10px",
@@ -54,6 +57,7 @@ const StyledShape02 = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
+// ----- Component Function - Icon for Animation
 function Icon({ content, color, sx, ...other }) {
   return (
     <Box
@@ -85,6 +89,7 @@ function Icon({ content, color, sx, ...other }) {
   );
 }
 
+// ------ Component Proptypes
 Icon.propTypes = {
   color: PropTypes.string,
   content: PropTypes.node,

@@ -1,11 +1,12 @@
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
+// ------MaterialUI Imports
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
 // ----------------------------------------------------------------------
-
+// ------Component Function - Icon Label for Animation 
 function Label({ icon, text, sx, ...other }) {
   return (
     <Stack
@@ -34,6 +35,7 @@ function Label({ icon, text, sx, ...other }) {
   );
 }
 
+// ------- Component Proptypes
 Label.propTypes = {
   icon: PropTypes.node,
   sx: PropTypes.object,

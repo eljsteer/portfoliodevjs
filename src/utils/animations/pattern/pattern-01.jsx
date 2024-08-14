@@ -2,11 +2,13 @@ import { memo } from 'react';
 import { m } from 'framer-motion';
 import PropTypes from 'prop-types';
 
+// ------ MaterialUI Imports ------->>
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
-// ----------------------------------------------------------------------
+// -------------------------------------------------------------------------
 
+// ------ Component Custom Styles ------>>
 const varUp = {
   animate: { y: [-12, 12, -12] },
   transition: { duration: 8, repeat: Infinity },
@@ -27,8 +29,9 @@ const varRight = {
   transition: { duration: 7, repeat: Infinity },
 };
 
-// ----------------------------------------------------------------------
+// --------------------------------------------------------------------------
 
+// ------ Component Function - Pattern for Animation
 function Pattern01({ sx, ...other }) {
   const theme = useTheme();
 
@@ -120,6 +123,7 @@ function Pattern01({ sx, ...other }) {
   );
 }
 
+// ------- Component Proptypes ------>>
 Pattern01.propTypes = {
   sx: PropTypes.object,
 };

@@ -1,27 +1,38 @@
 import { useState } from 'react';
+// ------- Swiper Package Imports ------->>
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
-
+// ------- MaterialUI Imports ------>>
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-
+// ------- Component Imports ------>>
 import ProjectData from "../../utils/ProjectData.json";
 import ProjectShowcaseDetails from './ProjectShowcaseDetails';
+// ------- Custom Theming ------>>
 import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../Theme.jsx";
+// ------ CSS Stylesheet
 import "./styles/ProjectShowcase.css";
+
+
+// --------------------------------------------------------------------------
+
 
 const baseURL = import.meta.env.BASE_URL;
 
 const isExternalLink = (url) => url.startsWith('http');
 
+// --------------------------------------------------------->>
+// ------ Showcase of Projects Component - Home Page ------->>
+// --------------------------------------------------------->>
 export default function ProjectShowcase() {
   const { isDarkMode } = useTheme();
   const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
 
+  // Function to handle change in slide and save index # of project to use in displaying the same projects data beside
   const handleSlideChange = (swiper) => {
     const activeIndex = swiper.activeIndex;
     setSelectedProject(ProjectData[activeIndex]);

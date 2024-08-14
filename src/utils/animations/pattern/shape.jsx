@@ -1,11 +1,15 @@
 import { memo } from 'react';
 
+// ------ MaterialUI Imports ------->>
 import Box from '@mui/material/Box';
+
+// ------ Custom Theming Imports ------>>
 import { useTheme } from "../../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../../Theme.jsx"; 
 
 // ----------------------------------------------------------------------
 
+// ------ Component Function - Shapes for Animation
 function Shape({ ...other }) {
   const { isDarkMode } = useTheme();
   const DARK_PRIMARY_LIGHT = darkTheme.palette.accents.light;

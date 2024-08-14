@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+// ------ MaterialUi ------->>
 import { Box, Button, Typography } from "@mui/material"
-
+// ------- Custom Theming Imports ------>>
 import profileImagePlaceholder from "/assets/images/homeContactImage/Placeholders/tim-marshall-wHgcJ4gVCQY-unsplash_Large10Placeholder.jpg"
 import { useTheme } from "../../contexts/ThemeContext.jsx";
+// ------ CSS StyleSheet ------>>
 import "./styles/homeContact.css"
 
+// ------ Responsive Placeholder Image Styling ------>>
 const placeholderImgStyle = {
   backgroundImage: `url(${profileImagePlaceholder})`,
   backgroundSize: "cover",
@@ -12,7 +15,13 @@ const placeholderImgStyle = {
   overflow: "hidden"
 }
 
-function HomeContact() {
+
+// --------------------------------------------------------------------------------------
+
+// --------------------------------------------->>
+// ------ Home Page Contact Section ------->>
+// --------------------------------------------->>
+export default function HomeContact() {
 
   const { isDarkMode } = useTheme();
 
@@ -49,5 +58,3 @@ function HomeContact() {
     </Box>
   );
 }
-
-export default HomeContact;
