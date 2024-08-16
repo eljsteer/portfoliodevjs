@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
-// MaterialUI Imports
+// -------- MaterialUI Imports ------>>
 import { Box, CardContent, Typography } from "@mui/material";
 import { Divider, Tooltip } from '@mui/material';
 import Fade from '@mui/material/Fade';
 import Stack from "@mui/material/Stack";
 
-// React Icons Imports
+// ------- React Icons Imports ------>>
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
@@ -22,19 +22,26 @@ import { SiMysql } from "react-icons/si";
 import { SiSequelize } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-// Loacal Component Imports
+// ------ Loacal Component Imports ------>>
 import ProjectButton from "../AppComponents/ProjectButton";
+// ------ Custom Theming Imports ------->>
 import { useTheme } from '../../contexts/ThemeContext';
 import { darkTheme, lightTheme } from "../../Theme.jsx";
-
+// ------ CSS Stylesheets ------->>
 import "./styles/gridProjectCard.css";
 
-const baseURL = import.meta.env.BASE_URL;
-const isExternalLink = (url) => url.startsWith('http');
 
-function GridProjectCard({ project }) {
+// -----------------------------------------------------------
+
+// ------------------------------------------------------>>
+// ------ Project card for small screens component ------>>
+// ------------------------------------------------------>>
+export default function GridProjectCard({ project }) {
   const { isDarkMode } = useTheme();
+  const baseURL = import.meta.env.BASE_URL;
+  const isExternalLink = (url) => url.startsWith('http');
 
+  // ------ Switch Function to display specific Tech Icons ------>>
   const mapIcon = (TechName) => {
     switch (TechName) {
       case "HTML5":
@@ -70,6 +77,7 @@ function GridProjectCard({ project }) {
     }
   }
 
+// -------- Custom Tooltip Props ------->> 
   const toolTipProps = {
     popper: {
       modifiers: [
@@ -136,6 +144,7 @@ function GridProjectCard({ project }) {
   );
 }
 
+// ------ Component Proptypes ------->>
 GridProjectCard.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -158,4 +167,3 @@ GridProjectCard.propTypes = {
   }).isRequired,
 };
 
-export default GridProjectCard;

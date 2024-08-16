@@ -1,19 +1,27 @@
-import { Box, IconButton, Tooltip } from "@mui/material";
+// ------- MaterialUi Imports ------->>
+import { Tooltip } from "@mui/material";
+import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
-
+import IconButton from '@mui/material/IconButton';
+// ------- Local Components Imports ------->>
 import StackSmall from "./StackSmall.jsx"
 import StackAnimation from "../AppComponents/StackAnimation.jsx"
 import ResumeFile from "/assets/resume/Jason_Steer_Resumé.pdf"
-
-// React Icons Imports
+// ------- React Icons Imports ------->>
 import { BsDownload } from "react-icons/bs";
-
-// Loacal Component Imports
+// -------- Custom Theming Imports ------->>
 import { useTheme } from "../../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../../Theme.jsx";
-
+// ------- CSS Stylesheets ------->>
 import "./styles/techStack.css"
 
+
+// --------------------------------------------------------------
+
+
+// ------------------------------------------------>>
+// ------ Resume Technology Proficient Stack ------>>
+// ------------------------------------------------>>
 export default function TechStack() {
   const { isDarkMode } = useTheme();
 

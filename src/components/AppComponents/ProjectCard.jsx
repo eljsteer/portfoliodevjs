@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
-import { Box, CardContent, Typography } from "@mui/material";
-import { Divider, Tooltip } from '@mui/material';
+// ------ MaterialUi Imports ------>>
+import Box from '@mui/material/Box';
+import CardContent from '@mui/material/CardContent';
+import Divider from '@mui/material/Divider';
 import Fade from '@mui/material/Fade';
 import Stack from "@mui/material/Stack";
-
-// React Icons Imports
+import { Tooltip } from '@mui/material';
+import Typography from '@mui/material/Typography';
+// ------ React Icons Imports ------>>
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
@@ -21,19 +24,27 @@ import { SiMysql } from "react-icons/si";
 import { SiSequelize } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-// Loacal Component Imports
+// ------ Local Component Imports ------>>
 import ProjectButton from "../AppComponents/ProjectButton";
+// ------ Custom Theming Imports ------>>
 import { useTheme } from '../../contexts/ThemeContext';
 import { darkTheme, lightTheme } from "../../Theme.jsx";
-
+// ------ CSS Stylesheets ------>>
 import "./styles/projectCard.css";
 
-const baseURL = import.meta.env.BASE_URL;
-const isExternalLink = (url) => url.startsWith('http');
 
-function ProjectCard({ project, imageSize }) {
+// ----------------------------------------------------------------------
+
+
+// ------------------------------------>>
+// ------ Project Card Component ------>>
+// ------------------------------------>>
+export default function ProjectCard({ project, imageSize }) {
   const { isDarkMode } = useTheme();
+  const baseURL = import.meta.env.BASE_URL;
+  const isExternalLink = (url) => url.startsWith('http');
 
+// ------ Switch Function to display specific Tech icons ------>> 
   const mapIcon = (TechName) => {
     switch (TechName) {
       case "HTML5":
@@ -141,6 +152,7 @@ function ProjectCard({ project, imageSize }) {
   );
 }
 
+// ------ Component Proptypes ------>>
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -164,5 +176,3 @@ ProjectCard.propTypes = {
   }).isRequired,
   imageSize: PropTypes.number.isRequired,
 };
-
-export default ProjectCard;

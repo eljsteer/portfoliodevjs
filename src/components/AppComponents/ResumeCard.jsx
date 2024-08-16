@@ -1,13 +1,19 @@
 import PropTypes from "prop-types";
+// ------MaterialUi Imports ------>>
 import Box from "@mui/material/Box";
-import { Container } from "@mui/material";
+import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-
+// ------ Custom Theming Imports ------->>
 import { useTheme } from "../../contexts/ThemeContext.jsx";
 import "./styles/resumeCard.css"
 
 
+// --------------------------------------------------------------------------------------
+
+// ----------------------------------->>
+// ------ Resume Card Component ------>>
+// ----------------------------------->>
 export default function ResumeCard({ type, data }) {
   const { isDarkMode } = useTheme();
 
@@ -64,6 +70,7 @@ export default function ResumeCard({ type, data }) {
   );
 }
 
+// ------ Component Proptyles ------>>
 ResumeCard.propTypes = {
   type: PropTypes.oneOf(["Education", "Experience"]).isRequired,
   data: PropTypes.shape({

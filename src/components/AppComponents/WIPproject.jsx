@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-
 // ------- MaterialUI Imports ------>>
 import { 
   Box, 
@@ -10,28 +9,30 @@ import {
   Stack, 
   Typography 
 } from "@mui/material";
-
 // ------- Data Imports ------>>
 import ProjectData from "../../utils/ProjectData.json"
-
 // ------- CSS import ------->>
 import "./styles/wipProject.css"
-
 // ------ Component Function ------>>
+
+
+// ----------------------------------------------------------
+
+
+// -------------------------------------------------->>
+// ------ Current Work in progress Application ------>>
+// -------------------------------------------------->>
 export default function WIPproject() {
   const baseURL = import.meta.env.BASE_URL;
   const [projectWIP, setProjectWIP] = useState(null)
 
+  // ------ Function to check through ProjectData to locate project with projectWIP value as "True" ------>>
   useEffect(() => {
     const project = ProjectData.find(project => project.projectWIP === true);
       if(project) {
         setProjectWIP(project);
       }
   },[]);
-  
-  WIPproject.propTypes = {
-    project: PropTypes.object,
-  }; 
 
   if (!projectWIP) {
     return <div>Loading...</div>;
@@ -60,3 +61,8 @@ export default function WIPproject() {
     </Card>
   );
 }
+
+  
+WIPproject.propTypes = {
+  project: PropTypes.object,
+}; 

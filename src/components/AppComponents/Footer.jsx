@@ -1,25 +1,28 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+// ------ MaterialUi Imports ------>>
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { NavList } from '../../layouts/NavList';
-
-// @mui icons
+// ------ MUI Icons ------>>
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
+// ------ Navigation Particulars import ------>>
+import { NavList } from '../../layouts/NavList';
+// ------ Custom Theming Imports ------>>
 import { useTheme } from '../../contexts/ThemeContext';
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
-
+// ------CSS StyleSheets
 import "./styles/footer.css"
 
-let darkThemeText = darkTheme.palette.text;
-let lightThemeText = lightTheme.palette.text;
 
-function Footer({
+// ---------------------------------------------------------
+
+// ---------------------------->>
+// ------ Footer Section ------>>
+// ---------------------------->>
+export default function Footer({
   socials = [
     {
       id: 1,
@@ -34,11 +37,13 @@ function Footer({
   ]
 }) {
   const { isDarkMode } = useTheme();
-
   const { href } = NavList;
-
   const year = new Date().getFullYear();
 
+  const darkThemeText = darkTheme.palette.text;
+  const lightThemeText = lightTheme.palette.text;
+
+  // ------ Socials Links ------>>
   const renderLinks = NavList.map((link) => (
     <Typography
       key={link.id}
@@ -51,7 +56,7 @@ function Footer({
       {link.name}
     </Typography>
   ));
-
+  // ------- Social Icons ------->>
   const renderSocials = socials.map((social) => (
     <Typography
       className="SocialsTypo"
@@ -107,11 +112,9 @@ function Footer({
   );
 }
 
-// Typechecking props for the CenteredFooter
+// ------ Component Proptypes ------>>
 Footer.propTypes = {
   company: PropTypes.objectOf(PropTypes.string),
   links: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
   socials: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])),
 };
-
-export default Footer;

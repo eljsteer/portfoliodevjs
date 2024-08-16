@@ -1,19 +1,21 @@
 import PropTypes from "prop-types";
-
+// ------ MaterialUi imports ------>>
 import { Box } from "@mui/material";
 import { Fab } from "@mui/material";
 import { Fade } from "@mui/material";
 import { useScrollTrigger } from "@mui/material";
-
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-
+// ------ Custom Theming imports ----->>
+import { useTheme } from '../../contexts/ThemeContext';
+import { darkTheme, lightTheme } from "../../Theme.jsx"; 
+// ------ CSS Stylesheet ------>>
 import "./styles/header.css"
 
-import { useTheme } from '../../contexts/ThemeContext';
 
-import { darkTheme, lightTheme } from "../../Theme.jsx"; 
+// -------------------------------------------------------------------
 
-//// --- Scroll to Top Arrow JSX function --- //// 
+
+// ------ Scroll to Top Component Element ------>>
 function ScrollTop(props) {
 
   const { children } = props;
@@ -22,7 +24,7 @@ function ScrollTop(props) {
     threshold: 100,
   });
 
-//// --- Event handler for Scroll up Click JSX function --- //// 
+// ------ Event handler for Scroll up Click JSX function ------>>
   const handleScrollUpClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
       "#back-to-top-anchor",
@@ -52,8 +54,10 @@ ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-//// --- Scroll to Top Arrow JSX function --- //// 
-function ScropUpTop(scrollUpProps) {
+// --------------------------------------------------------->>
+// ------ Scroll to Top of Page Main Button Component ------>>
+// --------------------------------------------------------->>
+export default function ScropUpTop(scrollUpProps) {
   const { isDarkMode } = useTheme();
   return (
     <>
@@ -69,5 +73,3 @@ function ScropUpTop(scrollUpProps) {
     </>
   ) 
 }
-
-export default ScropUpTop;

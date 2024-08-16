@@ -1,20 +1,23 @@
 import PropTypes from "prop-types";
+// ------ MaterialUi Imports ------>>
 import Button from '@mui/material/Button';
-
+// ------ Custom Theming Imports ------>>
 import { useTheme } from "../../contexts/ThemeContext.jsx";
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
+// ------ CSS Styleshee ------>>
 import "./styles/projectButton.css"
 
-let darkThemeText = darkTheme.palette.text
-let lightThemeText = lightTheme.palette.text
 
+// ---------------------------------------------------------------------
+
+
+// ---------------------------------------->>
+// ------ Custom Button for Projects ------>>
+// ---------------------------------------->>
 export default function ProjectButton({text, href}) {
   const { isDarkMode } = useTheme();
-
-  ProjectButton.propTypes = {
-    text: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
-  };
+  let darkThemeText = darkTheme.palette.text
+  let lightThemeText = lightTheme.palette.text
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
@@ -34,3 +37,9 @@ export default function ProjectButton({text, href}) {
     </a>
   );
 }
+
+// ------ Component Proptypes ------>>
+ProjectButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+};

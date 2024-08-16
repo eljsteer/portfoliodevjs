@@ -1,5 +1,6 @@
 import * as React from "react";
-
+import { Link } from "react-router-dom";
+// ------- MaterialUi & Icon mports ------->>
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -9,25 +10,29 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { IoLogoJavascript } from "react-icons/io";
-
-import "./styles/header.css"
-
-import { useTheme } from "../../contexts/ThemeContext";
-
+// ------ Local Components & Navigation Data ------>>
 import { NavList } from "../../layouts/NavList"
 import ToggleThemeButton from "./ToggleThemeButton";
-
+// ------- Custom Theming Imports ------>>
+import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
-import { Link } from "react-router-dom";
+// ------- CSS StyleSheet ------>>
+import "./styles/header.css"
 
-let darkThemeText = darkTheme.palette.text
-let lightThemeText = lightTheme.palette.text
 
-function Header() {
+// -------------------------------------------------------------------
+
+
+// ------------------------------------------->>
+// ------ Header Navigation Bar Section ------>>
+// ------------------------------------------->>
+export default function Header() {
   const { isDarkMode } = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  let darkThemeText = darkTheme.palette.text
+  let lightThemeText = lightTheme.palette.text
 
-  // Custom style for navLinksButton
+// ------ Custom style for the navigation links button ------->>
   const navLinksButtonStyle = {
     mx: { md: "5px", lg: "20px"},
     fontSize: { md: "18px", lg: "20px"},
@@ -49,6 +54,7 @@ function Header() {
     },
   };
 
+// ------ Custom Styling for Menu ------>>
   const menuStyle = {
     display: { xs: "block", md: "none" },
     "& .MuiPaper-root": {
@@ -56,7 +62,8 @@ function Header() {
       paddingRight: "10px",
     },
   };
-
+  
+// ------Functions to Open Navigation Menu on smaller screens ------>>
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
   };
@@ -176,4 +183,3 @@ function Header() {
     </Box>
   );
 }
-export default Header;

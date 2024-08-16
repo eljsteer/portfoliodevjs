@@ -1,6 +1,7 @@
-import { Box, Typography } from "@mui/material";
-
-// React Icons Imports
+// ------- MaterialUi Imports ------>>
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+// ------ React Icons Imports ------>>
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
@@ -15,9 +16,16 @@ import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { SiSequelize } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
-
+// ------ CSS Stylesheets ------>>
 import "./styles/stackSmall.css"
 
+
+// ------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------->>
+// ------ Resume Animation of Tech Stack on Small Screens ------>>
+// ------------------------------------------------------------->>
 export default function StackSmall() {
 
   const techStackArray = [

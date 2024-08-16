@@ -1,16 +1,23 @@
-import { useTheme } from "../../contexts/ThemeContext";
+// ------- MateriaUi Imports ------>>
 import IconButton from '@mui/material/IconButton';
-
+// ------- React Icons Imports ------->>
 import { FiSun } from "react-icons/fi";
 import { FiMoon } from "react-icons/fi";
-
+// -------- Custom Theming Imports ------->>
+import { useTheme } from "../../contexts/ThemeContext";
 import { darkTheme, lightTheme } from "../../Theme.jsx"; 
 
-let darkThemeText = darkTheme.palette.text
-let lightThemeText = lightTheme.palette.text
 
+// -----------------------------------------------------------
+
+
+// ----------------------------------------------------->>
+// ------ Custom Button to Toggle Theme in Header ------>>
+// ----------------------------------------------------->>
 const ToggleThemeButton = () => {
   const { isDarkMode, toggleTheme } = useTheme();
+  let darkThemeText = darkTheme.palette.text
+  let lightThemeText = lightTheme.palette.text
 
   return (
       <IconButton 
