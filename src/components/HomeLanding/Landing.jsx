@@ -22,7 +22,7 @@ export default function Landing() {
   // ------- Function to setup Typed package, with different settings
   useEffect(() => {
     const typedJS = new Typed(typedJSRef.current, {
-      strings: [ "Web development", "Creative Problem-Solving"],
+      strings: [ "web development", "creative problem-solving"],
       typeSpeed: 60,
       backSpeed: 40,
       backDelay: 100,
