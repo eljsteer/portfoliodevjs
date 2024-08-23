@@ -92,7 +92,7 @@ export default function Footer({
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <Typography variant="body1" color={ isDarkMode ? darkThemeText.primary : lightThemeText.primary}>
-            Copyright &copy; {year} Created with ❤️ by{" "}
+            Copyright &copy; {year}, Created by{" "}
             <Typography
               component={Link}
               href={href}
@@ -104,7 +104,6 @@ export default function Footer({
             >
               Jason Steer
             </Typography>
-            .
           </Typography>
         </Grid>
       </Grid>

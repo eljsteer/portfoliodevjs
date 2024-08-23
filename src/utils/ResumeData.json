@@ -2,7 +2,7 @@
   "Education": [
     {
       "courseID": 1,
-      "courseName": "Coding Boot Camp Certificate",
+      "courseName": "Coding Boot Camp certificate",
       "university": "University of Sydney and Trilogy Education Services",
       "startDate": "May 2022",
       "endDate": "Oct 2022"
@@ -24,7 +24,7 @@
       "jobTitle": "Intermediate Accountant",
       "keyAchievements": [
         { "achieveID": 1,
-          "achieveDescr": "Promoted into an Intermediate Accountant position taking on more complex clients with larger budgets"
+          "achieveDescr": "Promoted into an intermediate accountant position taking on more complex clients with larger budgets"
         },
         { "achieveID": 2,
         "achieveDescr": "I significantly improved the firm's current excel accounting 'workpapers', for both individuals and companies. I created new workpapers, cleaned up the layout and streamlined the calculations for existing sheets which became our firm's official workpapers and would save upwards of 15 minutes for each account, for each client, and a total time savings of upwards of an hour for each client."
