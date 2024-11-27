@@ -23,8 +23,8 @@ export default function Landing() {
   useEffect(() => {
     const typedJS = new Typed(typedJSRef.current, {
       strings: [ "web development", "creative problem-solving"],
-      typeSpeed: 60,
-      backSpeed: 40,
+      typeSpeed: 120,
+      backSpeed: 50,
       backDelay: 100,
       startDelay: 500,
       loop: true,
